@@ -1,0 +1,10 @@
+# En este archivo se agrega la ruta de los runners que no ejecutara el pipeline.
+# Con el simbolo # al inicio de la linea puede comentarla para omitir dicha linea a la hora de eliminar los runners
+src\test\java\co\com\bancolombia\certificacion\svp\runners\consult\balances\ConsultBalance.java
+src\test\java\co\com\bancolombia\certificacion\svp\runners\consult\balances\ConsultBalanceCreditCards.java
+src\test\java\co\com\bancolombia\certificacion\svp\runners\consult\balances\ConsultaSaldosECard.java
+src\test\java\co\com\bancolombia\certificacion\svp\runners\consult\movements\ConsultMovementsPocket.java
+src\test\java\co\com\bancolombia\certificacion\svp\runners\consult\movements\ConsultaMovimientosCreditoHipotecario.java
+src\test\java\co\com\bancolombia\certificacion\svp\runners\consult\movements\ConsultaMovimientosTarjetaCredito.java
+src\test\java\co\com\bancolombia\certificacion\svp\runners\security\ParametrizacionAlertasNotificaciones.java
+src\test\java\co\com\bancolombia\certificacion\svp\runners\payment\PagoCreditoHipotecario.java

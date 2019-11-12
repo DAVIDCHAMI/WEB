@@ -1,0 +1,52 @@
+group = 'co.com.bancolombia.certificacion.svp'
+version = '1.0'
+
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+description = 'Automatización Sucursal Virtual Personas'
+
+
+repositories {
+
+    maven { url "https://artifactory.apps.bancolombia.com/maven-bancolombia" }
+    maven { url "https://artifactory.apps.bancolombia.com/jcenter/" }
+    maven { url "https://artifactory.apps.bancolombia.com/common-maven/" }
+    maven { url "https://artifactory.apps.bancolombia.com/global-bancolombia/" }
+}
+
+buildscript {
+    repositories {
+        maven { url "https://artifactory.apps.bancolombia.com/maven-bancolombia" }
+        maven { url "https://artifactory.apps.bancolombia.com/jcenter/" }
+        maven { url "https://artifactory.apps.bancolombia.com/common-maven/" }
+        maven { url "https://artifactory.apps.bancolombia.com/global-bancolombia/" }
+    }
+
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:1.9.9")
+    }
+}
+
+dependencies {
+    implementation  "co.com.bancolombia.certificacion:backend-iseries:2.5.4"
+    implementation  "com.codoid.products:fillo:1.18"
+    implementation  "com.hynnet:jacob:1.18"
+    implementation  "net.sf.jt400:jt400-full:6.0"
+    implementation  "org.jvnet.com4j:com4j:2.1"
+    implementation  "org.slf4j:slf4j-simple:1.6.1"
+    implementation  "org.codehaus.groovy:groovy-all:2.4.11"
+    compile group: 'co.com.bancolombia.certificacion', name: 'conexion-bd', version: '4.1.0'
+
+    implementation "net.serenity-bdd:serenity-junit:1.9.9"
+    implementation "net.serenity-bdd:serenity-rest-assured:1.9.9"
+    implementation "net.serenity-bdd:serenity-screenplay-rest:1.9.20"
+    implementation "net.serenity-bdd:serenity-core:1.9.9"
+    implementation "net.serenity-bdd:serenity-cucumber:1.9.5"
+
+    testImplementation "org.assertj:assertj-core:3.9.0"
+    testImplementation "org.hamcrest:hamcrest-core:1.3"
+}
+
+gradle.startParameter.continueOnFailure = true
