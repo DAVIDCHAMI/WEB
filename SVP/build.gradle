@@ -10,18 +10,12 @@ apply plugin: 'net.serenity-bdd.aggregator'
 sourceCompatibility = 1.8
 
 repositories {
-    maven { url "https://artifactory.apps.bancolombia.com/maven-bancolombia" }
-    maven { url "https://artifactory.apps.bancolombia.com/jcenter/" }
-    maven { url "https://artifactory.apps.bancolombia.com/common-maven/" }
-    maven { url "https://artifactory.apps.bancolombia.com/global-bancolombia/" }
+    maven {url "http://cdv4.todo1.com/nexus/content/groups/public/"}
 }
 
 buildscript {
     repositories {
-        maven { url "https://artifactory.apps.bancolombia.com/maven-bancolombia" }
-        maven { url "https://artifactory.apps.bancolombia.com/jcenter/" }
-        maven { url "https://artifactory.apps.bancolombia.com/common-maven/" }
-        maven { url "https://artifactory.apps.bancolombia.com/global-bancolombia/" }
+        maven {url "http://cdv4.todo1.com/nexus/content/groups/public/"}
     }
 
     dependencies {
@@ -36,7 +30,6 @@ ext {
 
 dependencies {
     implementation "co.com.bancolombia.certificacion:backend-iseries:2.5.3"
-    implementation "co.com.bancolombia.certificacion:conexion-bd:4.1.0"
     implementation "com.codoid.products:fillo:1.18"
     implementation "com.hynnet:jacob:1.18"
     implementation "net.sf.jt400:jt400-full:6.0"
