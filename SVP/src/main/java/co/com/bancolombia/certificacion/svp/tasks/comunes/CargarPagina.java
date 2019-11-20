@@ -7,7 +7,6 @@ import static co.com.bancolombia.certificacion.svp.userinterface.comunes.Element
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class CargarPagina implements Task {
-
     public static CargarPagina esperarAQueSeCargueLaPagina() {
         return instrumented(CargarPagina.class);
     }

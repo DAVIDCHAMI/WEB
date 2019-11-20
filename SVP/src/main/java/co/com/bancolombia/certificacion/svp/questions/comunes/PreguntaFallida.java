@@ -13,7 +13,6 @@ public class PreguntaFallida implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-
         actor.attemptsTo(WaitUntil.the(ETIQUETA_MENSAJE_ERROR, isVisible()));
         String resultadoObtenido = ETIQUETA_MENSAJE_ERROR.resolveFor(actor).getText();
         String resultadoEsperado = DatosPrueba.getMap().get("resultadoEsperado").toString();

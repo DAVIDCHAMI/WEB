@@ -1,7 +1,6 @@
 package co.com.bancolombia.certificacion.svp.utilities.constant;
 
 public class ConstantManager {
-
     public static final String ACIERTO = "ACIERTO";
     public static final String EXITOSO = "EXITOSO";
     public static final String ALTERNO = "ALTERNO";
@@ -26,5 +25,4 @@ public class ConstantManager {
 
     private ConstantManager() {
     }
-
 }

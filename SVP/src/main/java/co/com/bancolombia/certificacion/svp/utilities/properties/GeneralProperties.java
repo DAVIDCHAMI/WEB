@@ -7,7 +7,6 @@ import java.util.Properties;
 
 
 public class GeneralProperties {
-
     private static Properties prop = null;
 
     private GeneralProperties() {

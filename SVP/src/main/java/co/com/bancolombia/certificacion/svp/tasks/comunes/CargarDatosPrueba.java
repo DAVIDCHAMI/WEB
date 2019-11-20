@@ -19,8 +19,7 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantMa
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.FORMATO_HORA_HHMMSS;
 
 public class CargarDatosPrueba implements Task {
-
-    private static final Logger LOGGER = LogManager.getLogger(ActualizarDatos.class.getName());
+    private static final Logger LOGGER = LogManager.getLogger(CargarDatosPrueba.class.getName());
     private List<Map<String, Object>> datosPrueba;
 
     public CargarDatosPrueba(List<Map<String, Object>> datosPrueba) {
@@ -39,15 +38,12 @@ public class CargarDatosPrueba implements Task {
                 DatosPrueba.getMap().put("fechaTransaccion", obtenerFechaSistema(FORMATO_FECHA_YYYYMMDD));
                 DatosPrueba.getMap().put("codigoCanal", CanalesSistemas.SVP.toString());
                 DatosPrueba.getMap().put("codigoSistema", CanalesSistemas.BLP.toString());
-
             } else {
                 DatosPrueba.getMap().putAll(mapAuxiliar);
-
             }
         } else {
             actor.remember("", new HashMap<>());
             LOGGER.info("La lista se encuentra vacia");
         }
     }
-
 }

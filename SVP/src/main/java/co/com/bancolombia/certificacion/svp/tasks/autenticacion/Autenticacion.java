@@ -1,6 +1,5 @@
 package co.com.bancolombia.certificacion.svp.tasks.autenticacion;
 
-import co.com.bancolombia.backend.iseries.transversal.log.canal.BackLogCanal;
 import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -17,10 +16,8 @@ import static co.com.bancolombia.certificacion.svp.userinterface.comunes.Element
 import static co.com.bancolombia.certificacion.svp.userinterface.comunes.ElementosComunes.ETIQUETA_MENSAJE_ERROR;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-
 public class Autenticacion implements Task {
-
-    private static final Logger LOGGER = LogManager.getLogger(BackLogCanal.class.getName());
+    private static final Logger LOGGER = LogManager.getLogger(Autenticacion.class.getName());
 
     public static Autenticacion autenticarseEnLaSVP() {
         return instrumented(Autenticacion.class);
@@ -29,23 +26,19 @@ public class Autenticacion implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         try {
-            actor.attemptsTo(Enter.theValue(DatosPrueba.getMap().get("usuario").toString()).into(TEXTO_NOMBRE_USUARIO),
+            actor.attemptsTo(
+                    Enter.theValue(DatosPrueba.getMap().get("usuario").toString()).into(TEXTO_NOMBRE_USUARIO),
                     Click.on(BOTON_ACEPTAR),
                     ingresarClave()
-
             );
             while (BOTON_ACEPTAR.resolveFor(actor).isCurrentlyVisible() && !ETIQUETA_MENSAJE_ERROR.resolveFor(actor).isCurrentlyVisible()) {
                 actor.attemptsTo(Click.on(BOTON_ACEPTAR),
                         esperar(4000),
                         esperarAQueSeCargueLaPagina()
-
                 );
-
             }
-
         } catch (Exception e) {
             LOGGER.error(e.getMessage(), e);
         }
     }
-
 }

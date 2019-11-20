@@ -2,7 +2,6 @@ package co.com.bancolombia.certificacion.svp.utilities.constant;
 
 
 public class ConstantTypeClass {
-
     public static final String UTILITY_CLASS = "Utility Class";
     public static final String UI_CLASS = "User interface Class";
     public static final String CONSTANT_CLASS = "Constant Class";
@@ -18,5 +17,4 @@ public class ConstantTypeClass {
     private ConstantTypeClass() {
         throw new IllegalStateException(CONSTANT_CLASS);
     }
-
 }

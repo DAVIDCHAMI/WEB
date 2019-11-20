@@ -15,12 +15,10 @@ import static net.thucydides.core.pages.PageObject.withParameters;
 
 public class Abrir implements Task {
     private static final Logger LOGGER = LogManager.getLogger(Abrir.class.getName());
-
     Autenticacion paginaAutenticacion = new Autenticacion();
     private String qa;
 
     public Abrir() {
-
     }
 
     public Abrir(String qa) {

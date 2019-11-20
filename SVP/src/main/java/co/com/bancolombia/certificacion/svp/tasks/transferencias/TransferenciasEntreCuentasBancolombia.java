@@ -22,13 +22,10 @@ import static co.com.bancolombia.certificacion.svp.utilities.enums.TituloMenu.TR
 import static co.com.bancolombia.certificacion.svp.utilities.enums.TituloSubMenu.TRANS_A_CTAS_BANCO_TRANSFERIR;
 import static co.com.bancolombia.certificacion.svp.utilities.managers.UtilityManager.depositAccountFormat;
 
-
 public class TransferenciasEntreCuentasBancolombia implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-
-        //Seleccionar menú
         actor.attemptsTo(esperar(4000));
         actor.attemptsTo(esperarAQueSeCargueLaPagina());
         String urlFrontQa = Serenity.sessionVariableCalled("urlFrontAtajos");
@@ -39,17 +36,13 @@ public class TransferenciasEntreCuentasBancolombia implements Task {
                     , seleccionarMenu(TRANSFERENCIAS).ySeleccionarSubMenu(TRANS_A_CTAS_BANCO_TRANSFERIR)
             );
         }
-
-        //Ingresa clave dinámica o segunda clave
         if (ElementosComunes.CLAVE_DINAMICA.resolveFor(actor).withTimeoutOf(40, TimeUnit.SECONDS).isVisible()) {
             actor.attemptsTo(esperarAQueSeCargueLaPagina()
                     , ingresarClaveDinamica()
                     , esperar(5000));
-
         } else {
             actor.attemptsTo(ingresarSegundaClave());
         }
-
         actor.attemptsTo(
                 esperarAQueSeCargueLaPagina()
                 , Click.on(OPCION_PRODUCTO_ORIGEN.of(depositAccountFormat(DatosPrueba.getMap().get("productoOrigen").toString())))
@@ -58,13 +51,10 @@ public class TransferenciasEntreCuentasBancolombia implements Task {
                 , Click.on(OPCION_TIPO_TRANSFERENCIA.of(DatosPrueba.getMap().get("tipoTransferencia").toString()))
                 , Click.on(BOTON_CONTINUAR)
         );
-
         actor.attemptsTo(
                 esperar(4000)
                 , Click.on(BOTON_TRANSFERIR)
                 , esperar(4000)
         );
-
-
     }
 }

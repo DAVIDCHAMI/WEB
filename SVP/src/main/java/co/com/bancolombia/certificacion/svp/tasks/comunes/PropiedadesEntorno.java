@@ -1,6 +1,5 @@
 package co.com.bancolombia.certificacion.svp.tasks.comunes;
 
-import co.com.bancolombia.backend.iseries.transversal.log.canal.BackLogCanal;
 import co.com.bancolombia.certificacion.svp.utilities.properties.GeneralProperties;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -10,8 +9,7 @@ import org.apache.logging.log4j.Logger;
 import java.io.IOException;
 
 public class PropiedadesEntorno implements Task {
-
-    private static final Logger LOGGER = LogManager.getLogger(BackLogCanal.class.getName());
+    private static final Logger LOGGER = LogManager.getLogger(PropiedadesEntorno.class.getName());
 
     @Override
     public <T extends Actor> void performAs(T actor) {

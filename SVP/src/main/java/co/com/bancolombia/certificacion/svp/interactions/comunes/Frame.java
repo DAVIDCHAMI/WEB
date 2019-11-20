@@ -7,9 +7,7 @@ import net.serenitybdd.screenplay.targets.Target;
 
 import static co.com.bancolombia.certificacion.svp.interactions.espera.Esperar.esperar;
 
-
 public class Frame implements Interaction {
-
     private Target frame;
 
     public Frame(Target frame) {

@@ -15,10 +15,7 @@ import java.lang.annotation.Target;
  * @author carmarlo
  * @since 25 /04/2018
  */
-// @Retention(RUNTIME)
-// @Target(METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 public @interface BeforeSuite {
-
 }

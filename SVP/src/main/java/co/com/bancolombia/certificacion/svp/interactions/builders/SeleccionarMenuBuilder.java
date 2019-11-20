@@ -5,7 +5,6 @@ import net.serenitybdd.screenplay.Interaction;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-
 public class SeleccionarMenuBuilder {
     private final Enum menuPrincipal;
 

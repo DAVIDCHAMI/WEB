@@ -11,14 +11,10 @@ import org.junit.runner.RunWith;
 
 import java.io.IOException;
 
-
 @CucumberOptions(
         features = "src/test/resources/features/transferencias/trn_0438_0538_transferencia_entre_cuentas_bancolombia.feature",
         snippets = SnippetType.CAMELCASE,
-        glue = {"co.com.bancolombia.certificacion.svp.stepdefinitions.autenticacion",
-                "co.com.bancolombia.certificacion.svp.stepdefinitions.communes",
-                "co.com.bancolombia.certificacion.svp.stepdefinitions.transferencias"},
-        plugin = {"json:target/cucumber_json/cucumber.json"}
+        glue = "co.com.bancolombia.certificacion.svp.stepdefinitions"
 )
 
 @RunWith(RunnerPersonalizado.class)

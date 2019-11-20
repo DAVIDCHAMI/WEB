@@ -16,18 +16,13 @@ public class Cargar {
 
     public static CargarDatosPrueba cargoLosDatosDeLaTransaccionConLaSiguiente(List<Map<String, Object>> informacion) {
         return instrumented(CargarDatosPrueba.class, informacion);
-
     }
 
     public static CargarDatosPrueba conLaSiguiente(List<Map<String, Object>> informacion) {
         return instrumented(CargarDatosPrueba.class, informacion);
-
     }
 
     public static PropiedadesEntorno environmentProperties() {
         return instrumented(PropiedadesEntorno.class);
-
     }
-
-
 }

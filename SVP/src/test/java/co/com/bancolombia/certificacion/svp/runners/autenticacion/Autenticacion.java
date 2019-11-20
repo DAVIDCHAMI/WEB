@@ -14,9 +14,7 @@ import java.io.IOException;
 @CucumberOptions(
         features = "src/test/resources/features/autenticacion/trn_0369_autenticacion.feature",
         snippets = SnippetType.CAMELCASE,
-        glue = {"co.com.bancolombia.certificacion.svp.stepdefinitions.autenticacion",
-                "co.com.bancolombia.certificacion.svp.stepdefinitions.comunes"},
-        plugin = {"json:target/cucumber_json/cucumber.json"}
+        glue = "co.com.bancolombia.certificacion.svp.stepdefinitions"
 )
 
 @RunWith(RunnerPersonalizado.class)

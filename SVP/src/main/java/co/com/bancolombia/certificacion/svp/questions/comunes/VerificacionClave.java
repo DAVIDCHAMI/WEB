@@ -4,7 +4,6 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
 public class VerificacionClave implements Question<Integer> {
-
     private Integer clave;
 
     public VerificacionClave(Integer clave) {

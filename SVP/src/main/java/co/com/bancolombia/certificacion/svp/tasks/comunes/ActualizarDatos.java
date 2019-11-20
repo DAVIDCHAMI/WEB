@@ -16,8 +16,7 @@ import static co.com.bancolombia.backend.utilidades.managers.DateManager.obtener
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.FORMATO_HORA_HHMMSS;
 
 public class ActualizarDatos implements Task {
-
-    public static final String DATOS_PRUEBA = "datosPrueba";
+    private static final String DATOS_PRUEBA = "datosPrueba";
     private static final Logger LOGGER = LogManager.getLogger(ActualizarDatos.class.getName());
     private List<Map<String, Object>> datos;
 
@@ -46,6 +45,5 @@ public class ActualizarDatos implements Task {
             actor.remember(DATOS_PRUEBA, new HashMap<>());
             LOGGER.info("La lista se encuentra vacia");
         }
-
     }
 }

@@ -14,7 +14,6 @@ import static co.com.bancolombia.certificacion.svp.utilities.managers.UtilityVal
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
 public class VerificacionResultadoEsperado implements Question<Boolean> {
-
     private Target elemento;
 
     public VerificacionResultadoEsperado(Target target) {

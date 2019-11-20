@@ -7,7 +7,6 @@ import net.serenitybdd.screenplay.targets.Target;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-
 public class Cambiar {
     private Cambiar() {
         throw new IllegalStateException(ConstantTypeClass.FACTORY_CLASS);

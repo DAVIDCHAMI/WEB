@@ -7,7 +7,6 @@ import net.serenitybdd.screenplay.Task;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class Transferencia {
-
     private Transferencia() {
         throw new IllegalStateException(ConstantTypeClass.FACTORY_CLASS);
     }
@@ -15,6 +14,4 @@ public class Transferencia {
     public static Task realizarTransferenciaEntreCuentasBancolombia() {
         return instrumented(TransferenciasEntreCuentasBancolombia.class);
     }
-
-
 }

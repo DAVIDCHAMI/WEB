@@ -12,7 +12,6 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantMa
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.EXITOSO;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
-
 public class PreguntaExitosa implements Question<Boolean> {
     private Target elemento;
     private boolean orientacion = false;

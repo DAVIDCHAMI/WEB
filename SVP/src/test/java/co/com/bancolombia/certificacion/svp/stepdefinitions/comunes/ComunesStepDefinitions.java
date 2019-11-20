@@ -19,5 +19,4 @@ public class ComunesStepDefinitions {
     public void systemUploadSVPEnvironment(String actor) {
         theActorCalled(actor).wasAbleTo(Cargar.environmentProperties());
     }
-
 }

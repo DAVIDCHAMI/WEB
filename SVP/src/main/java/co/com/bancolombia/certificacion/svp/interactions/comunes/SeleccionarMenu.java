@@ -11,7 +11,6 @@ import net.thucydides.core.annotations.Step;
 import static co.com.bancolombia.certificacion.svp.userinterface.comunes.ElementosComunes.MENU_PRINCIPAL;
 import static co.com.bancolombia.certificacion.svp.userinterface.comunes.ElementosComunes.SUB_MENU;
 
-
 public class SeleccionarMenu implements Interaction {
     private final Enum menuPrincipal;
     private final Enum subMenu;
@@ -32,6 +31,5 @@ public class SeleccionarMenu implements Interaction {
                 Click.on(MENU_PRINCIPAL.of(((TituloMenu) menuPrincipal).getName())),
                 Click.on(SUB_MENU.of(((TituloSubMenu) subMenu).geId()))
         );
-
     }
 }
