@@ -19,7 +19,7 @@ Característica: SVP transferencias entre cuentas bancolombia
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | codigoErrorOracle | resultadoEsperado       | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | productoOrigen | tipoProductoOrigen | productoDestino | tipoProductoDestino | valorTransferir | tipoTransferencia      |
          ##@externaldata@./src/test/resources/datadriven/transferencias/trn_0438_0538_transferencia_entre_cuentas_bancolombia.xlsx@Datos
-      | 1      | Acierto     | 0538              | 000         | 001               | Transferencia realizada | 1373022         | usua22rio | 1234  | 2443         | 1             | 40613022002    | Corriente          | 40673022011     | Ahorro              | 1300            | Transferencia en línea |
+	|1|Acierto|0538|000|001|Transferencia realizada|1373022|usua22rio|1234|2443|1|40613022002|Corriente|40673022011|Ahorro|1300|Transferencia en línea|
 
   @TestCase1
   Esquema del escenario: TRN0538 Transferencia exitosa, entre una cuenta corriente a una cuenta de ahorro propia, con tope banco
@@ -32,4 +32,4 @@ Característica: SVP transferencias entre cuentas bancolombia
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | codigoErrorOracle | resultadoEsperado       | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | productoOrigen | tipoProductoOrigen | productoDestino | tipoProductoDestino | valorTransferir | tipoTransferencia      |
          ##@externaldata@./src/test/resources/datadriven/transferencias/trn_0438_0538_transferencia_entre_cuentas_bancolombia.xlsx@Datos
-      | 1      | Acierto     | 0538              | 000         | 001               | Transferencia realizada | 1373022         | usua22rio | 1234  | 2443         | 1             | 40613022002    | Corriente          | 40673022011     | Ahorro              | 1300            | Transferencia en línea |
+	|1|Acierto|0538|000|001|Transferencia realizada|1373022|usua22rio|1234|2443|1|40613022002|Corriente|40673022011|Ahorro|1300|Transferencia en línea|
