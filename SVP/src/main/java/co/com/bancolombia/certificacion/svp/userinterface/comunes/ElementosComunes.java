@@ -1,7 +1,6 @@
 package co.com.bancolombia.certificacion.svp.userinterface.comunes;
 
 import co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTypeClass;
-import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.screenplay.targets.Target;
 
 import static org.openqa.selenium.By.id;

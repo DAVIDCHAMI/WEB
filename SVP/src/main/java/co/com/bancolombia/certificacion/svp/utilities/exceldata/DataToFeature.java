@@ -1,137 +1,104 @@
 package co.com.bancolombia.certificacion.svp.utilities.exceldata;
 
-import org.apache.commons.lang3.StringUtils;
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.Objects;
 
-
-/**
- * Ingresa los datos obtenidos del archivo de Excel al archivo feature del cual
- * se está llamando
- *
- * @author carmarlo
- * @since 25 /04/2018
- */
 public class DataToFeature {
+    protected static String data;
+    protected static boolean foundHashTag = false;
+    protected static boolean featureData = false;
+    protected static String sheetName;
+    protected static String excelFilePath;
+    protected static String caso;
 
     private DataToFeature() {
     }
 
-    /**
-     * Ingresa los datos obtenidos de un excel al archivo .feature del cual se está
-     * llamando, hace que se genere la tabla en el escenario Outline como Data Table
-     *
-     * @param featureFile Nombre del archivo .feature el cual se modificará, debe tener la ruta del archivo y la hoja ser usada
-     * @return
-     * @author carmarlo
-     * @since 25/04/2018
-     */
-    private static List<String> setExcelDataToFeature(File featureFile) throws InvalidFormatException, IOException {
+    private static List<String> setExcelDataToFeature(File featureFile) throws IOException {
         List<String> fileData = new ArrayList<>();
-        try (BufferedReader buffReader = new BufferedReader(new InputStreamReader(new BufferedInputStream(new FileInputStream(featureFile)), StandardCharsets.UTF_8))) {
-            String data;
-            String idCaso = null;
-            List<Map<String, String>> excelData = null;
-            boolean foundHashTag = false;
-            boolean featureData = false;
-            while ((data = buffReader.readLine()) != null) {
-                String sheetName = null;
-                String excelFilePath = null;
+        try (BufferedReader buffReader = new BufferedReader(
+                new InputStreamReader(new BufferedInputStream(new FileInputStream(featureFile)), "UTF-8"))) {
+            foundHashTag = false;
+            featureData = false;
 
-                if (data.trim().contains("@TestCase")) {
-                    idCaso = data.trim();
-                    idCaso = idCaso.substring(9);
-                }
+            while ((data = buffReader.readLine()) != null) {
+                sheetName = null;
+                excelFilePath = null;
 
                 if (data.trim().contains("##@externaldata")) {
-                    excelFilePath = data.substring(StringUtils.ordinalIndexOf(data, "@", 2) + 1, data.lastIndexOf('@'));
-                    sheetName = data.substring(data.lastIndexOf('@') + 1);
                     foundHashTag = true;
-                    fileData.add(data);
+                    fileData = getDataExcel(fileData);
                 }
                 if (foundHashTag) {
-                    excelData = new LectorExcel().getData(excelFilePath, sheetName, idCaso);
-                    for (int rowNumber = 0; rowNumber < excelData.size() - 1; rowNumber++) {
-                        StringBuilder cellDataBuilder = new StringBuilder("\t");
-                        for (Entry<String, String> mapData : excelData.get(rowNumber).entrySet()) {
-                            cellDataBuilder.append("|").append(mapData.getValue());
-                        }
-                        String cellData = cellDataBuilder.toString();
-                        cellData += "|";
-                        fileData.add(cellData);
-                    }
                     foundHashTag = false;
                     featureData = true;
-                    continue;
-                }
-                if (data.startsWith("|") || data.endsWith("|")) {
-                    if (featureData) {
-                        continue;
-                    } else {
-                        fileData.add(data);
+                } else {
+                    if ((data.startsWith("|") || data.endsWith("|")) && featureData) {
                         continue;
                     }
-                } else {
                     featureData = false;
+                    fileData.add(data);
                 }
-                fileData.add(data);
             }
         }
         return fileData;
     }
 
-    /**
-     * Lista de todos los features con sus respectivos archivo de excel que se
-     * usarán en la prueba
-     *
-     * @param folder Carpeta donde estarán los archivo .feature
-     * @return lista de Features
-     * @author carmarlo
-     * @since 25/04/2018
-     */
     private static List<File> listOfFeatureFiles(File folder) {
         List<File> featureFiles = new ArrayList<>();
-        for (File fileEntry : Objects.requireNonNull(folder.listFiles())) {
-            if (fileEntry.isDirectory()) {
-                featureFiles.addAll(listOfFeatureFiles(fileEntry));
-            } else {
-                if (fileEntry.isFile() && fileEntry.getName().endsWith(".feature")) {
-                    featureFiles.add(fileEntry);
+        if (folder.getName().endsWith(".feature")) {
+            featureFiles.add(folder);
+        } else {
+
+            for (File fileEntry : folder.listFiles()) {
+                if (fileEntry.isDirectory()) {
+                    featureFiles.addAll(listOfFeatureFiles(fileEntry));
+                } else {
+                    if (fileEntry.isFile() && fileEntry.getName().endsWith(".feature")) {
+                        featureFiles.add(fileEntry);
+                    }
                 }
             }
         }
         return featureFiles;
     }
 
-    /**
-     * Hace una lista con todos los features dependiendo de la ruta asignada
-     *
-     * @param featuresDirectoryPath Ruta donde se encuentran los features que tendrán las tablas
-     * @throws IOException            the io exception
-     * @throws InvalidFormatException the invalid format exception
-     * @author carmarlo
-     * @since 25 /04/2018
-     */
-    public static void overrideFeatureFiles(String featuresDirectoryPath)
-    // public void overrideFeatureFiles(String featuresDirectoryPath)
-            throws IOException, InvalidFormatException {
+    public static void overrideFeatureFiles(String featuresDirectoryPath) throws IOException {
         List<File> listOfFeatureFiles = listOfFeatureFiles(new File(featuresDirectoryPath));
         for (File featureFile : listOfFeatureFiles) {
             List<String> featureWithExcelData = setExcelDataToFeature(featureFile);
             try (BufferedWriter writer = new BufferedWriter(
-                    new OutputStreamWriter(new FileOutputStream(featureFile), StandardCharsets.UTF_8))) {
+                    new OutputStreamWriter(new FileOutputStream(featureFile), "UTF-8"));) {
                 for (String string : featureWithExcelData) {
                     writer.write(string);
                     writer.write("\n");
                 }
             }
         }
+    }
+
+    private static List<String> getDataExcel(List<String> fileData) {
+        List<Map<String, String>> excelData = null;
+        String[] dataVector = null;
+        dataVector = data.trim().split("@");
+        excelFilePath = dataVector[2];
+        sheetName = dataVector[3];
+        caso = dataVector[4];
+        fileData.add(data);
+        excelData = new LectorExcel().getData( excelFilePath, sheetName);
+        for (int rowNumber = Integer.parseInt(caso)-1; rowNumber < Integer.parseInt(caso); rowNumber++) {
+            StringBuilder cellData = new StringBuilder();
+            cellData.append("      ");
+            for (Entry<String, String> mapData : excelData.get(rowNumber).entrySet()) {
+                cellData.append("|" + mapData.getValue());
+            }
+            cellData.append("|");
+            fileData.add(cellData.toString());
+        }
+        return fileData;
     }
 }
