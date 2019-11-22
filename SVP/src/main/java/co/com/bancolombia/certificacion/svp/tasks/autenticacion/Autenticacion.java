@@ -10,7 +10,6 @@ import org.apache.logging.log4j.Logger;
 
 import static co.com.bancolombia.certificacion.svp.interactions.autenticacion.IngresarClave.ingresarClave;
 import static co.com.bancolombia.certificacion.svp.interactions.espera.Esperar.esperar;
-import static co.com.bancolombia.certificacion.svp.tasks.comunes.CargarPagina.esperarAQueSeCargueLaPagina;
 import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.Autenticacion.TEXTO_NOMBRE_USUARIO;
 import static co.com.bancolombia.certificacion.svp.userinterface.comunes.ElementosComunes.BOTON_ACEPTAR;
 import static co.com.bancolombia.certificacion.svp.userinterface.comunes.ElementosComunes.ETIQUETA_MENSAJE_ERROR;
@@ -33,8 +32,7 @@ public class Autenticacion implements Task {
             );
             while (BOTON_ACEPTAR.resolveFor(actor).isCurrentlyVisible() && !ETIQUETA_MENSAJE_ERROR.resolveFor(actor).isCurrentlyVisible()) {
                 actor.attemptsTo(Click.on(BOTON_ACEPTAR),
-                        esperar(4000),
-                        esperarAQueSeCargueLaPagina()
+                        esperar(4000)
                 );
             }
         } catch (Exception e) {

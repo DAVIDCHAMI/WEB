@@ -28,6 +28,7 @@ src/test/resources/driver/*
 
 # Sonarlint plugin
 .idea/sonarlint
+.scannerwork/
 
 # Package Files #
 *.jar
@@ -51,3 +52,4 @@ target/
 
 # Maven
 log/
+
