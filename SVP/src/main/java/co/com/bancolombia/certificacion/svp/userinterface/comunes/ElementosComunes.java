@@ -6,8 +6,7 @@ import net.serenitybdd.screenplay.targets.Target;
 import static org.openqa.selenium.By.id;
 
 public class ElementosComunes {
-    public static final Target BOTON_ACEPTAR = Target.the("boton aceptar").located(id("btnGo"));
-    public static final Target ETIQUETA_MENSAJE_ERROR = Target.the("mensaje de error").located(id("summary"));
+    public static final Target BTN_CONTINUAR = Target.the("Boton Continuar").locatedBy("");
 
     private ElementosComunes() {
         throw new IllegalStateException(ConstantTypeClass.UI_CLASS);

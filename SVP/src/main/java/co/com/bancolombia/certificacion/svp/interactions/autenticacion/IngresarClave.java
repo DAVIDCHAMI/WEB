@@ -5,7 +5,7 @@ import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 
-import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.Autenticacion.TECLADO_CLAVE;
+import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.AutenticacionPage.TECLADO_CLAVE;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class IngresarClave implements Interaction {
