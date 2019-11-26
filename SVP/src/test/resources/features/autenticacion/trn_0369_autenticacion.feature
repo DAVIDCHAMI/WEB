@@ -12,7 +12,6 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/autenticacion/trn_0369_autenticacion.xlsx@Datos@1
-      |1|Acierto|0369|000|Inicio2|1373022|usua22rio|1234|2443|1|
 
   Esquema del escenario: TRN0369 Inicio de sesion exitoso en SVP Dos
     Dado que Juan carga los datos de la transaccion
@@ -25,4 +24,3 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/autenticacion/trn_0369_autenticacion.xlsx@Datos@1
-      |1|Acierto|0369|000|Inicio2|1373022|usua22rio|1234|2443|1|
