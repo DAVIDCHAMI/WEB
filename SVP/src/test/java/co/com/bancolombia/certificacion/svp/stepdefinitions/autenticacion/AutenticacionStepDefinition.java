@@ -10,7 +10,7 @@ import static co.com.bancolombia.certificacion.svp.tasks.autenticacion.Autentica
 import static co.com.bancolombia.certificacion.svp.tasks.fabrica.Cargar.conLaSiguiente;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
-public class AutenticacionStepDefinitions {
+public class AutenticacionStepDefinition {
 
     @Cuando("^el intenta autenticarse utilizando sus credenciales$")
     public void intentoAutenticarmeUtilizandoMisCredenciales( List<Map<String, Object>> informacion) {

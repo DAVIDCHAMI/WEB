@@ -1,4 +1,4 @@
-package co.com.bancolombia.certificacion.svp.userinterface.registro;
+package co.com.bancolombia.certificacion.svp.userinterface.registrarusuario;
 
 import net.serenitybdd.screenplay.targets.Target;
 
@@ -19,7 +19,6 @@ public class RegistrarUsuarioPage {
     public static final Target LBL_REGISTRO_EXITOSO_REGISTRO_EXITOSO = Target.the("Label registro exitoso").locatedBy("");
     public static final Target LBL_COMPROBANTE_REGISTRO_USUARIO = Target.the("Label comprobante registro exitoso").locatedBy("");
     public static final Target LBL_FECHA_HORA_REGISTRO_USUARIO = Target.the("Label fecha y hora registro exitoso").locatedBy("");
-
 
     private RegistrarUsuarioPage() {
         throw new IllegalStateException(UI_CLASS);

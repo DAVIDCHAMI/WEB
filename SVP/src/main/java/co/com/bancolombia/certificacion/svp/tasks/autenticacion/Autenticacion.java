@@ -8,7 +8,7 @@ import net.serenitybdd.screenplay.actions.Enter;
 
 import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.AutenticacionPage.TXT_CLAVE;
 import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.AutenticacionPage.TXT_NOMBRE_USUARIO;
-import static co.com.bancolombia.certificacion.svp.userinterface.comunes.ElementosComunes.BTN_CONTINUAR;
+import static co.com.bancolombia.certificacion.svp.userinterface.comunes.ElementosComunesPage.BTN_CONTINUAR;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class Autenticacion implements Task {

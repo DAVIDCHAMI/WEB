@@ -12,7 +12,7 @@ import static co.com.bancolombia.certificacion.svp.tasks.fabrica.Cargar.conLaSig
 import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 
-public class ComunesStepDefinitions {
+public class ComunesStepDefinition {
 
     @Before
     public void initialConfiguration() {

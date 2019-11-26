@@ -1,4 +1,4 @@
-package co.com.bancolombia.certificacion.svp.userinterface.autenticacion;
+package co.com.bancolombia.certificacion.svp.userinterface.generarclave;
 
 import net.serenitybdd.screenplay.targets.Target;
 

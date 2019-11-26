@@ -1,4 +1,4 @@
-package co.com.bancolombia.certificacion.svp.tasks;
+package co.com.bancolombia.certificacion.svp.tasks.registrarusuario;
 
 import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
 import net.serenitybdd.screenplay.Actor;
@@ -7,8 +7,8 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 
-import static co.com.bancolombia.certificacion.svp.userinterface.comunes.ElementosComunes.BTN_CONTINUAR;
-import static co.com.bancolombia.certificacion.svp.userinterface.registro.RegistrarUsuarioPage.*;
+import static co.com.bancolombia.certificacion.svp.userinterface.comunes.ElementosComunesPage.BTN_CONTINUAR;
+import static co.com.bancolombia.certificacion.svp.userinterface.registrarusuario.RegistrarUsuarioPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class Registrar implements Task {

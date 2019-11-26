@@ -1,4 +1,4 @@
-package co.com.bancolombia.certificacion.svp.tasks.autenticacion;
+package co.com.bancolombia.certificacion.svp.tasks.generarclave;
 
 import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
 import net.serenitybdd.screenplay.Actor;
@@ -8,7 +8,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.SelectFromOptions;
 
-import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.GenerarClavePage.*;
+import static co.com.bancolombia.certificacion.svp.userinterface.generarclave.GenerarClavePage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class Generar implements Task {
