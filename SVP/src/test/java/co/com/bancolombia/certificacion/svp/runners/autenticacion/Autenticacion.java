@@ -12,7 +12,7 @@ import org.junit.runner.RunWith;
 import java.io.IOException;
 
 @CucumberOptions(
-        features = "src/test/resources/features/autenticacion/trn_0369_autenticacion.feature",
+        features = "src/test/resources/features/autenticacion/autenticacion.feature",
         glue = "co.com.bancolombia.certificacion.svp.stepdefinitions",
         snippets = SnippetType.CAMELCASE
 )

@@ -1,5 +1,6 @@
 package co.com.bancolombia.certificacion.svp.stepdefinitions.comunes;
 
+import co.com.bancolombia.certificacion.svp.interactions.comunes.AbrirNavegador;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Dado;
 import net.serenitybdd.screenplay.actors.OnlineCast;
@@ -19,17 +20,11 @@ public class ComunesStepDefinition {
         setTheStage(new OnlineCast());
     }
 
-    @Dado("^que (.*) carga los datos de la transaccion$")
-    public void queCargoLosDatosDeLaTransaccion(String actor, List<Map<String, Object>> informacion) {
-        theActorCalled(actor).wasAbleTo(
-                conLaSiguiente(informacion)
-        );
-    }
-
     @Dado("^que (.*) carga los datos de la prueba$")
     public void queCargoLosDatosDeLaPrueba(String actor, List<Map<String, Object>> informacion) {
         theActorCalled(actor).wasAbleTo(
-                cargoLosDatosDeLaTransaccionConLaSiguiente(informacion)
+                cargoLosDatosDeLaTransaccionConLaSiguiente(informacion),
+                AbrirNavegador.paraSVP()
         );
     }
 }

@@ -1,29 +1,63 @@
 package co.com.bancolombia.certificacion.svp.stepdefinitions.autenticacion;
 
-import co.com.bancolombia.certificacion.svp.interactions.comunes.AbrirNavegador;
+import co.com.bancolombia.certificacion.svp.questions.autenticacion.PantallaInicioSVP;
 import cucumber.api.java.es.Cuando;
+import cucumber.api.java.es.Entonces;
 
-import java.util.List;
-import java.util.Map;
-
+import static co.com.bancolombia.certificacion.svp.questions.autenticacion.Clave.mensajeClaveBloqueada;
+import static co.com.bancolombia.certificacion.svp.questions.autenticacion.Mensaje.mensajeClaveInvalida;
 import static co.com.bancolombia.certificacion.svp.tasks.autenticacion.Autenticacion.autenticarseEnLaSVP;
-import static co.com.bancolombia.certificacion.svp.tasks.fabrica.Cargar.conLaSiguiente;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class AutenticacionStepDefinition {
 
-    @Cuando("^el intenta autenticarse utilizando sus credenciales$")
-    public void intentoAutenticarmeUtilizandoMisCredenciales( List<Map<String, Object>> informacion) {
+    @Cuando("^el realiza la autenticacion en la SVP$")
+    public void elRealizaLaAutenticacionEnLaSVP() {
         theActorInTheSpotlight().attemptsTo(
-                AbrirNavegador.paraSVP(),
-                conLaSiguiente(informacion),
-                autenticarseEnLaSVP());
+                autenticarseEnLaSVP()
+        );
     }
 
-    @Cuando("^el realiza la autenticacion$")
-    public void realizaLaAutenticacion() {
+    @Cuando("^el realiza la autenticacion en la SVP con clave invalida$")
+    public void elRealizaLaAutenticacionEnLaSVPConClaveInvalida() {
         theActorInTheSpotlight().attemptsTo(
-                AbrirNavegador.paraSVP(),
-                autenticarseEnLaSVP());
+                autenticarseEnLaSVP()
+        );
+    }
+
+    @Cuando("^el realiza la autenticacion en la SVP con clave bloqueada$")
+    public void elRealizaLaAutenticacionEnLaSVPConClaveBloqueada() {
+        theActorInTheSpotlight().attemptsTo(
+                autenticarseEnLaSVP()
+        );
+    }
+
+    @Cuando("^el realiza la autenticacion en la SVP con usuario inexistente$")
+    public void elRealizaLaAutenticacionEnLaSVPConUsuarioInexistente() {
+        theActorInTheSpotlight().attemptsTo(
+                autenticarseEnLaSVP()
+        );
+    }
+
+    @Entonces("^el deberia de ver la pantalla de inicio de la SVP$")
+    public void elDeberiaDeVerLaPantallaDeInicioDeLaSVP() {
+        theActorInTheSpotlight().should(seeThat(
+                PantallaInicioSVP.esVisible())
+        );
+    }
+
+    @Entonces("^el deberia de ver un mensaje de clave bloqueada$")
+    public void elDeberiaDeVerUnMensajeDeClaveBloqueada() {
+        theActorInTheSpotlight().should(seeThat(
+                mensajeClaveBloqueada())
+        );
+    }
+
+    @Entonces("^el deberia de ver un mensaje de (.*)$")
+    public void elDeberiaDeVerUnMensajeDeUsuarioOClaveInvalidaPorFavorIntenteDeNuevo(String mensaje) {
+        theActorInTheSpotlight().should(seeThat(
+                mensajeClaveInvalida())
+        );
     }
 }
