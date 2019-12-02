@@ -1,5 +1,7 @@
 package co.com.bancolombia.certificacion.svp.utilities.constant;
 
+import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTypeClass.CONSTANT_CLASS;
+
 public class ConstantManager {
     public static final String ACIERTO = "ACIERTO";
     public static final String EXITOSO = "EXITOSO";
@@ -24,5 +26,6 @@ public class ConstantManager {
     public static final String CODIGO_TRANSACCION_AUTENTICACION = "0369";
 
     private ConstantManager() {
+        throw new IllegalStateException(CONSTANT_CLASS);
     }
 }

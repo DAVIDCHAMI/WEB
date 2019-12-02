@@ -1,4 +1,4 @@
-package co.com.bancolombia.certificacion.svp.runners.autenticacion;
+package co.com.bancolombia.certificacion.svp.runners.recordarusuario;
 
 import co.com.bancolombia.certificacion.svp.utilities.exceldata.BeforeSuite;
 import co.com.bancolombia.certificacion.svp.utilities.exceldata.DataToFeature;
@@ -13,20 +13,19 @@ import java.io.IOException;
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTypeClass.RUNNER_CLASS;
 
 @CucumberOptions(
-        features = "src/test/resources/features/autenticacion/autenticacion.feature",
+        features = "src/test/resources/features/recordarusuario/recordar_usuario.feature",
         glue = "co.com.bancolombia.certificacion.svp.stepdefinitions",
         snippets = SnippetType.CAMELCASE
 )
 @RunWith(RunnerPersonalizado.class)
-public class Autenticacion {
+public class RecordarUsuario {
 
-    private Autenticacion() {
+    private RecordarUsuario() {
         throw new IllegalStateException(RUNNER_CLASS);
     }
 
     @BeforeSuite
     public static void test() throws InvalidFormatException, IOException {
-        DataToFeature.overrideFeatureFiles("./src/test/resources/features/autenticacion/");
+        DataToFeature.overrideFeatureFiles("./src/test/resources/features/recordarusuario/");
     }
 }
-
