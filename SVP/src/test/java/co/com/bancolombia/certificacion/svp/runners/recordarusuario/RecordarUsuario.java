@@ -1,6 +1,5 @@
 package co.com.bancolombia.certificacion.svp.runners.recordarusuario;
 
-import co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTypeClass;
 import co.com.bancolombia.certificacion.svp.utilities.exceldata.BeforeSuite;
 import co.com.bancolombia.certificacion.svp.utilities.exceldata.DataToFeature;
 import co.com.bancolombia.certificacion.svp.utilities.runner.RunnerPersonalizado;
@@ -11,6 +10,8 @@ import org.junit.runner.RunWith;
 
 import java.io.IOException;
 
+import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTypeClass.RUNNER_CLASS;
+
 @CucumberOptions(
         features = "src/test/resources/features/recordarusuario/recordar_usuario.feature",
         glue = "co.com.bancolombia.certificacion.svp.stepdefinitions",
@@ -20,7 +21,7 @@ import java.io.IOException;
 public class RecordarUsuario {
 
     private RecordarUsuario() {
-        throw new IllegalStateException(ConstantTypeClass.RUNNER_CLASS);
+        throw new IllegalStateException(RUNNER_CLASS);
     }
 
     @BeforeSuite
