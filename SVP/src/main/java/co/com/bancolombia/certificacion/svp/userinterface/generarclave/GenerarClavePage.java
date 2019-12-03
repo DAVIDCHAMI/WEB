@@ -14,6 +14,6 @@ public class GenerarClavePage {
     public static final Target LBL_FECHA_HORA_GENERAR = Target.the("Label fecha generar clave").locatedBy("");
 
     private GenerarClavePage() {
-        throw new IllegalStateException(UI_CLASS);
+    throw new IllegalStateException(UI_CLASS);
     }
 }

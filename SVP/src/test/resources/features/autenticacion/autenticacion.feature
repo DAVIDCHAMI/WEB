@@ -5,6 +5,7 @@ Característica: SVP autenticacion
   Quiero iniciar sesion en el SVP
   Para realizar transacciones en la SVP
 
+  @test1
   Esquema del escenario: Inicio de sesion exitoso
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
@@ -14,7 +15,7 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@1
-      |1|Acierto|||||||||
+      |1|Acierto|||||SVPPRU08|1234|||
 
   Esquema del escenario: Inicio de sesion exitoso sin imagen y frase de seguridad
     Dado que Juan carga los datos de la prueba

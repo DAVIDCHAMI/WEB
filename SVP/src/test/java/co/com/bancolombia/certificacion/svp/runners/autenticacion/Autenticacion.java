@@ -14,7 +14,9 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
 
 @CucumberOptions(
         features = "src/test/resources/features/autenticacion/autenticacion.feature",
-        glue = "co.com.bancolombia.certificacion.svp.stepdefinitions",
+        glue = {"co.com.bancolombia.certificacion.svp.stepdefinitions.autenticacion",
+                "co.com.bancolombia.certificacion.svp.stepdefinitions.comunes"},
+        tags = {"@test1"},
         snippets = SnippetType.CAMELCASE
 )
 @RunWith(RunnerPersonalizado.class)

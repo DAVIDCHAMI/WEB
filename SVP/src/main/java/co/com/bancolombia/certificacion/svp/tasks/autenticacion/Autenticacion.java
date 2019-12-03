@@ -1,14 +1,17 @@
 package co.com.bancolombia.certificacion.svp.tasks.autenticacion;
 
+
 import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
+import net.serenitybdd.screenplay.questions.Text;
 
-import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.AutenticacionPage.TXT_CLAVE;
-import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.AutenticacionPage.TXT_NOMBRE_USUARIO;
+
+import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.AutenticacionPage.*;
 import static co.com.bancolombia.certificacion.svp.userinterface.comunes.ElementosComunesPage.BTN_CONTINUAR;
+
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class Autenticacion implements Task {
