@@ -4,7 +4,6 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
-import static org.openqa.selenium.By.id;
 
 public class AutenticacionPage extends PageObject {
     public static final Target TXT_NOMBRE_USUARIO = Target.the("Campo Nombre de usuario").located(By.id("UsernameInput"));
@@ -14,6 +13,8 @@ public class AutenticacionPage extends PageObject {
     public static final Target LNK_GENERAR_CLAVE = Target.the("Link generar clave").locatedBy("");
     public static final Target IMG_USUARIO=Target.the("Imagen de seguridad del usuario").located(By.id("UserImage"));
     public static final Target TEXT_FRASE_SEGURIDAD=Target.the("Frase de seguridad del usuario").located(By.id("Phrase2"));
+    public static final Target TEXT_NOMBRE_USUARIO=Target.the("Nombre de usuario").locatedBy("");
+    public static final Target MSG_USUARIO_REGISTRADO=Target.the("mensage que indica que el usuario ya se encuentra registrado").locatedBy("");
 }
 
 

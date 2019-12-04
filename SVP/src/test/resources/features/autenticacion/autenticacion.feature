@@ -39,12 +39,13 @@ Característica: SVP autenticacion
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@3
       |3|Acierto|||||||||
 
+  @test2
   Esquema del escenario: Inicio de sesion exitoso con documento de identidad  (con usuario registrado)
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
       | <idCaso> | <orientacion> | <codigoTransaccion> | <codigoError> | <resultadoEsperado> | <numeroDocumento> | <usuario> | <clave> | <segundaClave> | <tipoDocumento> |
     Cuando el realiza la autenticacion en la SVP
-    Entonces el deberia de ver la pantalla de inicio de la SVP
+    Entonces el deberia de ver un mensaje Usuario o clave inválida. Inténtalo nuevamente
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@4
