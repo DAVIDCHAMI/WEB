@@ -1,7 +1,6 @@
 package co.com.bancolombia.certificacion.svp.stepdefinitions.comunes;
 
 import co.com.bancolombia.certificacion.svp.interactions.comunes.AbrirNavegador;
-import co.com.bancolombia.certificacion.svp.questions.comunes.Mensaje;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Entonces;
