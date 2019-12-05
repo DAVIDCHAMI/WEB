@@ -1,15 +1,23 @@
 package co.com.bancolombia.certificacion.svp.stepdefinitions.autenticacion;
 
+import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
 import co.com.bancolombia.certificacion.svp.questions.autenticacion.PantallaInicioSVP;
+
 
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
+
+
+import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.RESULTADO_ESPERADO;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static org.hamcrest.Matchers.equalTo;
 
 import static co.com.bancolombia.certificacion.svp.questions.autenticacion.Clave.mensajeClaveBloqueada;
 import static co.com.bancolombia.certificacion.svp.questions.autenticacion.Mensaje.mensajeClaveInvalida;
 import static co.com.bancolombia.certificacion.svp.questions.autenticacion.UsuarioRegistrado.mensajeUsuarioRegistrado;
 import static co.com.bancolombia.certificacion.svp.tasks.autenticacion.Autenticacion.autenticarseEnLaSVP;
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static co.com.bancolombia.certificacion.svp.tasks.autenticacion.AutenticacionConDocumento.autenticarseConDocumentoEnLaSVP;
+
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class AutenticacionStepDefinition {
@@ -21,23 +29,23 @@ public class AutenticacionStepDefinition {
         );
     }
 
-    @Cuando("^el realiza la autenticacion en la SVP con clave invalida$")
-    public void elRealizaLaAutenticacionEnLaSVPConClaveInvalida() {
+    @Cuando("^el realiza la autenticacion en la SVP con numero de documento$")
+    public void elRealizaLaAutenticacionEnLaSVPConNumeroDeDocumento() {
         theActorInTheSpotlight().attemptsTo(
-                autenticarseEnLaSVP()
+                autenticarseConDocumentoEnLaSVP()
         );
     }
 
-    @Entonces("^el deberia de ver un mensaje (.*)$")
+    @Entonces("^el deberia de ver un mensaje(.*)$")
     public void elDeberiaDeVerUnMensajeUsuarioOClaveInvalidaIntentaloNuevamente(String mensaje) {
-        theActorInTheSpotlight().should(seeThat(mensajeUsuarioRegistrado()));
+        theActorInTheSpotlight().should(seeThat(mensajeUsuarioRegistrado(),equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO))));
     }
 
 
     @Cuando("^el realiza la autenticacion en la SVP con clave bloqueada$")
     public void elRealizaLaAutenticacionEnLaSVPConClaveBloqueada() {
         theActorInTheSpotlight().attemptsTo(
-                autenticarseEnLaSVP()
+                autenticarseConDocumentoEnLaSVP()
         );
     }
 
@@ -59,17 +67,17 @@ public class AutenticacionStepDefinition {
 
 
 
-    @Entonces("^el deberia de ver un mensaje de clave bloqueada$")
-    public void elDeberiaDeVerUnMensajeDeClaveBloqueada() {
+    @Entonces("^el deberia de ver mensaje de clave bloqueada$")
+    public void elDeberiaDeVerMensajeDeClaveBloqueada() {
         theActorInTheSpotlight().should(seeThat(
-                mensajeClaveBloqueada())
+                mensajeClaveBloqueada(),equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO)))
         );
     }
 
     @Entonces("^el deberia de ver un mensaje de (.*)$")
-    public void elDeberiaDeVerUnMensajeDeUsuarioOClaveInvalidaPorFavorIntenteDeNuevo(String mensaje) {
+    public void elDeberiaDeVerUnMensajeDeUsuarioOClaveInvalidaPorFavorIntenteDeNuevo(String mensaj) {
         theActorInTheSpotlight().should(seeThat(
-                mensajeClaveInvalida())
+                mensajeClaveInvalida(),equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO)))
         );
     }
 }

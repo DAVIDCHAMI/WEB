@@ -14,7 +14,9 @@ public class AutenticacionPage extends PageObject {
     public static final Target IMG_USUARIO=Target.the("Imagen de seguridad del usuario").located(By.id("UserImage"));
     public static final Target TEXT_FRASE_SEGURIDAD=Target.the("Frase de seguridad del usuario").located(By.id("Phrase2"));
     public static final Target TEXT_NOMBRE_USUARIO=Target.the("Nombre de usuario").locatedBy("");
-    public static final Target MSG_USUARIO_REGISTRADO=Target.the("mensage que indica que el usuario ya se encuentra registrado").locatedBy("");
+    public static final Target MSG_USUARIO_REGISTRADO=Target.the("mensage que indica que el usuario ya se encuentra registrado").locatedBy("//div[@id='b7-MessageContent']");
+    public static final Target MSG_CLAVE_INVALIDA=Target.the("Mensaje de clave invalida").locatedBy("//div[@id='b7-MessageContent']");
+    public static final Target MSG_CLAVE_BLOQUEADA=Target.the("Mensaje de clave bloqueada").locatedBy("//div[@id='b7-MessageContent']");
 }
 
 
