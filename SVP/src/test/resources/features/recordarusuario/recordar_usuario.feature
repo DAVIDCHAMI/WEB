@@ -25,4 +25,4 @@ Característica: Recordar usuario
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario | clave | segundaClave | tipoDocumento | mensajeRespuesta |
        ##@externaldata@./src/test/resources/datadriven/recordarusuario/recordar_usuario.xlsx@Datos@2
-      |2|Alterno||||||||||
+      |2|Alterno||||123456789|prueba|1234|1234||¡Lo Sentimos!|
