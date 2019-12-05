@@ -5,7 +5,6 @@ Característica: Recordar usuario
   Quiero recordar el usuario
   Para ingresar a la Sucursal Virtual Personas
 
-  @RecordarExitoso
   Esquema del escenario: Recordar usuario exitoso
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | mensajeRespuesta   |

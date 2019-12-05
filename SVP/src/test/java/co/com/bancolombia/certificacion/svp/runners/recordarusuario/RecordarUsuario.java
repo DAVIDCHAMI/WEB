@@ -15,7 +15,6 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
 @CucumberOptions(
         features = "src/test/resources/features/recordarusuario/recordar_usuario.feature",
         glue = "co.com.bancolombia.certificacion.svp.stepdefinitions",
-        tags = "@RecordarExitoso",
         snippets = SnippetType.CAMELCASE
 )
 @RunWith(RunnerPersonalizado.class)
