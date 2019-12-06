@@ -18,5 +18,3 @@ public class AutenticacionPage extends PageObject {
     public static final Target MSG_CLAVE_INVALIDA=Target.the("Mensaje de clave invalida").locatedBy("//div[@id='b7-MessageContent']");
     public static final Target MSG_CLAVE_BLOQUEADA=Target.the("Mensaje de clave bloqueada").locatedBy("//span[@id='b9-ErrorDescription']");
 }
-
-

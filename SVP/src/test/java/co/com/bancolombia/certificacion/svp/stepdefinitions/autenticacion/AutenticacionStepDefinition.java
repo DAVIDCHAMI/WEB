@@ -24,64 +24,64 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class AutenticacionStepDefinition {
 
-    @Cuando("^el realiza la autenticacion en la SVP$")
-    public void elRealizaLaAutenticacionEnLaSVP() {
+@Cuando("^el realiza la autenticacion en la SVP$")
+public void elRealizaLaAutenticacionEnLaSVP() {
         theActorInTheSpotlight().attemptsTo(
-                autenticarseEnLaSVP()
+        autenticarseEnLaSVP()
         );
-    }
+        }
 
-    @Cuando("^el realiza la autenticacion en la SVP con numero de documento$")
-    public void elRealizaLaAutenticacionEnLaSVPConNumeroDeDocumento() {
+@Cuando("^el realiza la autenticacion en la SVP con numero de documento$")
+public void elRealizaLaAutenticacionEnLaSVPConNumeroDeDocumento() {
         theActorInTheSpotlight().attemptsTo(
-                autenticarseConDocumentoEnLaSVP()
+        autenticarseConDocumentoEnLaSVP()
         );
-    }
+        }
 
-    @Entonces("^el deberia de visualizar un mensaje Usuarios claves(.*)$")
-    public void elDeberiaDeVisualizarUnMensajeUsuariosClaveInvalida(String mensaje) {
+@Entonces("^el deberia de visualizar un mensaje Usuarios claves(.*)$")
+public void elDeberiaDeVisualizarUnMensajeUsuariosClaveInvalida(String mensaje) {
         theActorInTheSpotlight().should(seeThat(mensajeUsuarioInexistentes(),
-                Matchers.<Object>equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO))));
-    }
+        Matchers.<Object>equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO))));
+        }
 
-    @Entonces("^el deberia de ver un mensaje Usuario(.*)$")
-    public void elDeberiaDeVerUnMensajeUsuarioIntentaloNuevamente(String mensaje) {
-       theActorInTheSpotlight().should(seeThat(mensajeUsuarioRegistrado(),
-            equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO))));
-}
+@Entonces("^el deberia de ver un mensaje Usuario(.*)$")
+public void elDeberiaDeVerUnMensajeUsuarioIntentaloNuevamente(String mensaje) {
+        theActorInTheSpotlight().should(seeThat(mensajeUsuarioRegistrado(),
+        equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO))));
+        }
 
-    @Cuando("^el realiza la autenticacion en la SVP con clave bloqueada$")
-    public void elRealizaLaAutenticacionEnLaSVPConClaveBloqueada() {
+@Cuando("^el realiza la autenticacion en la SVP con clave bloqueada$")
+public void elRealizaLaAutenticacionEnLaSVPConClaveBloqueada() {
         theActorInTheSpotlight().attemptsTo(
-                autenticarseConDocumentoEnLaSVP()
+        autenticarseConDocumentoEnLaSVP()
         );
-    }
+        }
 
-    @Cuando("^el realiza la autenticacion en la SVP con usuario inexistente$")
-    public void elRealizaLaAutenticacionEnLaSVPConUsuarioInexistente() {
+@Cuando("^el realiza la autenticacion en la SVP con usuario inexistente$")
+public void elRealizaLaAutenticacionEnLaSVPConUsuarioInexistente() {
         theActorInTheSpotlight().attemptsTo(
-                autenticarseConDocumentoEnLaSVP()
+        autenticarseConDocumentoEnLaSVP()
         );
-    }
+        }
 
-    @Entonces("^el deberia de ver la pantalla de inicio de la SVP$")
-    public void elDeberiaDeVerLaPantallaDeInicioDeLaSVP() {
+@Entonces("^el deberia de ver la pantalla de inicio de la SVP$")
+public void elDeberiaDeVerLaPantallaDeInicioDeLaSVP() {
         theActorInTheSpotlight().should(seeThat(
-                PantallaInicioSVP.esVisible(),equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO)))
+        PantallaInicioSVP.esVisible(),equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO)))
         );
-    }
+        }
 
-    @Entonces("^el deberia de ver mensaje de clave bloqueada$")
-    public void elDeberiaDeVerMensajeDeClaveBloqueada() {
+@Entonces("^el deberia de ver mensaje de clave bloqueada$")
+public void elDeberiaDeVerMensajeDeClaveBloqueada() {
         theActorInTheSpotlight().should(seeThat(
-                mensajeClaveBloqueada(),equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO)))
+        mensajeClaveBloqueada(),equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO)))
         );
-    }
+        }
 
-    @Entonces("^el deberia de observar un mensaje de (.*)$")
-       public void elDeberiaDeObservarUnMensajeDeUsuarioOClaveInvalidaIntentaloNuevamente(String mensaje) {
+@Entonces("^el deberia de observar un mensaje de (.*)$")
+public void elDeberiaDeObservarUnMensajeDeUsuarioOClaveInvalidaIntentaloNuevamente(String mensaje) {
         theActorInTheSpotlight().should(seeThat(
-                mensajeClaveInvalida(),equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO)))
+        mensajeClaveInvalida(),equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO)))
         );
-    }
-}
+        }
+        }
