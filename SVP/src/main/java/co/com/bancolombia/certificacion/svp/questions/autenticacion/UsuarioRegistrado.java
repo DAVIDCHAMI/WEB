@@ -17,9 +17,8 @@ public class UsuarioRegistrado implements Question<String> {
 
     @Override
     public String answeredBy(Actor actor) {
-        if(DatosPrueba.getMap().get(ORIENTACION).toString().equalsIgnoreCase(ALTERNO))
+        if(DatosPrueba.getMap().get(ORIENTACION).toString().equalsIgnoreCase(ACIERTO))
               return Text.of(MSG_USUARIO_REGISTRADO).viewedBy(actor).asString();
         return "";
-
     }
 }

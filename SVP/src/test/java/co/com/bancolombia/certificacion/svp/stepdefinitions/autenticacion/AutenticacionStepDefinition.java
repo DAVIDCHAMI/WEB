@@ -6,8 +6,10 @@ import co.com.bancolombia.certificacion.svp.questions.autenticacion.PantallaInic
 
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
+import org.hamcrest.Matchers;
 
 
+import static co.com.bancolombia.certificacion.svp.questions.autenticacion.MensajeUsuarioInexistente.mensajeUsuarioInexistentes;
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.RESULTADO_ESPERADO;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.Matchers.equalTo;
@@ -36,11 +38,17 @@ public class AutenticacionStepDefinition {
         );
     }
 
-    @Entonces("^el deberia de ver un mensaje(.*)$")
-    public void elDeberiaDeVerUnMensajeUsuarioOClaveInvalidaIntentaloNuevamente(String mensaje) {
-        theActorInTheSpotlight().should(seeThat(mensajeUsuarioRegistrado(),equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO))));
+    @Entonces("^el deberia de visualizar un mensaje Usuarios claves(.*)$")
+    public void elDeberiaDeVisualizarUnMensajeUsuariosClaveInvalida(String mensaje) {
+        theActorInTheSpotlight().should(seeThat(mensajeUsuarioInexistentes(),
+                Matchers.<Object>equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO))));
     }
 
+    @Entonces("^el deberia de ver un mensaje Usuario(.*)$")
+    public void elDeberiaDeVerUnMensajeUsuarioIntentaloNuevamente(String mensaje) {
+       theActorInTheSpotlight().should(seeThat(mensajeUsuarioRegistrado(),
+            equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO))));
+}
 
     @Cuando("^el realiza la autenticacion en la SVP con clave bloqueada$")
     public void elRealizaLaAutenticacionEnLaSVPConClaveBloqueada() {
@@ -52,20 +60,16 @@ public class AutenticacionStepDefinition {
     @Cuando("^el realiza la autenticacion en la SVP con usuario inexistente$")
     public void elRealizaLaAutenticacionEnLaSVPConUsuarioInexistente() {
         theActorInTheSpotlight().attemptsTo(
-                autenticarseEnLaSVP()
+                autenticarseConDocumentoEnLaSVP()
         );
     }
 
     @Entonces("^el deberia de ver la pantalla de inicio de la SVP$")
     public void elDeberiaDeVerLaPantallaDeInicioDeLaSVP() {
         theActorInTheSpotlight().should(seeThat(
-                PantallaInicioSVP.esVisible())
+                PantallaInicioSVP.esVisible(),equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO)))
         );
     }
-
-
-
-
 
     @Entonces("^el deberia de ver mensaje de clave bloqueada$")
     public void elDeberiaDeVerMensajeDeClaveBloqueada() {
@@ -74,8 +78,8 @@ public class AutenticacionStepDefinition {
         );
     }
 
-    @Entonces("^el deberia de ver un mensaje de (.*)$")
-    public void elDeberiaDeVerUnMensajeDeUsuarioOClaveInvalidaPorFavorIntenteDeNuevo(String mensaj) {
+    @Entonces("^el deberia de observar un mensaje de (.*)$")
+       public void elDeberiaDeObservarUnMensajeDeUsuarioOClaveInvalidaIntentaloNuevamente(String mensaje) {
         theActorInTheSpotlight().should(seeThat(
                 mensajeClaveInvalida(),equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO)))
         );

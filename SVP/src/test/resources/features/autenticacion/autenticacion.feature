@@ -5,7 +5,7 @@ Característica: SVP autenticacion
   Quiero iniciar sesion en el SVP
   Para realizar transacciones en la SVP
 
-
+  @test1
   Esquema del escenario: Inicio de sesion exitoso
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
@@ -15,8 +15,9 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@1
-      |1|Acierto|||||SVPPRU08|1234|||
+      |1|Acierto|||¡Hola!||OSVPPRU10|1234|||
 
+  @test1
   Esquema del escenario: Inicio de sesion exitoso sin imagen y frase de seguridad
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
@@ -26,8 +27,7 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@2
-      |2|Acierto|||||||||
-
+      |2|Acierto|||¡Hola!||OSVPPRU10|1234|||
 
   Esquema del escenario: Inicio de sesion exitoso con documento de identidad (sin usuario registrado)
     Dado que Juan carga los datos de la prueba
@@ -50,8 +50,7 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@4
-      |4|Acierto|||Usuario o clave inválida. Inténtalo nuevamente|20513841|USUARIOS41|1234|||
-
+      |4|Acierto|||Usuario o clave inválida. Inténtalo nuevamente.|20513841|USUARIOS41|1234|||
 
   @test1
   Esquema del escenario: Inicio de sesion con clave invalida
@@ -59,11 +58,11 @@ Característica: SVP autenticacion
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
       | <idCaso> | <orientacion> | <codigoTransaccion> | <codigoError> | <resultadoEsperado> | <numeroDocumento> | <usuario> | <clave> | <segundaClave> | <tipoDocumento> |
     Cuando el realiza la autenticacion en la SVP
-    Entonces el deberia de ver un mensaje Usuario o clave inválida. Inténtalo nuevamente
+    Entonces el deberia de observar un mensaje de Usuario o clave invalida. Intentalo nuevamente
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@5
-      |5|Alterno|||Usuario o clave inválida. Inténtalo nuevamente||USUARIOS41|4567|||
+      |5|Alterno|||Usuario o clave inválida. Inténtalo nuevamente.||OSVPPRU04|4567|||
 
   @test1
   Esquema del escenario: Inicio de sesion con clave bloqueada
@@ -83,8 +82,8 @@ Característica: SVP autenticacion
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
       | <idCaso> | <orientacion> | <codigoTransaccion> | <codigoError> | <resultadoEsperado> | <numeroDocumento> | <usuario> | <clave> | <segundaClave> | <tipoDocumento> |
     Cuando el realiza la autenticacion en la SVP con usuario inexistente
-    Entonces el deberia de ver un mensaje Usuario o clave invalida, Inténtalo nuevamente
+    Entonces el deberia de visualizar un mensaje Usuarios claves invalida
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@7
-      |7|Alterno|||Usuario o clave inválida. Inténtalo nuevamente||MORAM12|1234|||
+      |7|Alterno|||Usuario o clave inválida. Inténtalo nuevamente.|854124014||1234|||

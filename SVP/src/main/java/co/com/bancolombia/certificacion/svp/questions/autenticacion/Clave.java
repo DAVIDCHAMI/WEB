@@ -18,7 +18,7 @@ public class Clave implements Question<String> {
     @Override
     public String answeredBy(Actor actor) {
         if(DatosPrueba.getMap().get(ORIENTACION).toString().equalsIgnoreCase(ALTERNO))
-           return Text.of(MSG_CLAVE_INVALIDA).viewedBy(actor).asString();
+           return Text.of(MSG_CLAVE_BLOQUEADA).viewedBy(actor).asString();
         return "";
     }
 }
