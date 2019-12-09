@@ -24,6 +24,15 @@ public class ConstantManager {
     public static final String SN = "SN";
     public static final String RC = "RC";
     public static final String CODIGO_TRANSACCION_AUTENTICACION = "0369";
+    public static final String ORIENTACION="orientacion";
+    public static final String CODIGO_TRANSACCION="codigoTransaccion";
+    public static final String CODIGO_ERROR="codigoError";
+    public static final String RESULTADO_ESPERADO="resultadoEsperado";
+    public static final String NUMERO_DOCUMENTO="numeroDocumento";
+    public static final String USUARIO="usuario";
+    public static final String CLAVE="clave";
+    public static final String SEGUNDA_CLAVE="segundaClave";
+    public static final String TIPO_DOCUMENTO="tipoDocumento";
 
     private ConstantManager() {
         throw new IllegalStateException(CONSTANT_CLASS);
