@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 
 
-import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.AutenticacionPage.TEXT_LOGIN_USUARIO;
+import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.AutenticacionPage.LBL_LOGIN_USUARIO;
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.ACIERTO;
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.ORIENTACION;
 
@@ -18,6 +18,6 @@ public class PantallaInicioSVP implements Question<String> {
 
     @Override
     public String answeredBy(Actor actor) {
-        return DatosPrueba.getMap().get(ORIENTACION).toString().equalsIgnoreCase(ACIERTO)? Text.of(TEXT_LOGIN_USUARIO).viewedBy(actor).asString():"";
+        return DatosPrueba.getMap().get(ORIENTACION).toString().equalsIgnoreCase(ACIERTO)? Text.of(LBL_LOGIN_USUARIO).viewedBy(actor).asString():"";
     }
 }

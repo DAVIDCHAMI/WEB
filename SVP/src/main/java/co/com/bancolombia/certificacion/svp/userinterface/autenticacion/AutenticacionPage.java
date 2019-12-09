@@ -12,8 +12,8 @@ public class AutenticacionPage extends PageObject {
     public static final Target TXT_CLAVE = Target.the("Campo clave de usuario").located(By.id("b3-Input_Input1"));
     public static final Target LNK_GENERAR_CLAVE = Target.the("Link generar clave").locatedBy("");
     public static final Target IMG_USUARIO=Target.the("Imagen de seguridad del usuario").located(By.id("UserImage"));
-    public static final Target TEXT_FRASE_SEGURIDAD=Target.the("Frase de seguridad del usuario").located(By.id("Phrase2"));
-    public static final Target TEXT_LOGIN_USUARIO=Target.the("Nombre de usuario").locatedBy("//div[@id='b1-Title']/span[contains(text(),'Hola')]");
-    public static final Target MSG_CLAVE_INVALIDA=Target.the("Mensaje de clave invalida").located(By.id("b7-MessageContent"));
-    public static final Target MSG_CLAVE_BLOQUEADA=Target.the("Mensaje de clave bloqueada").located(By.id("b9-ErrorDescription"));
+    public static final Target LBL_FRASE_SEGURIDAD=Target.the("Frase de seguridad del usuario").located(By.id("Phrase2"));
+    public static final Target LBL_LOGIN_USUARIO=Target.the("Nombre de usuario").locatedBy("//div[@id='b1-Title']/span[contains(text(),'Hola')]");
+    public static final Target LBL_CLAVE_INVALIDA=Target.the("Mensaje de clave invalida").located(By.id("b7-MessageContent"));
+    public static final Target LBL_CLAVE_BLOQUEADA=Target.the("Mensaje de clave bloqueada").located(By.id("b9-ErrorDescription"));
 }
