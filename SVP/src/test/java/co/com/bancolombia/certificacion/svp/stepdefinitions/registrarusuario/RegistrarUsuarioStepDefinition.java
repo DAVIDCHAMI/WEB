@@ -1,9 +1,6 @@
 package co.com.bancolombia.certificacion.svp.stepdefinitions.registrarusuario;
 
 import co.com.bancolombia.certificacion.svp.questions.registrarusuario.MensajeRealizarRegistro;
-import co.com.bancolombia.certificacion.svp.questions.registrarusuario.RegistroExitoso;
-import co.com.bancolombia.certificacion.svp.questions.registrarusuario.RegistroIncorrecto;
-import co.com.bancolombia.certificacion.svp.questions.registrarusuario.UsuarioRegistrar;
 import co.com.bancolombia.certificacion.svp.tasks.registrarusuario.Registrar;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
@@ -54,21 +51,4 @@ public class RegistrarUsuarioStepDefinition {
         );
     }
 
-    @Entonces("^el deberia de ver el mensaje de (.*)$")
-    public void elDeberiaDeVerElMensajeDeRegistroExitoso(String mensaje) {
-        theActorInTheSpotlight().should(seeThat(RegistroExitoso.enSVP())
-        );
-    }
-
-    @Entonces("^el deberia de ver el mensaje (.*)$")
-    public void elDeberiaDeVerElMensajeIngresaOtroUsuarioElQueIngresasteYaEstaEnUso(String mensaje) {
-        theActorInTheSpotlight().should(seeThat(UsuarioRegistrar.estaEnUso())
-        );
-    }
-
-    @Entonces("^el deberia de ver el mensaje de (.*)$")
-    public void elDeberiaDeVerElMensajeDeRegistroDeUsuarioIncorrecto(String mensaje) {
-        theActorInTheSpotlight().should(seeThat(RegistroIncorrecto.enSVP())
-        );
-    }
 }
