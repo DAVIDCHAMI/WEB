@@ -16,7 +16,6 @@ import static  net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class AutenticacionConDocumento  implements Task {
 
-
     public static AutenticacionConDocumento autenticarseConDocumentoEnLaSVP() {
         return instrumented(AutenticacionConDocumento.class);
     }
