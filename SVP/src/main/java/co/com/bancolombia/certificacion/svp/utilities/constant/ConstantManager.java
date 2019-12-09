@@ -33,6 +33,9 @@ public class ConstantManager {
     public static final String CLAVE="clave";
     public static final String SEGUNDA_CLAVE="segundaClave";
     public static final String TIPO_DOCUMENTO="tipoDocumento";
+    public static final String CORREO_ELECTRONICO = "correoElectronico";
+    public static final String CELULAR = "celular";
+    public static final String PALABRA_CLAVE = "palabraClave";
 
     private ConstantManager() {
         throw new IllegalStateException(CONSTANT_CLASS);
