@@ -11,7 +11,5 @@ public class AutenticacionPage extends PageObject {
     public static final Target LNK_PROBLEMAS_CONEXION = Target.the("Link problemas conexion").locatedBy("");
     public static final Target TXT_CLAVE = Target.the("Campo clave de usuario").locatedBy("");
     public static final Target LNK_GENERAR_CLAVE = Target.the("Link generar clave").locatedBy("");
-
     public static final Target BTN_OLVIDASTE_TU_USUARIO = Target.the("Boton Recordar").locatedBy("//a[@id='ForgetLink']/span");
-
 }
