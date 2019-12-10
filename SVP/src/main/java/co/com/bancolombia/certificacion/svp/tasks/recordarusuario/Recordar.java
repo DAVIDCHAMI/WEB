@@ -13,7 +13,7 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class Recordar implements Task {
 
-    public static Performable usuario(){
+    public static Performable usuario() {
         return instrumented(Recordar.class);
     }
 

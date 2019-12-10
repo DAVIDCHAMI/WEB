@@ -8,7 +8,6 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 
 import static co.com.bancolombia.certificacion.svp.tasks.autenticacion.AutenticacionConDocumento.autenticarseConDocumentoEnLaSVP;
-import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.AutenticacionPage.TXT_NOMBRE_USUARIO;
 import static co.com.bancolombia.certificacion.svp.userinterface.comunes.ElementosComunesPage.BTN_CONTINUAR;
 import static co.com.bancolombia.certificacion.svp.userinterface.registrarusuario.RegistrarUsuarioPage.*;
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.*;
@@ -36,6 +35,5 @@ public class Registrar implements Task {
                 Click.on(BTN_REGISTRAR_USUARIO),
                 Click.on(BTN_CONTINUAR)
         );
-
     }
 }
