@@ -47,7 +47,7 @@ Característica: Registro de usuarios
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario | clave | segundaClave | tipoDocumento | correoElectronico | celular | palabraClave | mensajeRespuesta                                       |
         ##@externaldata@./src/test/resources/datadriven/registrarusuario/registrar_usuario.xlsx@Datos@4
-      |4|Alterno||||||||||||Ingresa otro usuario. El que ingresaste ya esta en uso|
+      |4|Alterno||||||||||||Ingresa otro usuario. El que ingresaste ya esta en us|
 
   Esquema del escenario: Registro de usuario con usuario ya existente (limite)
     Dado que Juan carga los datos de la prueba
