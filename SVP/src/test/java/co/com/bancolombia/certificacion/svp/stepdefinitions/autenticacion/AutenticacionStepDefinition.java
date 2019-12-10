@@ -19,22 +19,8 @@ public class AutenticacionStepDefinition {
         );
     }
 
-    @Cuando("^el realiza la autenticacion en la SVP con clave invalida$")
+    @Cuando("^el realiza la autenticacion en la SVP (con clave invalida|con clave bloqueada|con usuario inexistente)$")
     public void elRealizaLaAutenticacionEnLaSVPConClaveInvalida() {
-        theActorInTheSpotlight().attemptsTo(
-                autenticarseEnLaSVP()
-        );
-    }
-
-    @Cuando("^el realiza la autenticacion en la SVP con clave bloqueada$")
-    public void elRealizaLaAutenticacionEnLaSVPConClaveBloqueada() {
-        theActorInTheSpotlight().attemptsTo(
-                autenticarseEnLaSVP()
-        );
-    }
-
-    @Cuando("^el realiza la autenticacion en la SVP con usuario inexistente$")
-    public void elRealizaLaAutenticacionEnLaSVPConUsuarioInexistente() {
         theActorInTheSpotlight().attemptsTo(
                 autenticarseEnLaSVP()
         );
