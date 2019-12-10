@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 
-import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.AutenticacionPage.LNK_OLVIDASTE_CONTRASENA;
+import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.AutenticacionPage.BTN_OLVIDASTE_TU_USUARIO;
 import static co.com.bancolombia.certificacion.svp.userinterface.recordarusuario.RecordarUsuarioPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
@@ -20,7 +20,7 @@ public class Recordar implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(LNK_OLVIDASTE_CONTRASENA),
+                Click.on(BTN_OLVIDASTE_TU_USUARIO),
                 Enter.theValue(DatosPrueba.getMap().get("numeroDocumento").toString()).into(TXT_NUMERO_DOCUMENTO),
                 Enter.theValue(DatosPrueba.getMap().get("clave").toString()).into(TXT_CLAVE),
                 Click.on(BTN_RECORDAR)
