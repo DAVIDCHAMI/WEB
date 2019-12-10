@@ -14,8 +14,10 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
 
 @CucumberOptions(
         features = "src/test/resources/features/autenticacion/autenticacion.feature",
-        glue = "co.com.bancolombia.certificacion.svp.stepdefinitions",
-        snippets = SnippetType.CAMELCASE
+        glue = {"co.com.bancolombia.certificacion.svp.stepdefinitions.autenticacion",
+                "co.com.bancolombia.certificacion.svp.stepdefinitions.comunes"
+        },
+       snippets = SnippetType.CAMELCASE
 )
 @RunWith(RunnerPersonalizado.class)
 public class Autenticacion {
@@ -29,4 +31,3 @@ public class Autenticacion {
         DataToFeature.overrideFeatureFiles("./src/test/resources/features/autenticacion/");
     }
 }
-
