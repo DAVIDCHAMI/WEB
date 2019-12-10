@@ -47,4 +47,4 @@ Característica: Recordar usuario
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario | clave | segundaClave | tipoDocumento | mensajeRespuesta                                 |
        ##@externaldata@./src/test/resources/datadriven/recordarusuario/recordar_usuario.xlsx@Datos@4
-      | 1      | Acierto     |                   |             |                   | 123456789       | prueba  | 1234  | 1234         |               | El usuario ha sido enviado al correo electronico |
+      | 1      | Acierto     |                   |             |                   | 123456789       | prueba  | 1234  | 1234         |               | El usuario ha sido enviado al correo electronic |
