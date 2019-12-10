@@ -26,6 +26,6 @@ public class SaldosPorProducto {
 
     @BeforeSuite
     public static void test() throws InvalidFormatException, IOException {
-        DataToFeature.overrideFeatureFiles("./src/test/resources/features/autenticacion/");
+        DataToFeature.overrideFeatureFiles("./src/test/resources/features/saldos/producto/saldosporproducto.feature");
     }
 }
