@@ -8,7 +8,6 @@ import net.serenitybdd.screenplay.questions.Text;
 import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.AutenticacionPage.LBL_CLAVE_INVALIDA;
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.*;
 
-
 public class UsuarioRegistrado implements Question<String> {
 
     public static UsuarioRegistrado mensajeUsuarioRegistrado() {

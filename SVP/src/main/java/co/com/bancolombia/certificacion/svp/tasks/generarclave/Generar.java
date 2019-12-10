@@ -23,8 +23,7 @@ public class Generar implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(TXT_NOMBRE_USUARIO),
-                Enter.theValue(DatosPrueba.getMap().get("tipoDocumento").toString()).into(TXT_NOMBRE_USUARIO),
+                Enter.theValue(DatosPrueba.getMap().get("usuario").toString()).into(TXT_NOMBRE_USUARIO),
                 Click.on(BTN_CONTINUAR),
                 Click.on(LNK_GENERAR_CLAVE),
                 Check.whether(BTN_ENTIENDO_MODAL.resolveFor(actor).isVisible()).andIfSo(
