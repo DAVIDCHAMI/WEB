@@ -10,7 +10,7 @@ Característica: Registro de usuarios
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | correoElectronico   | celular   | palabraClave   | mensajeRespuesta   |
       | <idCaso> | <orientacion> | <codigoTransaccion> | <codigoError> | <resultadoEsperado> | <numeroDocumento> | <usuario> | <clave> | <segundaClave> | <tipoDocumento> | <correoElectronico> | <celular> | <palabraClave> | <mensajeRespuesta> |
     Cuando el completa el registro en SVP
-    Entonces el deberia de ver el mensaje de
+    Entonces el deberia de ver el mensaje de respuesta
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario | clave | segundaClave | tipoDocumento | correoElectronico | celular    | palabraClave | mensajeRespuesta   |
        ##@externaldata@./src/test/resources/datadriven/registrarusuario/registrar_usuario.xlsx@Datos@1
