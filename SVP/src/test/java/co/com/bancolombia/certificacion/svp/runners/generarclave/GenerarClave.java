@@ -14,7 +14,9 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
 
 @CucumberOptions(
         features = "src/test/resources/features/generarclave/generar_clave.feature",
-        glue = "co.com.bancolombia.certificacion.svp.stepdefinitions",
+        glue = {"co.com.bancolombia.certificacion.svp.stepdefinitions.generarclave",
+                "co.com.bancolombia.certificacion.svp.stepdefinitions.comunes"
+        },
         snippets = SnippetType.CAMELCASE
 )
 @RunWith(RunnerPersonalizado.class)
