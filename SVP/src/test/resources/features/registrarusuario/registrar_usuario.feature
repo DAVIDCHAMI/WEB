@@ -14,7 +14,7 @@ Característica: Registro de usuarios
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario | clave | segundaClave | tipoDocumento | correoElectronico | celular    | palabraClave | mensajeRespuesta   |
        ##@externaldata@./src/test/resources/datadriven/registrarusuario/registrar_usuario.xlsx@Datos@1
-      |1|Acierto||||123456789|usr01|1234|1234||da@gmail.com|3216549877|hola|¡Registro exitoso!|
+      |1|Acierto||||25130103|OSVPPRU22|1234|1234||da@gmail.com|3182314777|hola|¡Registro exitoso!|
 
   Esquema del escenario: Registro de usuario fallido
     Dado que Juan carga los datos de la prueba

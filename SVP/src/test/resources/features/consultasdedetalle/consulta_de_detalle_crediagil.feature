@@ -5,13 +5,13 @@ Característica: SVP autenticacion
   Quiero iniciar sesion en el SVP
   Para realizar transacciones en la SVP
 
-@test1
-  Esquema del escenario: Consulta detalle credito de comsumo
+
+  Esquema del escenario: Consulta detalle crediagil
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
       | <idCaso> | <orientacion> | <codigoTransaccion> | <codigoError> | <resultadoEsperado> | <numeroDocumento> | <usuario> | <clave> | <segundaClave> | <tipoDocumento> |
     Cuando el realiza la autenticacion en la SVP
-    Entonces el deberia de ver el detalle del credito de consumo
+    Entonces el deberia de ver el detalle  de crediagil
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/consultasdedetalle/consultadedetallecuentas.xlsx@Datos@1
