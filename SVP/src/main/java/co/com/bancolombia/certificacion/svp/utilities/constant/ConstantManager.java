@@ -8,6 +8,7 @@ public class ConstantManager {
     public static final String ALTERNO = "ALTERNO";
     public static final String FORMATO_HORA_HHMMSS = "HHmmss";
     public static final String FORMATO_FECHA_YYYYMMDD = "yyyyMMdd";
+    public static final String COMA = ",";
     public static final String EMPTY = "";
     public static final String REMOVE_MIDDLE_SCRIPT = "-";
     public static final String MM_DD_YYYY = "MM/dd/yyyy";
@@ -37,6 +38,7 @@ public class ConstantManager {
     public static final String CELULAR = "celular";
     public static final String PALABRA_CLAVE = "palabraClave";
     public static final String MENSAJE_RESPUESTA = "mensajeRespuesta";
+    public static final String PRODUCTOS = "productos";
 
     private ConstantManager() {
         throw new IllegalStateException(CONSTANT_CLASS);

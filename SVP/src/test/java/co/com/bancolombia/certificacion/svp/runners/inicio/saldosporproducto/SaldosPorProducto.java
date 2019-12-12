@@ -1,4 +1,4 @@
-package co.com.bancolombia.certificacion.svp.runners.saldos.producto;
+package co.com.bancolombia.certificacion.svp.runners.inicio.saldosporproducto;
 
 import co.com.bancolombia.certificacion.svp.utilities.exceldata.BeforeSuite;
 import co.com.bancolombia.certificacion.svp.utilities.exceldata.DataToFeature;
@@ -13,7 +13,7 @@ import java.io.IOException;
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTypeClass.RUNNER_CLASS;
 
 @CucumberOptions(
-        features = "src/test/resources/features/saldos/producto/saldosporproducto.feature",
+        features = "src/test/resources/features/inicio/saldosporproducto/saldosporproducto.feature",
         glue = {"co.com.bancolombia.certificacion.svp.stepdefinitions"},
        snippets = SnippetType.CAMELCASE
 )
@@ -24,8 +24,10 @@ public class SaldosPorProducto {
         throw new IllegalStateException(RUNNER_CLASS);
     }
 
+
+    //
     @BeforeSuite
     public static void test() throws InvalidFormatException, IOException {
-        DataToFeature.overrideFeatureFiles("./src/test/resources/features/saldos/producto/saldosporproducto.feature");
+        DataToFeature.overrideFeatureFiles("./src/test/resources/features/inicio/saldosporproducto/saldosporproducto.feature");
     }
 }
