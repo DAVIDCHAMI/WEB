@@ -15,17 +15,17 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
 @CucumberOptions(
         features = "src/test/resources/features/inicio/saldosporproducto/saldosporproducto.feature",
         glue = {"co.com.bancolombia.certificacion.svp.stepdefinitions"},
-       snippets = SnippetType.CAMELCASE
+       snippets = SnippetType.CAMELCASE,tags = "@tag1"
 )
 @RunWith(RunnerPersonalizado.class)
-public class SaldosPorProducto {
+public class SaldosPorProductoVisibles {
 
-    private SaldosPorProducto() {
+    private SaldosPorProductoVisibles() {
         throw new IllegalStateException(RUNNER_CLASS);
     }
 
 
-    //
+
     @BeforeSuite
     public static void test() throws InvalidFormatException, IOException {
         DataToFeature.overrideFeatureFiles("./src/test/resources/features/inicio/saldosporproducto/saldosporproducto.feature");

@@ -38,7 +38,12 @@ public class ConstantManager {
     public static final String CELULAR = "celular";
     public static final String PALABRA_CLAVE = "palabraClave";
     public static final String MENSAJE_RESPUESTA = "mensajeRespuesta";
-    public static final String PRODUCTOS = "productos";
+
+    public static final String CUENTAS = "cuentas";
+    public static final String TARJETASDECREDITO = "tarjetasCredito";
+    public static final String CREDITOS = "creditos";
+    public static final String INVERSIONES = "inversiones";
+    public static final String CREDIAGIL = "crediagil";
 
     private ConstantManager() {
         throw new IllegalStateException(CONSTANT_CLASS);
