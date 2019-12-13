@@ -1,7 +1,6 @@
 package co.com.bancolombia.certificacion.svp.questions.inicio.saldosporproducto;
 
 import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
-import co.com.bancolombia.certificacion.svp.userinterface.inicio.InicioPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 

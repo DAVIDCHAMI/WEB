@@ -1,7 +1,6 @@
 package co.com.bancolombia.certificacion.svp.userinterface.comunes;
 
 import net.serenitybdd.screenplay.targets.Target;
-import org.openqa.selenium.By;
 
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTypeClass.UI_CLASS;
 

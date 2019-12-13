@@ -14,7 +14,7 @@ public class ProductoVisible {
     private static Actor actor;
     private static String producto;
     private static String numerosProductos;
-    public static boolean resultado =true;
+    private static boolean resultado =true;
     private static final String CUENTAS = "Cuentas";
 
     public ProductoVisible(Actor actor) {
@@ -38,7 +38,9 @@ public class ProductoVisible {
     public boolean eIdentificaQueSePresenta() {
 
         if (numerosProductos != null && !numerosProductos.equals(EMPTY)) {
-            if (!CUENTAS.equals(producto)) {actor.attemptsTo(Click.on(LBL_PRODUCTOS.of(producto)));}
+            if (!CUENTAS.equals(producto)) {
+                actor.attemptsTo(Click.on(LBL_PRODUCTOS.of(producto)));
+            }
             for (String numeroProducto : numerosProductos.split(COMA)) {
                 if (!LBL_PRODUCTOS.of(numeroProducto).resolveFor(actor).isVisible()) {
                     resultado = false;

@@ -17,18 +17,15 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantMa
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.CREDIAGIL;
 
 public class SaldosPorProductoVisibles implements Question<Boolean> {
-
-
-
-    public SaldosPorProductoVisibles() {}
-
+    private static boolean respuesta;
     @Override
     public Boolean answeredBy(Actor actor) {
 
-        return el(actor).visualizalProducto(PRODUCTO_CUENTAS).conLosNumeros(DatosPrueba.getMap().get(CUENTAS).toString()).eIdentificaQueSePresenta()
+        respuesta = el(actor).visualizalProducto(PRODUCTO_CUENTAS).conLosNumeros(DatosPrueba.getMap().get(CUENTAS).toString()).eIdentificaQueSePresenta()
                 &&el(actor).visualizalProducto(PRODUCTO_TARJETASDECREDITO).conLosNumeros(DatosPrueba.getMap().get(TARJETASDECREDITO).toString()).eIdentificaQueSePresenta()
-                &&el(actor).visualizalProducto(PRODUCTO_CREDITOS).conLosNumeros(DatosPrueba.getMap().get(CREDITOS).toString()).eIdentificaQueSePresenta()
-                &&el(actor).visualizalProducto(PRODUCTO_INVERSIONES).conLosNumeros(DatosPrueba.getMap().get(INVERSIONES).toString()).eIdentificaQueSePresenta()
+                &&el(actor).visualizalProducto(PRODUCTO_CREDITOS).conLosNumeros(DatosPrueba.getMap().get(CREDITOS).toString()).eIdentificaQueSePresenta();
+
+        return respuesta &&el(actor).visualizalProducto(PRODUCTO_INVERSIONES).conLosNumeros(DatosPrueba.getMap().get(INVERSIONES).toString()).eIdentificaQueSePresenta()
                 &&el(actor).visualizalProducto(PRODUCTO_CREDIAGIL).conLosNumeros(DatosPrueba.getMap().get(CREDIAGIL).toString()).eIdentificaQueSePresenta();
     }
 
