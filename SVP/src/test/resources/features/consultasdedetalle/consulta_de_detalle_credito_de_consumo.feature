@@ -5,7 +5,7 @@ Característica: SVP autenticacion
   Quiero iniciar sesion en el SVP
   Para realizar transacciones en la SVP
 
-  @test1
+
   Esquema del escenario: Consulta detalle credito de comsumo
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |

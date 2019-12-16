@@ -6,6 +6,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 
+import static co.com.bancolombia.certificacion.svp.interactions.wait.Esperar.unTiempo;
 import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.AutenticacionPage.*;
 import static co.com.bancolombia.certificacion.svp.userinterface.comunes.ElementosComunesPage.BTN_CONTINUAR;
 

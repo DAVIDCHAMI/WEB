@@ -5,7 +5,7 @@ Característica: SVP autenticacion
   Quiero iniciar sesion en el SVP
   Para realizar transacciones en la SVP
 
-@test1
+
   Esquema del escenario: Consulta detalle tarjetas de credito.
     Dado que Juan carga los datos de la prueba
      | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
@@ -17,7 +17,6 @@ Característica: SVP autenticacion
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/consultasdedetalle/consultadedetallecuentas.xlsx@Datos@1
       |1|Acierto|||||OSVPPRU04|1234|||
-
 
   Esquema del escenario: Consulta detalle tarjetas de credito E-card
     Dado que Juan carga los datos de la prueba

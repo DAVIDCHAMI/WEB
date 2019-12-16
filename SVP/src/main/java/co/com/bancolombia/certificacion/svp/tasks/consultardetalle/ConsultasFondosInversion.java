@@ -1,12 +1,12 @@
 package co.com.bancolombia.certificacion.svp.tasks.consultardetalle;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import static net.serenitybdd.screenplay.Tasks.instrumented;
+import static  net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class ConsultasCuentasCorriente implements Task {
+public class ConsultasFondosInversion implements Task {
 
-    public static ConsultasCuentasCorriente consultaDeDetalleCorriente() {
-        return instrumented(ConsultasCuentasCorriente.class);
+    public static ConsultasFondosInversion consultarDetalleFondosInversion() {
+        return instrumented(ConsultasFondosInversion.class);
     }
 
     @Override
@@ -14,5 +14,6 @@ public class ConsultasCuentasCorriente implements Task {
         actor.attemptsTo(
 
         );
+
     }
 }

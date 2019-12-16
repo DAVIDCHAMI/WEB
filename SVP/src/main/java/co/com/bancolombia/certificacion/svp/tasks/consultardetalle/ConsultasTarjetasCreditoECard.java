@@ -3,10 +3,10 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class ConsultasCuentasCorriente implements Task {
+public class ConsultasTarjetasCreditoECard implements Task {
 
-    public static ConsultasCuentasCorriente consultaDeDetalleCorriente() {
-        return instrumented(ConsultasCuentasCorriente.class);
+    public static ConsultasTarjetasCreditoECard consultarDetalleTarjetaCreditoECard() {
+        return instrumented(ConsultasTarjetasCreditoECard.class);
     }
 
     @Override
