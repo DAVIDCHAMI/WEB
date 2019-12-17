@@ -15,7 +15,7 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@1
-      |1|Acierto|||¡Hola!||OSVPPRU04|1234|||
+      |1|Acierto|||¡Hola!||OSVPPRU11|1234|||
 
   Esquema del escenario: Inicio de sesion exitoso sin imagen y frase de seguridad
     Dado que Juan carga los datos de la prueba
@@ -26,18 +26,7 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@2
-      |2|Acierto|||¡Hola!||OSVPPRU04|1234|||
-
-  Esquema del escenario: Inicio de sesion exitoso con documento de identidad (sin usuario registrado)
-    Dado que Juan carga los datos de la prueba
-      | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
-      | <idCaso> | <orientacion> | <codigoTransaccion> | <codigoError> | <resultadoEsperado> | <numeroDocumento> | <usuario> | <clave> | <segundaClave> | <tipoDocumento> |
-    Cuando el realiza la autenticacion en la SVP con numero de documento
-    Entonces el deberia de ver la pantalla de inicio de la SVP
-    Ejemplos:
-      | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
-       ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@3
-      |3|Acierto|||||||||
+      |2|Acierto|||¡Hola!||OSVPPRU12|1234|||
 
 
   Esquema del escenario: Inicio de sesion exitoso con documento de identidad  (con usuario registrado)
@@ -49,8 +38,7 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@4
-      |4|Acierto|||Usuario o clave inválida. Inténtalo nuevamente|20513841|USUARIOS41|1234|||
-
+      |4|Acierto|||Usuario o clave inválida. Inténtalo nuevamente|52269682|OSVPPRU10|1234|||
 
   Esquema del escenario: Inicio de sesion con clave invalida
     Dado que Juan carga los datos de la prueba
@@ -61,9 +49,9 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@5
-      |5|Alterno|||Usuario o clave inválida. Inténtalo nuevamente||OSVPPRU04|4567|||
+      |5|Alterno|||Usuario o clave inválida. Inténtalo nuevamente||OSVPPRU01|4567|||
 
-
+  @test1
   Esquema del escenario: Inicio de sesion con clave bloqueada
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |

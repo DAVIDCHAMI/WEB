@@ -1,5 +1,6 @@
 package co.com.bancolombia.certificacion.svp.interactions.wait;
 
+import net.serenitybdd.core.time.InternalSystemClock;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 
@@ -15,7 +16,7 @@ public class Esperar implements Interaction {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(unTiempo(time));
+        new InternalSystemClock().pauseFor(time);
     }
 
     public static Esperar unTiempo(int time){
