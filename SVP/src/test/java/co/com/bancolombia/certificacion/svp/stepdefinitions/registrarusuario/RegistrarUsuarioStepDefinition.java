@@ -5,6 +5,8 @@ import co.com.bancolombia.certificacion.svp.tasks.registrarusuario.Registrar;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
 
+import static co.com.bancolombia.certificacion.svp.tasks.registrarusuario.LlenarFormularioRegistro.llenaFormularioRegistro;
+import static co.com.bancolombia.certificacion.svp.tasks.registrarusuario.RegistrarMaximoIntentos.ingresaVariosUsuariosExistentes;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
@@ -27,21 +29,21 @@ public class RegistrarUsuarioStepDefinition {
     @Cuando("^el realiza un registro con diferentes usuarios ya existentes$")
     public void elRealizaUnRegistroConDiferentesUsuariosYaExistentes() {
         theActorInTheSpotlight().attemptsTo(
-                Registrar.usuario()
+                ingresaVariosUsuariosExistentes()
         );
     }
 
     @Cuando("^el realiza un registro con usuario que ya existe en la SVP$")
     public void elRealizaUnRegistroConUsuarioQueYaExisteEnLaSVP() {
         theActorInTheSpotlight().attemptsTo(
-                Registrar.usuario()
+                llenaFormularioRegistro()
         );
     }
 
     @Cuando("^el realiza un registro con usuario y documento igual en SVP$")
     public void elRealizaUnRegistroConUsuarioYDocumentoIgualEnSVP() {
         theActorInTheSpotlight().attemptsTo(
-                Registrar.usuario()
+                llenaFormularioRegistro()
         );
     }
 
