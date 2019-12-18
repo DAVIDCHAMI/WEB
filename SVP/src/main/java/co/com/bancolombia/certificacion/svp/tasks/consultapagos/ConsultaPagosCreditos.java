@@ -14,4 +14,3 @@ public class ConsultaPagosCreditos implements Task {
         actor.attemptsTo();
     }
 }
-

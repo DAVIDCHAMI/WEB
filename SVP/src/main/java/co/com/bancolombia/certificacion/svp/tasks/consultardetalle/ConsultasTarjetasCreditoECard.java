@@ -12,7 +12,6 @@ public class ConsultasTarjetasCreditoECard implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-
         );
     }
 }

@@ -14,6 +14,5 @@ public class ConsultasFondosInversion implements Task {
         actor.attemptsTo(
 
         );
-
     }
 }

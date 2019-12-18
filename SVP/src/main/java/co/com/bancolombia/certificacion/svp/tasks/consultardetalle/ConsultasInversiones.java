@@ -13,6 +13,5 @@ public class ConsultasInversiones implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
         );
-
     }
 }
