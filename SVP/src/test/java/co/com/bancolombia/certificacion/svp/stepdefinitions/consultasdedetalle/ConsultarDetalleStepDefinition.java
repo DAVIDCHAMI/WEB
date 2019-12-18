@@ -11,6 +11,7 @@ import static co.com.bancolombia.certificacion.svp.questions.consultasdetallecue
 import static co.com.bancolombia.certificacion.svp.questions.consultasdetallecuentas.CaracteristicasDeInversione.lasCaracteristicaDeInversiones;
 import static co.com.bancolombia.certificacion.svp.questions.consultasdetallecuentas.CaracteristicasDeTarjetasCredito.lasCaracteristicasDeLasTarjetasDeCredito;
 import static co.com.bancolombia.certificacion.svp.questions.consultasdetallecuentas.CaracteristicasDeTarjetasCreditosEcard.lasCaracteristicasDeTarjetasCreditosECard;
+import static co.com.bancolombia.certificacion.svp.questions.consultasdetallecuentas.ConsultarCreditoOpcionPagarDisponible.laOpcionDePagarDisponible;
 import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasCrediagil.consultarDetalleCrediagil;
 import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasCredito.consultaDetalleCredito;
 import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasCuentaAhorro.consultaDetalleCuentas;
@@ -103,5 +104,11 @@ public class ConsultarDetalleStepDefinition {
     public void consultaElDetalleDeLaTarjetaDeCreditoECard() {
         theActorInTheSpotlight().attemptsTo(consultarDetalleTarjetaCreditoECard());
     }
+
+    @Entonces("^el deberia de ver la opcion de pagar disponible$")
+    public void elDeberiaDeVerLaOpcionDePagarDisponible() {
+        theActorInTheSpotlight().should(seeThat(laOpcionDePagarDisponible()));
+    }
+
 
 }

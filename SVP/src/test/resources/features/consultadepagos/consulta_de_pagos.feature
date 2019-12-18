@@ -45,7 +45,6 @@ Característica: SVP autenticacion
       ##@externaldata@./src/test/resources/datadriven/consultadepagos/consultadepagos.xlsx@Datos@1
       |1|Acierto|||||OSVPPRU15|1234|||
 
-
   Esquema del escenario: Consulta de pagos de tarjetas de credito (usuario sin tarjetas de credito)
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
