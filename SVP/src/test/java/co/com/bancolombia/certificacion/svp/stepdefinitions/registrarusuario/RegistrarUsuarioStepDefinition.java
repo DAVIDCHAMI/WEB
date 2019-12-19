@@ -16,7 +16,8 @@ public class RegistrarUsuarioStepDefinition {
     @Cuando("^el realiza un registro con usuario y documento igual en SVP$")
     public void elRealizaUnRegistroConUsuarioYDocumentoIgualEnSVP() {
         theActorInTheSpotlight().attemptsTo(
-                registrarUsuario ()
+                autenticarseConDocumentoEnLaSVP(),
+                llenaElPrimerFormularioDeRegistro()
         );
     }
 
