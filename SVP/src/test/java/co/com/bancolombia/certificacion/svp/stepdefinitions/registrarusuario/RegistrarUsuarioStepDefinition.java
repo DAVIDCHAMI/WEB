@@ -1,7 +1,6 @@
 package co.com.bancolombia.certificacion.svp.stepdefinitions.registrarusuario;
 
 import co.com.bancolombia.certificacion.svp.questions.registrarusuario.MensajeRealizarRegistro;
-import co.com.bancolombia.certificacion.svp.tasks.registrarusuario.RegistrarUsuario;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
 
