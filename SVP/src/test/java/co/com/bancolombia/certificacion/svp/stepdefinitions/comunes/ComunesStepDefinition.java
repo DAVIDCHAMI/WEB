@@ -24,12 +24,12 @@ public class ComunesStepDefinition {
     }
 
     @Dado("^que (.*) carga los datos de la prueba$")
-    public void queCargoLosDatosDeLaPrueba(String actor, List<Map<String, Object>> informacion) {
-        theActorCalled(actor).wasAbleTo(
-                cargoLosDatosDeLaTransaccionConLaSiguiente(informacion),
-                AbrirNavegador.paraSVP()
-        );
-    }
+public void queCargoLosDatosDeLaPrueba(String actor, List<Map<String, Object>> informacion) {
+    theActorCalled(actor).wasAbleTo(
+            cargoLosDatosDeLaTransaccionConLaSiguiente(informacion),
+            AbrirNavegador.paraSVP()
+    );
+}
 
     @Entonces("^el deberia de ver el mensaje de respuesta$")
     public void elDeberiaDeVerElMensajeDeRespuesta() {

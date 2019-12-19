@@ -14,6 +14,6 @@ public class AutenticacionPage extends PageObject {
     public static final Target LBL_FRASE_SEGURIDAD=Target.the("Frase de seguridad del usuario").located(By.id("Phrase2"));
     public static final Target LBL_LOGIN_USUARIO=Target.the("Nombre de usuario").locatedBy("//div[@id='b1-Title']/span[contains(text(),'Hola')]");
     public static final Target LBL_CLAVE_INVALIDA=Target.the("Mensaje de clave invalida").located(By.id("b7-MessageContent"));
-    public static final Target LBL_CLAVE_BLOQUEADA=Target.the("Mensaje de clave bloqueada").located(By.id("b9-ErrorDescription"));
+    public static final Target LBL_CLAVE_BLOQUEADA=Target.the("Mensaje de clave bloqueada").located(By.id("b7-ErrorDescription"));
     public static final Target BTN_OLVIDASTE_TU_USUARIO = Target.the("Boton Recordar").locatedBy("//a[@id='ForgetLink']/span");
 }

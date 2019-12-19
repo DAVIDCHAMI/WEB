@@ -37,9 +37,10 @@ Característica: SVP autenticacion
     Entonces el deberia de ver un mensaje Usuario o clave invalida. Intentalo nuevamente
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
-       ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@4
+       ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@3
       |4|Acierto|||Usuario o clave inválida. Inténtalo nuevamente|52269682|OSVPPRU10|1234|||
 
+@test1
   Esquema del escenario: Inicio de sesion con clave invalida
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
@@ -48,10 +49,10 @@ Característica: SVP autenticacion
     Entonces el deberia de observar un mensaje de Usuario o clave invalida. Intentalo nuevamente
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
-       ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@5
-      |5|Alterno|||Usuario o clave inválida. Inténtalo nuevamente||OSVPPRU01|4567|||
+       ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@4
+      |5|Alterno|||Usuario o clave inválida. Inténtalo nuevamente||chipote87|4567|||
 
-  @test1
+
   Esquema del escenario: Inicio de sesion con clave bloqueada
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
@@ -60,7 +61,7 @@ Característica: SVP autenticacion
     Entonces el deberia de ver mensaje de clave bloqueada
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
-       ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@6
+       ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@5
       |6|Alterno|||La clave que usas en el cajero está bloqueada. Debes activarla en la Sucursal Física. Para mayor información comunícate con la Sucursal Telefónica.|1989636238||1234|||
 
 
@@ -72,5 +73,5 @@ Característica: SVP autenticacion
     Entonces el deberia de visualizar un mensaje de Usuario o clave invalida
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
-       ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@7
+       ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@6
       |7|Alterno|||Usuario o clave inválida. Inténtalo nuevamente|854124014||1234|||
