@@ -17,12 +17,12 @@ public class LlenarFormularioRegistro implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(autenticarseConDocumentoEnLaSVP(),
+        actor.attemptsTo(
                 Enter.theValue(DatosPrueba.getMap().get(USUARIO).toString()).into(TXT_CREAR_USUARIO),
                 Enter.theValue(DatosPrueba.getMap().get(CORREO_ELECTRONICO).toString()).into(TXT_CORREO_ELECTRONICO),
                 Enter.theValue(DatosPrueba.getMap().get(CELULAR).toString()).into(TXT_CELULAR),
-                Click.on(TXT_CREAR_USUARIO),
-                Click.on(BTN_CONTINUAR));
+                Click.on(TXT_CREAR_USUARIO)
+        );
     }
 
     public static LlenarFormularioRegistro llenaFormularioRegistro(){
