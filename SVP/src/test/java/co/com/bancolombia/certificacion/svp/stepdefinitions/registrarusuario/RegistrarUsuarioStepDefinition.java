@@ -5,25 +5,27 @@ import co.com.bancolombia.certificacion.svp.tasks.registrarusuario.RegistrarUsua
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
 
+import static co.com.bancolombia.certificacion.svp.tasks.autenticacion.AutenticacionConDocumento.autenticarseConDocumentoEnLaSVP;
 import static co.com.bancolombia.certificacion.svp.tasks.registrarusuario.LLenarFormularioUsuario.llenaElPrimerFormularioDeRegistro;
-import static co.com.bancolombia.certificacion.svp.tasks.registrarusuario.LlenarFormularioRegistro.llenaFormularioRegistro;
 import static co.com.bancolombia.certificacion.svp.tasks.registrarusuario.RegistrarMaximoIntentos.ingresaVariosUsuariosExistentes;
+import static co.com.bancolombia.certificacion.svp.tasks.registrarusuario.RegistrarUsuario.registrarUsuario;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class RegistrarUsuarioStepDefinition {
 
-    @Cuando("^el completa el registro en SVP$")
-    public void elCompletaElRegistroEnSVP() {
+    @Cuando("^el realiza un registro con usuario y documento igual en SVP$")
+    public void elRealizaUnRegistroConUsuarioYDocumentoIgualEnSVP() {
         theActorInTheSpotlight().attemptsTo(
-                RegistrarUsuario.usuario()
+                registrarUsuario ()
         );
     }
 
-    @Cuando("^el realiza un registro incompleto en SVP$")
-    public void elRealizaUnRegistroIncompletoEnSVP() {
+    @Cuando("^el realiza un registro con usuario que ya existe en la SVP$")
+    public void elRealizaUnRegistroConUsuarioQueYaExisteEnLaSVP() {
         theActorInTheSpotlight().attemptsTo(
-                RegistrarUsuario.usuario()
+                autenticarseConDocumentoEnLaSVP(),
+                llenaElPrimerFormularioDeRegistro()
         );
     }
 
@@ -34,17 +36,10 @@ public class RegistrarUsuarioStepDefinition {
         );
     }
 
-    @Cuando("^el realiza un registro con usuario que ya existe en la SVP$")
-    public void elRealizaUnRegistroConUsuarioQueYaExisteEnLaSVP() {
+    @Cuando("^el completa el registro en SVP$")
+    public void elCompletaElRegistroEnSVP() {
         theActorInTheSpotlight().attemptsTo(
-                llenaElPrimerFormularioDeRegistro()
-        );
-    }
-
-    @Cuando("^el realiza un registro con usuario y documento igual en SVP$")
-    public void elRealizaUnRegistroConUsuarioYDocumentoIgualEnSVP() {
-        theActorInTheSpotlight().attemptsTo(
-                llenaFormularioRegistro()
+                registrarUsuario ()
         );
     }
 
