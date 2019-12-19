@@ -1,7 +1,6 @@
 package co.com.bancolombia.certificacion.svp.questions.comunes;
 
 import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
-import co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
