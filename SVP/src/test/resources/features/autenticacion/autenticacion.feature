@@ -28,7 +28,6 @@ Característica: SVP autenticacion
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@2
       |2|Acierto|||¡Hola!||OSVPPRU12|1234|||
 
-
   Esquema del escenario: Inicio de sesion exitoso con documento de identidad  (con usuario registrado)
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
@@ -40,7 +39,7 @@ Característica: SVP autenticacion
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@3
       |4|Acierto|||Usuario o clave inválida. Inténtalo nuevamente|52269682|OSVPPRU10|1234|||
 
-@test1
+
   Esquema del escenario: Inicio de sesion con clave invalida
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |

@@ -17,6 +17,11 @@ public class MensajeUsuarioInexistente implements Question<String> {
 
     @Override
     public String answeredBy(Actor actor) {
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return DatosPrueba.getMap().get(ORIENTACION).toString().equalsIgnoreCase(ALTERNO)? Text.of(LBL_CLAVE_INVALIDA).viewedBy(actor).asString():"";
     }
 }
