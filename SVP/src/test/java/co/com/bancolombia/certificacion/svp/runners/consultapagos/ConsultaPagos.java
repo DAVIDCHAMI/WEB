@@ -1,5 +1,4 @@
 package co.com.bancolombia.certificacion.svp.runners.consultapagos;
-
 import co.com.bancolombia.certificacion.svp.utilities.exceldata.BeforeSuite;
 import co.com.bancolombia.certificacion.svp.utilities.exceldata.DataToFeature;
 import co.com.bancolombia.certificacion.svp.utilities.runner.RunnerPersonalizado;
@@ -17,7 +16,6 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
                 "co.com.bancolombia.certificacion.svp.stepdefinitions.autenticacion",
                 "co.com.bancolombia.certificacion.svp.stepdefinitions.comunes"
         },
-        tags={"@test1"},
         snippets = SnippetType.CAMELCASE
 )
 @RunWith(RunnerPersonalizado.class)
@@ -30,5 +28,4 @@ public class ConsultaPagos {
     public static void test() throws InvalidFormatException, IOException {
         DataToFeature.overrideFeatureFiles("./src/test/resources/features/consultadepagos/");
     }
-
 }
