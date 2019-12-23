@@ -29,8 +29,6 @@ Característica: Recordar usuario
        ##@externaldata@./src/test/resources/datadriven/recordarusuario/recordar_usuario.xlsx@Datos@2
       |2|Acierto||||25130110|USUCTDC1|1234|1234||El usuario ha sido enviado al correo electrónico.|
 
-
-  @tag1
   Esquema del escenario: Bloqueo por intentos fallidos al recordar usuario
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | mensajeRespuesta   |
