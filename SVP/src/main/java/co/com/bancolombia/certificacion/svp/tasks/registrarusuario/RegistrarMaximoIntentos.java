@@ -15,7 +15,7 @@ public class RegistrarMaximoIntentos implements Task {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo (autenticarseConDocumentoEnLaSVP());
-        for (int i = 0; i < Integer.parseInt(DatosPrueba.getMap().get(INTENTOS).toString()); i++) {
+        for (int i = 0; i < INTENTOS; i++) {
             actor.attemptsTo(llenaElPrimerFormularioDeRegistro());
         }
     }
