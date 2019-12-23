@@ -27,7 +27,7 @@ public class AutenticacionConDocumento  implements Task {
                 Enter.theValue(DatosPrueba.getMap().get(NUMERO_DOCUMENTO).toString()).into(TXT_NOMBRE_USUARIO),
                 Click.on(BTN_CONTINUAR), WaitUntil.the(TXT_CLAVE, isVisible()),
                 Enter.theValue(DatosPrueba.getMap().get(CLAVE).toString()).into(TXT_CLAVE),
-                Click.on(BTN_CONTINUAR),unTiempo(TIEMPO_ESPERA_LOGIN)
+                Click.on(BTN_CONTINUAR),unTiempo()
         );
     }
 }
