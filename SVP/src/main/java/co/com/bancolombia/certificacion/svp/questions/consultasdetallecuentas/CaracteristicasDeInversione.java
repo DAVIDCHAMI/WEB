@@ -1,8 +1,9 @@
 package co.com.bancolombia.certificacion.svp.questions.consultasdetallecuentas;
+
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-public class CaracteristicasDeInversione  implements Question<Boolean> {
+public class CaracteristicasDeInversione implements Question<Boolean> {
 
     public static CaracteristicasDeInversione lasCaracteristicaDeInversiones() {
         return new CaracteristicasDeInversione();

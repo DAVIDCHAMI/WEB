@@ -1,17 +1,18 @@
 package co.com.bancolombia.certificacion.svp.stepdefinitions.consultapagos;
+
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
 
 import static co.com.bancolombia.certificacion.svp.questions.consultasdepagos.ConsultaDePagos.pagosDisponibles;
 import static co.com.bancolombia.certificacion.svp.questions.consultasdepagos.ConsultaPagosCreditos.pagosDisponiblesDeCreditos;
-import static co.com.bancolombia.certificacion.svp.questions.consultasdepagos.MensajeConsultaDePagosDeCreditos.*;
+import static co.com.bancolombia.certificacion.svp.questions.consultasdepagos.MensajeConsultaDePagosDeCreditos.mensajeUstedNoTienePagosDeCreditos;
 import static co.com.bancolombia.certificacion.svp.questions.consultasdepagos.MensajeConsultaDePagosTarjetaCreditos.mensajeProductoNoDisponible;
 import static co.com.bancolombia.certificacion.svp.tasks.consultapagos.ConsultaPagosCreditos.consultarLosPagosDeCreditos;
 import static co.com.bancolombia.certificacion.svp.tasks.consultapagos.ConsultaPagosTrajetasCreditos.consultarLosPagosDeTarjetasDeCreditos;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
-public class ConsultaPagosStepDefinition  {
+public class ConsultaPagosStepDefinition {
 
     @Cuando("^consulta los pagos de tarjetes de creditos$")
     public void consultaLosPagosDeTarjetesDeCreditos() {

@@ -38,7 +38,7 @@ Característica: Recordar usuario
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario  | clave | segundaClave | tipoDocumento | mensajeRespuesta |
        ##@externaldata@./src/test/resources/datadriven/recordarusuario/recordar_usuario.xlsx@Datos@3
-      |3|Alterno||||25130111|registro01 |4321|1234||¡Lo sentimos!|
+      |3|Alterno||||25130233|USUCTDC3|4321|1234||¡Lo sentimos!|
 
   Esquema del escenario: Recordar usuario - clave bloqueada
     Dado que Juan carga los datos de la prueba

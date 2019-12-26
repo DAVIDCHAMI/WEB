@@ -5,7 +5,6 @@ Característica: SVP autenticacion
   Quiero iniciar sesion en el SVP
   Pra realizar transacciones en la SVP
 
-  @test1
   Esquema del escenario: Consulta de pagos de tarjetas de credito exitoso
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
@@ -15,7 +14,7 @@ Característica: SVP autenticacion
     Entonces el deberia de ver los productos que tienen pagos disponibles
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario | clave | segundaClave | tipoDocumento |
-     ##@externaldata@./src/test/resources/datadriven/consultadepagos/consultadepagos.xlsx@Datos@1
+     ##@externaldata@./src/test/resources/datadriven/consultadepagos/consulta_de_pagos.xlsx@Datos@1
       |1|Acierto|||||OSVPPRU15|1234|||
 
   Esquema del escenario: Consulta de pagos de creditos (usuario sin credito)
@@ -27,7 +26,7 @@ Característica: SVP autenticacion
     Entonces el deberia de observar mensaje Usted no tiene credito
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario | clave | segundaClave | tipoDocumento |
-   ##@externaldata@./src/test/resources/datadriven/consultadepagos/consultadepagos.xlsx@Datos@1
+   ##@externaldata@./src/test/resources/datadriven/consultadepagos/consulta_de_pagos.xlsx@Datos@1
       |1|Acierto|||||OSVPPRU15|1234|||
 
   Esquema del escenario: Consulta de pagos de credito exitoso
@@ -39,7 +38,7 @@ Característica: SVP autenticacion
     Entonces el deberia de ver los creditos que tienen pagos disponibles
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario | clave | segundaClave | tipoDocumento |
-      ##@externaldata@./src/test/resources/datadriven/consultadepagos/consultadepagos.xlsx@Datos@1
+      ##@externaldata@./src/test/resources/datadriven/consultadepagos/consulta_de_pagos.xlsx@Datos@1
       |1|Acierto|||||OSVPPRU15|1234|||
 
   Esquema del escenario: Consulta de pagos de tarjetas de credito (usuario sin tarjetas de credito)
@@ -51,5 +50,5 @@ Característica: SVP autenticacion
     Entonces el deberia de observar mensaje Actualmente la informacion de sus productos no se encuentra disponible
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario | clave | segundaClave | tipoDocumento |
-       ##@externaldata@./src/test/resources/datadriven/consultadepagos/consultadepagos.xlsx@Datos@1
+       ##@externaldata@./src/test/resources/datadriven/consultadepagos/consulta_de_pagos.xlsx@Datos@1
       |1|Acierto|||||OSVPPRU15|1234|||
