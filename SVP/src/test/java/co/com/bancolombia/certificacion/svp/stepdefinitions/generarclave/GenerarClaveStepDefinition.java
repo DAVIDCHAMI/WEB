@@ -1,14 +1,16 @@
 package co.com.bancolombia.certificacion.svp.stepdefinitions.generarclave;
 
-import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
-import co.com.bancolombia.certificacion.svp.questions.generarclave.FechaComprobanteAlGenerarClave;
+import co.com.bancolombia.certificacion.svp.exceptions.comunes.generarclave.FechaComprobanteDiferenteDelSistemaException;
+import co.com.bancolombia.certificacion.svp.exceptions.comunes.generarclave.NoSeVisualizaMensajeGeneracionClaveException;
+import co.com.bancolombia.certificacion.svp.questions.generarclave.FechaComprobante;
 import co.com.bancolombia.certificacion.svp.questions.generarclave.Mensaje;
 import co.com.bancolombia.certificacion.svp.tasks.generarclave.Generar;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
 import cucumber.api.java.es.Y;
-import org.hamcrest.core.IsEqual;
 
+import static co.com.bancolombia.certificacion.svp.exceptions.comunes.generarclave.FechaComprobanteDiferenteDelSistemaException.MENSAJE_FECHA_COMPROBANTE;
+import static co.com.bancolombia.certificacion.svp.exceptions.comunes.generarclave.NoSeVisualizaMensajeGeneracionClaveException.MENSAJE_ERROR_GENERAR_CLAVE;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
@@ -21,18 +23,19 @@ public class GenerarClaveStepDefinition {
         );
     }
 
-    @Entonces("^el deberia de ver el mensaje (.*)$")
-    public void elDeberiaDeVerElMensajeDeConfirmacionClavePendienteDeActivacionYFechaDeLaTransaccion(String mensaje)  {
-        theActorInTheSpotlight().should(seeThat(
-                FechaComprobanteAlGenerarClave.con(mensaje)
+    @Entonces("^el deberia de ver el mensaje ¡Clave pendiente de activacion!$")
+    public void elDeberiaDeVerElMensajeDeConfirmacionClavePendienteDeActivacionYFechaDeLaTransaccion() {
+        theActorInTheSpotlight().should(seeThat(Mensaje.alGenerarClave()).orComplainWith(
+                NoSeVisualizaMensajeGeneracionClaveException.class, MENSAJE_ERROR_GENERAR_CLAVE
                 )
         );
     }
 
     @Y("^el mensaje de confirmacion con fecha de la transaccion$")
-    public void mensajeConfirmacionConFechaTransaccion()  {
+    public void mensajeConfirmacionConFechaTransaccion() {
         theActorInTheSpotlight().should(seeThat(
-                Mensaje.alGenerarClave(), IsEqual.equalTo(DatosPrueba.getMap().get("mensajeEsperado").toString())
+                FechaComprobante.alGenerarClave()).orComplainWith(
+                FechaComprobanteDiferenteDelSistemaException.class, MENSAJE_FECHA_COMPROBANTE
                 )
         );
     }
