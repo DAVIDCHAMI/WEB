@@ -4,8 +4,7 @@ import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-import static co.com.bancolombia.certificacion.svp.userinterface.generarclave.GenerarClavePage.*;
-import static co.com.bancolombia.certificacion.svp.utilities.administrador.UtileriaFechas.obtenerFechaComprobantes;
+import static co.com.bancolombia.certificacion.svp.userinterface.generarclave.GenerarClavePage.LBL_CONFIRMACION_GENERAR;
 
 public class Mensaje implements Question<Boolean> {
 

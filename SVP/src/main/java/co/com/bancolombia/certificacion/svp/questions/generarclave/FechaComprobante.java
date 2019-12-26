@@ -16,6 +16,6 @@ public class FechaComprobante implements Question<Boolean> {
     @Override
     public Boolean answeredBy(Actor actor) {
         return LBL_MENSAJE_GENERAR.resolveFor(actor).isVisible() &&
-        LBL_FECHA_HORA_GENERAR.resolveFor(actor).getText().contains(obtenerFechaComprobantes());
+                LBL_FECHA_HORA_GENERAR.resolveFor(actor).getText().contains(obtenerFechaComprobantes());
     }
 }

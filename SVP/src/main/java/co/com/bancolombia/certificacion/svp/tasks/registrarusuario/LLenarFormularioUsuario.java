@@ -5,7 +5,6 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 
-import static co.com.bancolombia.certificacion.svp.tasks.autenticacion.AutenticacionConDocumento.autenticarseConDocumentoEnLaSVP;
 import static co.com.bancolombia.certificacion.svp.tasks.registrarusuario.LlenarFormularioRegistro.llenaFormularioRegistro;
 import static co.com.bancolombia.certificacion.svp.userinterface.comunes.ElementosComunesPage.BTN_CONTINUAR;
 
@@ -19,7 +18,7 @@ public class LLenarFormularioUsuario implements Task {
         );
     }
 
-    public static LLenarFormularioUsuario llenaElPrimerFormularioDeRegistro(){
+    public static LLenarFormularioUsuario llenaElPrimerFormularioDeRegistro() {
         return Tasks.instrumented(LLenarFormularioUsuario.class);
     }
 }

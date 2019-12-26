@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.Question;
 
 public class RegistroIncorrecto implements Question<String> {
 
-    public static RegistroIncorrecto enSVP(){
+    public static RegistroIncorrecto enSVP() {
         return new RegistroIncorrecto();
     }
 

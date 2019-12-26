@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.Question;
 
 public class UsuarioRegistrar implements Question<Boolean> {
 
-    public static UsuarioRegistrar estaEnUso(){
+    public static UsuarioRegistrar estaEnUso() {
         return new UsuarioRegistrar();
     }
 

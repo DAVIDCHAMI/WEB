@@ -4,16 +4,14 @@ import co.com.bancolombia.certificacion.svp.interactions.comunes.AbrirNavegador;
 import cucumber.api.java.Before;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Entonces;
-
 import net.serenitybdd.screenplay.actors.OnlineCast;
 
 import java.util.List;
 import java.util.Map;
 
 import static co.com.bancolombia.certificacion.svp.questions.comunes.Mensaje.mensajeDeRespuesta;
-import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static co.com.bancolombia.certificacion.svp.tasks.fabrica.Cargar.cargoLosDatosDeLaTransaccionConLaSiguiente;
-import static co.com.bancolombia.certificacion.svp.tasks.fabrica.Cargar.conLaSiguiente;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 
 public class ComunesStepDefinition {
