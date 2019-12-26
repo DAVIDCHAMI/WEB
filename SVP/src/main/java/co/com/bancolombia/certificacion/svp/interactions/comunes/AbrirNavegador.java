@@ -1,5 +1,4 @@
 package co.com.bancolombia.certificacion.svp.interactions.comunes;
-
 import co.com.bancolombia.certificacion.svp.userinterface.autenticacion.AutenticacionPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;

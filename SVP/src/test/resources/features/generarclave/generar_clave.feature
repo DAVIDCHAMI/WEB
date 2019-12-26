@@ -15,4 +15,4 @@ Característica: Generar clave en SVP
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |mensajeEsperado|
        ##@externaldata@./src/test/resources/datadriven/generarclave/generar_clave.xlsx@Datos@1
-      |1|Acierto||||1234567890|juferz24|1234|1234|NIT|La nueva clave quedará pendiente de activación en la Sucursal Física. Si eres colombiano en el exterior comunícate con la Sucursal Telefónica.|
+      |1|Acierto|||||OSVPPRU12|1234|||La nueva clave quedará pendiente de activación en la Sucursal Física. Si eres colombiano en el exterior comunícate con la Sucursal Telefónica.|
