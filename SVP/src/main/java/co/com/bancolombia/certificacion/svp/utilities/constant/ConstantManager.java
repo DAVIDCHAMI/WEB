@@ -38,6 +38,9 @@ public class ConstantManager {
     public static final String CELULAR = "celular";
     public static final String PALABRA_CLAVE = "palabraClave";
     public static final String MENSAJE_RESPUESTA = "mensajeRespuesta";
+    public static final int INTENTOS_REGISTRAR_USUARIO = 3;
+    public static final int INTENTOS_RECORDAR_USUARIO = 4;
+    public static final int TIEMPO_ESPERA_LOGIN= 10000;
 
     public static final String CUENTAS = "cuentas";
     public static final String TARJETASDECREDITO = "tarjetasCredito";

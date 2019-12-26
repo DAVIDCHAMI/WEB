@@ -53,7 +53,7 @@ public class AutenticacionStepDefinition {
         );
     }
 
-    @Entonces("^el deberia de ver un mensaje Usuario o clave inválida. Inténtalo nuevamente$")
+    @Entonces("^el deberia de ver un mensaje Usuario o clave invalida. Intentalo nuevamente$")
     public void elDeberiaDeVerUnMensajeUsuarioIntentaloNuevamente() {
         theActorInTheSpotlight().should(seeThat(
                 mensajeUsuarioRegistrado(), equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO)))
