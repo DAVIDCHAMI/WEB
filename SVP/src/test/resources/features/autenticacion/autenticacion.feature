@@ -47,7 +47,7 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@4
-      |5|Alterno|||Usuario o clave inválida. Inténtalo nuevamente||chipote87|4567|||
+      |5|Alterno|||Usuario o clave inválida. Inténtalo nuevamente||OSVPPRU06|4567|||
 
   Esquema del escenario: Inicio de sesion con clave bloqueada
     Dado que Juan carga los datos de la prueba
