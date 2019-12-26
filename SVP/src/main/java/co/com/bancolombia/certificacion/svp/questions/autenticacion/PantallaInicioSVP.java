@@ -1,11 +1,8 @@
 package co.com.bancolombia.certificacion.svp.questions.autenticacion;
-
 import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
-
-
 import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.AutenticacionPage.LBL_LOGIN_USUARIO;
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.ACIERTO;
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.ORIENTACION;
