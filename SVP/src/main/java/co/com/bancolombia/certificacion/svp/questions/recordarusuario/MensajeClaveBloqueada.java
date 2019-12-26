@@ -1,7 +1,6 @@
 package co.com.bancolombia.certificacion.svp.questions.recordarusuario;
 
 import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
-import co.com.bancolombia.certificacion.svp.userinterface.recordarusuario.RecordarUsuarioPage;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
