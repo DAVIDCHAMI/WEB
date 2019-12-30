@@ -67,7 +67,6 @@ Característica: Generar clave en SVP
        ##@externaldata@./src/test/resources/datadriven/generarclave/generar_clave.xlsx@Datos@5
       |5|Alterno||||1002576587|chipote87|4321|4321|Cédula de ciudadanía||
 
-    @Prueba
   Esquema del escenario: Generar clave en SVP con documento no existente para el banco
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | mensajeEsperado   |
