@@ -39,7 +39,7 @@ Característica: Recordar usuario
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario  | clave | segundaClave | tipoDocumento | mensajeRespuesta                                  |
        ##@externaldata@./src/test/resources/datadriven/recordarusuario/recordar_usuario.xlsx@Datos@3
-      |3|Acierto||||25130110|USUCTDC1|1234|1234||El usuario ha sido enviado al correo electrónico.|
+      |3|Acierto||||25130111|USUCTDC1|1234|1234||El usuario ha sido enviado al correo electrónico.|
 
   Esquema del escenario: Bloqueo por intentos fallidos al recordar usuario
     Dado que Juan carga los datos de la prueba
@@ -50,7 +50,7 @@ Característica: Recordar usuario
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario    | clave | segundaClave | tipoDocumento | mensajeRespuesta |
        ##@externaldata@./src/test/resources/datadriven/recordarusuario/recordar_usuario.xlsx@Datos@4
-      |4|Alterno||||1989636240|USUCTDC3|4321|1234||¡Lo sentimos!|
+      |4|Alterno||||1245123884|USUCTDC3|4321|1234||¡Lo sentimos!|
 
   Esquema del escenario: Recordar usuario - clave bloqueada
     Dado que Juan carga los datos de la prueba

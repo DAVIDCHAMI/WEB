@@ -14,7 +14,7 @@ Característica: Registro de usuarios
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario    | clave | segundaClave | tipoDocumento | correoElectronico | celular    | palabraClave | mensajeRespuesta                                            |
        ##@externaldata@./src/test/resources/datadriven/registrarusuario/registrar_usuario.xlsx@Datos@1
-      |1|Alterno||||1245123881|1245123881|1234|1234||da@gmail.com|3182314777|hola|Para continuar debes registrarte de nuevo en la aplicación.|
+      |1|Alterno||||65698237|25130234|1234|1234||da@gmail.com|3182314777|hola|Para continuar debes registrarte de nuevo en la aplicación.|
 
   Esquema del escenario: Registro de usuario con usuario ya existente
     Dado que Juan carga los datos de la prueba
@@ -25,7 +25,7 @@ Característica: Registro de usuarios
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | correoElectronico | celular    | palabraClave | mensajeRespuesta                                       |
         ##@externaldata@./src/test/resources/datadriven/registrarusuario/registrar_usuario.xlsx@Datos@2
-      |2|Alterno||||1245123881|OSVPPRU01|1234|1234||da@gmail.com|3182314777|hola|Ingresa otro usuario. El que ingresaste ya está en uso|
+      |2|Alterno||||65698237|OSVPPRU01|1234|1234||da@gmail.com|3182314777|hola|Ingresa otro usuario. El que ingresaste ya está en uso|
 
   Esquema del escenario: Registro de usuario con usuario ya existente (limite)
     Dado que Juan carga los datos de la prueba
@@ -36,7 +36,7 @@ Característica: Registro de usuarios
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | correoElectronico | celular    | palabraClave | mensajeRespuesta |
        ##@externaldata@./src/test/resources/datadriven/registrarusuario/registrar_usuario.xlsx@Datos@3
-      |3|Alterno||||1245123881|OSVPPRU01|1234|1234||da@gmail.com|3182314777|hola|¡Lo Sentimos!|
+      |3|Alterno||||65698237|OSVPPRU01|1234|1234||da@gmail.com|3182314777|hola|¡Lo sentimos!|
 
   Esquema del escenario: Registro de usuario exitoso
     Dado que Juan carga los datos de la prueba
@@ -47,4 +47,4 @@ Característica: Registro de usuarios
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | correoElectronico | celular    | palabraClave | mensajeRespuesta   |
        ##@externaldata@./src/test/resources/datadriven/registrarusuario/registrar_usuario.xlsx@Datos@4
-      |4|Acierto||||1245123881|OSVPPRU99|1234|1234||da@gmail.com|3182314777|hola|¡Registro exitoso!|
+      |4|Acierto||||51854814|UserEjec21|1234|1234||da@gmail.com|3182314777|hola|¡Registro exitoso!|
