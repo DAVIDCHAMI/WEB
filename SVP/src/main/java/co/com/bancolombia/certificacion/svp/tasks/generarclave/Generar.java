@@ -1,5 +1,6 @@
 package co.com.bancolombia.certificacion.svp.tasks.generarclave;
 
+import co.com.bancolombia.certificacion.svp.interactions.comunes.Cargar;
 import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
@@ -28,6 +29,7 @@ public class Generar implements Task {
         actor.attemptsTo(
                 Enter.theValue(DatosPrueba.getMap().get(USUARIO).toString()).into(TXT_NOMBRE_USUARIO),
                 Click.on(BTN_CONTINUAR),
+                Cargar.transaccion(),
                 WaitUntil.the(LNK_GENERAR_CLAVE, isClickable())
         );
         actor.attemptsTo(
@@ -42,7 +44,8 @@ public class Generar implements Task {
                 Enter.theValue(DatosPrueba.getMap().get(NUMERO_DOCUMENTO).toString()).into(TXT_NUMERO_DOCUMENTO),
                 Enter.theValue(DatosPrueba.getMap().get(CLAVE).toString()).into(TXT_CLAVE_USUARIO),
                 Enter.theValue(DatosPrueba.getMap().get(CLAVE).toString()).into(TXT_CONFIRMAR_CLAVE_USUARIO),
-                Click.on(BTN_GENERAR_CLAVE)
+                Click.on(BTN_GENERAR_CLAVE),
+                Cargar.transaccion()
         );
     }
 }
