@@ -14,7 +14,5 @@ public class MensajeClaveBloqueada implements Question<Boolean> {
         return LBL_CONFIRMACION_RECORDAR.of(DatosPrueba.getMap().get(MENSAJE_RESPUESTA).toString()).resolveFor(actor).isVisible();
     }
 
-    public static MensajeClaveBloqueada visualizaElMensajeDeClaveBloqueada() {
-        return new MensajeClaveBloqueada();
-    }
+    public static MensajeClaveBloqueada visualizaElMensajeDeClaveBloqueada(){return new MensajeClaveBloqueada ();}
 }
