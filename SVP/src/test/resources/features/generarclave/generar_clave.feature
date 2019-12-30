@@ -54,7 +54,8 @@ Característica: Generar clave en SVP
        ##@externaldata@./src/test/resources/datadriven/generarclave/generar_clave.xlsx@Datos@4
       |4|Alterno|||La clave que usas en el cajero está bloqueada. Debes activarla en la Sucursal Física. Para mayor información comunícate con la Sucursal Telefónica.||||||La clave que usas en el cajero está bloqueada. Debes activarla en la Sucursal Física. Para mayor información comunícate con la Sucursal Telefónica.|
 
-  Esquema del escenario: Generar clave en SVP con clave bloqueda por el usuario
+
+  Esquema del escenario: Generar clave en SVP con clave bloqueda voluntariamente
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | mensajeEsperado   |
       | <idCaso> | <orientacion> | <codigoTransaccion> | <codigoError> | <resultadoEsperado> | <numeroDocumento> | <usuario> | <clave> | <segundaClave> | <tipoDocumento> | <mensajeEsperado> |
@@ -64,4 +65,4 @@ Característica: Generar clave en SVP
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario  | clave | segundaClave | tipoDocumento        | mensajeEsperado                                                                                                        |
        ##@externaldata@./src/test/resources/datadriven/generarclave/generar_clave.xlsx@Datos@5
-      |5|Alterno||||||||||
+      |5|Alterno||||1002576587|chipote87|4321|4321|Cédula de ciudadanía||
