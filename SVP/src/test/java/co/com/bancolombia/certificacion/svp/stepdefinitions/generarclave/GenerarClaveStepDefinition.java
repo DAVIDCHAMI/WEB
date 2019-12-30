@@ -43,6 +43,13 @@ public class GenerarClaveStepDefinition {
         );
     }
 
+    @Cuando("^el genera la clave para svp con documento de identidad que no existe$")
+    public void elGeneraLaClaveParaSvpConDocumentoNoExistente() {
+        theActorInTheSpotlight().attemptsTo(
+                Generar.clave()
+        );
+    }
+
     @Entonces("^el deberia de ver el mensaje ¡Clave pendiente de activacion!$")
     public void elDeberiaDeVerElMensajeDeConfirmacionClavePendienteDeActivacionYFechaDeLaTransaccion() {
         theActorInTheSpotlight().should(seeThat(Mensaje.alGenerarClave()).orComplainWith(

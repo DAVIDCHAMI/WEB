@@ -17,6 +17,7 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
         glue = {"co.com.bancolombia.certificacion.svp.stepdefinitions.generarclave",
                 "co.com.bancolombia.certificacion.svp.stepdefinitions.comunes"
         },
+        tags = "@Prueba",
         snippets = SnippetType.CAMELCASE
 )
 @RunWith(RunnerPersonalizado.class)

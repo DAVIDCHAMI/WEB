@@ -66,3 +66,15 @@ Característica: Generar clave en SVP
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario  | clave | segundaClave | tipoDocumento        | mensajeEsperado                                                                                                        |
        ##@externaldata@./src/test/resources/datadriven/generarclave/generar_clave.xlsx@Datos@5
       |5|Alterno||||1002576587|chipote87|4321|4321|Cédula de ciudadanía||
+
+    @Prueba
+  Esquema del escenario: Generar clave en SVP con documento no existente para el banco
+    Dado que Juan carga los datos de la prueba
+      | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | mensajeEsperado   |
+      | <idCaso> | <orientacion> | <codigoTransaccion> | <codigoError> | <resultadoEsperado> | <numeroDocumento> | <usuario> | <clave> | <segundaClave> | <tipoDocumento> | <mensajeEsperado> |
+    Cuando el genera la clave para svp con documento de identidad que no existe
+    Entonces el deberia de ver un mensaje Usuario o clave invalida
+    Ejemplos:
+      | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario  | clave | segundaClave | tipoDocumento        | mensajeEsperado                                                                                                        |
+       ##@externaldata@./src/test/resources/datadriven/generarclave/generar_clave.xlsx@Datos@6
+      |6|Alterno|||Usuario o clave inválida. Inténtalo nuevamente|12343565433322|docnoexiste|4321|4321|Cédula de ciudadanía|Usuario o clave inválida. Inténtalo nuevamente|
