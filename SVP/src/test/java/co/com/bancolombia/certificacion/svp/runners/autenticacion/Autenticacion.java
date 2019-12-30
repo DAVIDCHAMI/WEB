@@ -7,9 +7,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.junit.runner.RunWith;
-
 import java.io.IOException;
-
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTypeClass.RUNNER_CLASS;
 
 @CucumberOptions(
