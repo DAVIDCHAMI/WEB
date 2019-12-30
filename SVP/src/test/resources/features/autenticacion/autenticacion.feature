@@ -71,7 +71,6 @@ Característica: SVP autenticacion
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@6
       |6|Alterno|||Usuario o clave inválida. Inténtalo nuevamente||OOMAP12|1234|||
 
-
   Esquema del escenario: Inicio de sesion con numero de documento inexistente (banco)
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
@@ -82,7 +81,3 @@ Característica: SVP autenticacion
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@7
       |7|Alterno|||Usuario o clave inválida. Inténtalo nuevamente|854124014||1234|||
-
-
-
-
