@@ -1,7 +1,9 @@
 package co.com.bancolombia.certificacion.svp.tasks.consultardetalle;
+
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
-import static  net.serenitybdd.screenplay.Tasks.instrumented;
+
+import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class ConsultasTarjetasCredito implements Task {
 
@@ -11,8 +13,7 @@ public class ConsultasTarjetasCredito implements Task {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-      actor.attemptsTo(
-
-      );
+        actor.attemptsTo(
+        );
     }
 }

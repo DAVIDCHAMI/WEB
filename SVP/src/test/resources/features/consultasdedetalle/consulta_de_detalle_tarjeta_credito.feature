@@ -30,8 +30,6 @@ Característica: SVP autenticacion
       |1|Acierto|||||OSVPPRU04|1234|||
 
 
-
-
   Esquema del escenario: Consultar detalle de Tarjetas de creditos (cuando el pago mínimo y total sea mayor a cero)
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |

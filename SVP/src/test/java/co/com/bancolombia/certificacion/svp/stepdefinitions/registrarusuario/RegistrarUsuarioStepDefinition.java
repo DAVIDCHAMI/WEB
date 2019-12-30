@@ -39,7 +39,7 @@ public class RegistrarUsuarioStepDefinition {
     @Cuando("^el completa el registro en SVP$")
     public void elCompletaElRegistroEnSVP() {
         theActorInTheSpotlight().attemptsTo(
-                registrarUsuario ()
+                registrarUsuario()
         );
     }
 

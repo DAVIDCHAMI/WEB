@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.Question;
 
 public class MensajeRealizarRegistro implements Question<Boolean> {
 
-    public static MensajeRealizarRegistro deNuevo(){
+    public static MensajeRealizarRegistro deNuevo() {
         return new MensajeRealizarRegistro();
     }
 

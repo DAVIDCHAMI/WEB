@@ -1,4 +1,5 @@
 package co.com.bancolombia.certificacion.svp.stepdefinitions.consultasdedetalle;
+
 import co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasFondosInversion;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
@@ -60,6 +61,7 @@ public class ConsultarDetalleStepDefinition {
     public void elDeberiaDeVerElDetalleDeLaTarjetaDeCredito() {
         theActorInTheSpotlight().should(seeThat(lasCaracteristicasDeLasTarjetasDeCredito()));
     }
+
     @Entonces("^el deberia de ver el detalle de la tarjeta de credito E-card$")
     public void elDeberiaDeVerElDetalleDeLaTarjetaDeCreditoECard() {
         theActorInTheSpotlight().should(seeThat(lasCaracteristicasDeTarjetasCreditosECard()));
@@ -97,7 +99,7 @@ public class ConsultarDetalleStepDefinition {
 
     @Cuando("^consulta el detalle de crediagil$")
     public void consultaElDetalleDeCrediagil() {
-       theActorInTheSpotlight().attemptsTo(consultarDetalleCrediagil());
+        theActorInTheSpotlight().attemptsTo(consultarDetalleCrediagil());
     }
 
     @Cuando("^consulta el detalle de la tarjeta de credito E-card$")

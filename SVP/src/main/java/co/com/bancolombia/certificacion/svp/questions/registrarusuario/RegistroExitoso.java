@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.Question;
 
 public class RegistroExitoso implements Question<Boolean> {
 
-    public static RegistroExitoso enSVP(){
+    public static RegistroExitoso enSVP() {
         return new RegistroExitoso();
     }
 

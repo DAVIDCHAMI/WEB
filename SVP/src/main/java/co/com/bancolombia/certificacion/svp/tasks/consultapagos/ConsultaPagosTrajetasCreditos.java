@@ -1,6 +1,8 @@
 package co.com.bancolombia.certificacion.svp.tasks.consultapagos;
+
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
+
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class ConsultaPagosTrajetasCreditos implements Task {
