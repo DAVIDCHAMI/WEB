@@ -7,6 +7,7 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
 public class ElementosComunesPage {
     public static final Target BTN_CONTINUAR = Target.the("Boton Continuar").locatedBy("//span[text()='CONTINUAR']");
     public static final Target TXT_MENSAJE_RESPUESTA = Target.the("Mensaje de respuesta").locatedBy("//*[text()='{0}']");
+    public static final Target LBL_CARGANDO = Target.the("Mensaje Cargando transaccion").locatedBy("//span[contains(.,'Cargando...')]");
 
     private ElementosComunesPage() {
         throw new IllegalStateException(UI_CLASS);
