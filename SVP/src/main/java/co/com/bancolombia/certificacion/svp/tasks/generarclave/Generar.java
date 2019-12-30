@@ -29,6 +29,7 @@ public class Generar implements Task {
         actor.attemptsTo(
                 Enter.theValue(DatosPrueba.getMap().get(USUARIO).toString()).into(TXT_NOMBRE_USUARIO),
                 Click.on(BTN_CONTINUAR),
+                Cargar.transaccion(),
                 WaitUntil.the(LNK_GENERAR_CLAVE, isClickable())
         );
         actor.attemptsTo(
