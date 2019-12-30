@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.Question;
 
 public class LoSentimos implements Question<Boolean> {
 
-    public static LoSentimos mensajeLoSentimos(){
+    public static LoSentimos mensajeLoSentimos() {
         return new LoSentimos();
     }
 
