@@ -1,6 +1,5 @@
 package co.com.bancolombia.certificacion.svp.stepdefinitions.recordarusuario;
 
-import co.com.bancolombia.certificacion.svp.questions.recordarusuario.MensajeClaveBloqueada;
 import co.com.bancolombia.certificacion.svp.tasks.recordarusuario.Recordar;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
