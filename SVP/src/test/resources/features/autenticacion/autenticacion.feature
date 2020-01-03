@@ -4,7 +4,7 @@ Característica: SVP autenticacion
   Yo como usuario de Bancolombia
   Quiero iniciar sesion en el SVP
   Para realizar transacciones en la SVP
-@test1
+
   Esquema del escenario: Inicio de sesion exitoso
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
