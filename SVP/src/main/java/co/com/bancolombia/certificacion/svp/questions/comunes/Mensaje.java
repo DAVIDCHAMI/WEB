@@ -9,7 +9,9 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantMa
 
 public class Mensaje implements Question<Boolean> {
 
-    public static Mensaje mensajeDeRespuesta(){return new Mensaje();}
+    public static Mensaje mensajeDeRespuesta() {
+        return new Mensaje();
+    }
 
     @Override
     public Boolean answeredBy(Actor actor) {

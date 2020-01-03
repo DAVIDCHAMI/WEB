@@ -4,7 +4,6 @@ import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
 import co.com.bancolombia.certificacion.svp.questions.autenticacion.PantallaInicioSVP;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
-
 import static co.com.bancolombia.certificacion.svp.questions.autenticacion.Clave.mensajeClaveBloqueada;
 import static co.com.bancolombia.certificacion.svp.questions.autenticacion.Mensaje.mensajeClaveInvalida;
 import static co.com.bancolombia.certificacion.svp.questions.autenticacion.MensajeUsuarioInexistente.mensajeUsuarioInexistentes;
@@ -42,7 +41,7 @@ public class AutenticacionStepDefinition {
     @Cuando("^el realiza la autenticacion en la SVP con usuario inexistente$")
     public void elRealizaLaAutenticacionEnLaSVPConUsuarioInexistente() {
         theActorInTheSpotlight().attemptsTo(
-                autenticarseConDocumentoEnLaSVP()
+                autenticarseEnLaSVP()
         );
     }
 

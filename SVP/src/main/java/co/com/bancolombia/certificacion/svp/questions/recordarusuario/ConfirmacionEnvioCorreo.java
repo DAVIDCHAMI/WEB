@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.Question;
 
 public class ConfirmacionEnvioCorreo implements Question<Boolean> {
 
-    public static ConfirmacionEnvioCorreo alRecordarUsuario(){
+    public static ConfirmacionEnvioCorreo alRecordarUsuario() {
         return new ConfirmacionEnvioCorreo();
     }
 

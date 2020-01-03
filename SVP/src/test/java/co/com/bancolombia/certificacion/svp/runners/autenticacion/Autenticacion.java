@@ -1,4 +1,5 @@
 package co.com.bancolombia.certificacion.svp.runners.autenticacion;
+
 import co.com.bancolombia.certificacion.svp.utilities.exceldata.BeforeSuite;
 import co.com.bancolombia.certificacion.svp.utilities.exceldata.DataToFeature;
 import co.com.bancolombia.certificacion.svp.utilities.runner.RunnerPersonalizado;
@@ -6,9 +7,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.SnippetType;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.junit.runner.RunWith;
-
 import java.io.IOException;
-
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTypeClass.RUNNER_CLASS;
 
 @CucumberOptions(
@@ -16,7 +15,7 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
         glue = {"co.com.bancolombia.certificacion.svp.stepdefinitions.autenticacion",
                 "co.com.bancolombia.certificacion.svp.stepdefinitions.comunes"
         },
-       snippets = SnippetType.CAMELCASE
+        snippets = SnippetType.CAMELCASE
 )
 @RunWith(RunnerPersonalizado.class)
 public class Autenticacion {

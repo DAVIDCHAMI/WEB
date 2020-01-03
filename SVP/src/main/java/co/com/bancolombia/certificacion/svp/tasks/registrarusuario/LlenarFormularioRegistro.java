@@ -7,9 +7,7 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 
-
 import static co.com.bancolombia.certificacion.svp.userinterface.registrarusuario.RegistrarUsuarioPage.*;
-import static co.com.bancolombia.certificacion.svp.userinterface.registrarusuario.RegistrarUsuarioPage.TXT_CREAR_USUARIO;
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.*;
 
 public class LlenarFormularioRegistro implements Task {
@@ -24,7 +22,7 @@ public class LlenarFormularioRegistro implements Task {
         );
     }
 
-    public static LlenarFormularioRegistro llenaFormularioRegistro(){
+    public static LlenarFormularioRegistro llenaFormularioRegistro() {
         return Tasks.instrumented(LlenarFormularioRegistro.class);
     }
 }
