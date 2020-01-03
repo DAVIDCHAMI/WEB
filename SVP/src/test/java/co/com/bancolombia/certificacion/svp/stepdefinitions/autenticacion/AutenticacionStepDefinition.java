@@ -1,15 +1,15 @@
 package co.com.bancolombia.certificacion.svp.stepdefinitions.autenticacion;
-
 import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
-import co.com.bancolombia.certificacion.svp.questions.autenticacion.PantallaInicioSVP;
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
 import static co.com.bancolombia.certificacion.svp.questions.autenticacion.Clave.mensajeClaveBloqueada;
 import static co.com.bancolombia.certificacion.svp.questions.autenticacion.Mensaje.mensajeClaveInvalida;
 import static co.com.bancolombia.certificacion.svp.questions.autenticacion.MensajeUsuarioInexistente.mensajeUsuarioInexistentes;
+import static co.com.bancolombia.certificacion.svp.questions.autenticacion.PantallaInicioSVP.esVisible;
 import static co.com.bancolombia.certificacion.svp.questions.autenticacion.UsuarioRegistrado.mensajeUsuarioRegistrado;
 import static co.com.bancolombia.certificacion.svp.tasks.autenticacion.Autenticacion.autenticarseEnLaSVP;
 import static co.com.bancolombia.certificacion.svp.tasks.autenticacion.AutenticacionConDocumento.autenticarseConDocumentoEnLaSVP;
+import static co.com.bancolombia.certificacion.svp.tasks.autenticacion.AutenticacionSinImagenSinFrase.autenticarseEnLaSVPSinImagen;
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.RESULTADO_ESPERADO;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -62,7 +62,7 @@ public class AutenticacionStepDefinition {
     @Entonces("^el deberia de ver la pantalla de inicio de la SVP$")
     public void elDeberiaDeVerLaPantallaDeInicioDeLaSVP() {
         theActorInTheSpotlight().should(seeThat(
-                PantallaInicioSVP.esVisible(), equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO)))
+                esVisible(),  equalTo((DatosPrueba.getMap().get(RESULTADO_ESPERADO))))
         );
     }
 
@@ -77,6 +77,12 @@ public class AutenticacionStepDefinition {
     public void elDeberiaDeObservarUnMensajeDeUsuarioOClaveInvalidaIntentaloNuevamente() {
         theActorInTheSpotlight().should(seeThat(
                 mensajeClaveInvalida(), equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO)))
+        );
+    }
+
+    @Cuando("^el realiza la autenticacion en la SVP sin imagen$")
+    public void elRealizaLaAutenticacionEnLaSVPSinImagen() {
+        theActorInTheSpotlight().attemptsTo(autenticarseEnLaSVPSinImagen()
         );
     }
 }
