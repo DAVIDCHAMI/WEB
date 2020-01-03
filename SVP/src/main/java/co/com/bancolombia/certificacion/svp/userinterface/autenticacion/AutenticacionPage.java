@@ -1,4 +1,5 @@
 package co.com.bancolombia.certificacion.svp.userinterface.autenticacion;
+
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
@@ -12,7 +13,7 @@ public class AutenticacionPage extends PageObject {
     public static final Target IMG_USUARIO = Target.the("Imagen de seguridad del usuario").located(By.id("UserImage"));
     public static final Target LBL_FRASE_SEGURIDAD = Target.the("Frase de seguridad del usuario").located(By.id("Phrase2"));
     public static final Target LBL_LOGIN_USUARIO = Target.the("Nombre de usuario").locatedBy("//div[@id='b1-Title']/div/span[contains(text(),'Hola')]");
-    public static final Target LBL_CLAVE_INVALIDA = Target.the("Mensaje de clave invalida").located(By.id("b7-MessageContent"));
-    public static final Target LBL_CLAVE_BLOQUEADA = Target.the("Mensaje de clave bloqueada").located(By.id("b7-ErrorDescription"));
+    public static final Target LBL_CLAVE_INVALIDA = Target.the("Mensaje de clave invalida").located(By.xpath("//div[contains(@id, 'MessageContent')]"));
+    public static final Target LBL_CLAVE_BLOQUEADA = Target.the("Mensaje de clave bloqueada").located(By.xpath("//div[contains(@id, 'ErrorDescription')]"));
     public static final Target BTN_OLVIDASTE_TU_USUARIO = Target.the("Boton Recordar").locatedBy("//a[@id='ForgetLink']/span");
 }
