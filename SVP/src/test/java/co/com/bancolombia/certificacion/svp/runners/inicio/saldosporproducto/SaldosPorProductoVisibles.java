@@ -14,7 +14,9 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
 
 @CucumberOptions(
         features = "src/test/resources/features/inicio/saldosporproducto/saldosporproducto.feature",
-        glue = {"co.com.bancolombia.certificacion.svp.stepdefinitions"},
+        glue = {"co.com.bancolombia.certificacion.svp.stepdefinitions.autenticacion",
+                "co.com.bancolombia.certificacion.svp.stepdefinitions.comunes",
+                "co.com.bancolombia.certificacion.svp.stepdefinitions.inicio.saldosporproductos"},
        snippets = SnippetType.CAMELCASE,tags = "@tag1"
 )
 @RunWith(RunnerPersonalizado.class)
