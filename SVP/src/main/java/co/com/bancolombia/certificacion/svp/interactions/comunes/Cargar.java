@@ -11,8 +11,7 @@ public class Cargar implements Interaction {
 
     @Override
     public <T extends Actor> void performAs(T actor) {
-        while(LBL_CARGANDO.resolveFor(actor).isVisible()){
-        }
+        while(LBL_CARGANDO.resolveFor(actor).isVisible()){}
     }
 
     public static Performable transaccion(){

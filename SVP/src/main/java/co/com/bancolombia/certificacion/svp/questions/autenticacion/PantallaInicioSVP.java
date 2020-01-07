@@ -17,6 +17,6 @@ public class PantallaInicioSVP implements Question<String> {
 
     @Override
     public String answeredBy(Actor actor) {
-        return DatosPrueba.getMap().get(ORIENTACION).toString().equalsIgnoreCase(ACIERTO) ? Text.of(LBL_LOGIN_USUARIO).viewedBy(actor).asString() : "";
+        return DatosPrueba.getMap().get(ORIENTACION).toString().equalsIgnoreCase(ACIERTO) ? Text.of(LBL_LOGIN_USUARIO).viewedBy(actor).asString().substring(0,4) : "";
     }
 }
