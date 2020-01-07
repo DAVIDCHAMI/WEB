@@ -14,18 +14,18 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@1
-      |1|Acierto|||¡Hola!||OSVPPRU11|1234|||
+      |1|Acierto|||Hola||OSVPPRU11|1234|||
 
   Esquema del escenario: Inicio de sesion exitoso sin imagen y frase de seguridad
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
       | <idCaso> | <orientacion> | <codigoTransaccion> | <codigoError> | <resultadoEsperado> | <numeroDocumento> | <usuario> | <clave> | <segundaClave> | <tipoDocumento> |
-    Cuando el realiza la autenticacion en la SVP
+    Cuando el realiza la autenticacion en la SVP sin imagen
     Entonces el deberia de ver la pantalla de inicio de la SVP
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@2
-      |2|Acierto|||¡Hola!||OSVPPRU12|1234|||
+      |2|Acierto|||Hola||chipote25|1234|||
 
   Esquema del escenario: Inicio de sesion exitoso con documento de identidad  (con usuario registrado)
     Dado que Juan carga los datos de la prueba
