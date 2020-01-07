@@ -17,7 +17,7 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
         glue = {"co.com.bancolombia.certificacion.svp.stepdefinitions.autenticacion",
                 "co.com.bancolombia.certificacion.svp.stepdefinitions.comunes",
                 "co.com.bancolombia.certificacion.svp.stepdefinitions.inicio.saldosporproductos"},
-       snippets = SnippetType.CAMELCASE,tags = "@tag1"
+       snippets = SnippetType.CAMELCASE
 )
 @RunWith(RunnerPersonalizado.class)
 public class SaldosPorProductoVisibles {
@@ -25,8 +25,6 @@ public class SaldosPorProductoVisibles {
     private SaldosPorProductoVisibles() {
         throw new IllegalStateException(RUNNER_CLASS);
     }
-
-
 
     @BeforeSuite
     public static void test() throws InvalidFormatException, IOException {
