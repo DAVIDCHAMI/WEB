@@ -10,7 +10,6 @@ import static co.com.bancolombia.certificacion.svp.userinterface.inicio.InicioPa
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.*;
 
 public class ProductoVisible {
-
     private static Actor actor;
     private static Target producto;
     private static String numerosProductos;
@@ -19,7 +18,6 @@ public class ProductoVisible {
     public ProductoVisible(Actor actor) {
         this.actor = actor;
     }
-
 
     public static ProductoVisible el(Actor actor) {
         return new ProductoVisible (actor);
@@ -37,7 +35,7 @@ public class ProductoVisible {
 
     public boolean eIdentificaQueSePresenta() {
         if (numerosProductos != null && !numerosProductos.equals (EMPTY)) {
-            if (!TXT_CUENTAS.equals (producto.resolveFor(actor).getText())) {
+            if (!TXT_CUENTAS.equals (producto.resolveFor (actor).getText ())) {
                 actor.attemptsTo (Click.on (producto));
             }
             for (String numeroProducto : numerosProductos.split (COMA)) {

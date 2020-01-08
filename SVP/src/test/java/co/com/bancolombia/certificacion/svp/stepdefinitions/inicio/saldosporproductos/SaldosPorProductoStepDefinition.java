@@ -14,7 +14,6 @@ public class SaldosPorProductoStepDefinition {
         theActorInTheSpotlight().should(seeThat(visualizaSusSaldos()));
     }
 
-
     @Entonces("^el deberia de ver un mensaje informativo$")
     public void elDeberiaDeVerUnMensajeInformativo() {
         theActorInTheSpotlight().should(seeThat(visualizaElMensajeDeProductosOcultos()));
