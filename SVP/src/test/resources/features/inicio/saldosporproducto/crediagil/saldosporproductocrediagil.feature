@@ -14,7 +14,7 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | cuentas | tarjetasCredito | creditos | inversiones | crediagil | mensaje                                                                                                              | escenario         |
        ##@externaldata@.\src\test\resources\datadriven\inicio\saldosporproducto\saldosporproducto.xlsx@Datos@14
-      | 14     | Acierto     |                   |             |                   | 854124014       | OSVPPRU10 | 1234  | 1234         |               |         |                 | 4676     |             |           | Los productos están ocultos, puedes habilitarlos nuevamente en la opción "Productos/ Administrar productos propios". | Crediagil ocultas |
+      |14|Acierto||||854124014|OSVPPRU10|1234|1234||||4676|||Los productos están ocultos, puedes habilitarlos nuevamente en la opción "Productos/ Administrar productos propios".|Crediagil ocultas |
 
   Esquema del escenario: Consulta saldos por producto sin crediagil
     Dado que Juan carga los datos de la prueba
@@ -25,4 +25,4 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | cuentas | tarjetasCredito | creditos | inversiones | crediagil | mensaje | escenario     |
        ##@externaldata@.\src\test\resources\datadriven\inicio\saldosporproducto\saldosporproducto.xlsx@Datos@21
-      | 21     | Acierto     |                   |             |                   | 854124014       | OSVPPRU10 | 1234  | 1234         |               |         |                 |          |             |           |         | Sin crediagil |
+      |21|Acierto||||854124014|OSVPPRU10|1234|1234||||||||Sin crediagil|
