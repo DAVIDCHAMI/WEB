@@ -42,6 +42,7 @@ public class ConstantManager {
     public static final int INTENTOS_RECORDAR_USUARIO = 4;
     public static final int TIEMPO_ESPERA_LOGIN = 9000;
 
+    public static final String TXT_CUENTAS = "Cuentas";
     public static final String CUENTAS = "cuentas";
     public static final String TARJETASDECREDITO = "tarjetasCredito";
     public static final String CREDITOS = "creditos";

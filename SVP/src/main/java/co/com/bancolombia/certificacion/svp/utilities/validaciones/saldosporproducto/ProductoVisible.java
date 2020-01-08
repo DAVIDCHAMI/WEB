@@ -4,53 +4,52 @@ import co.com.bancolombia.certificacion.svp.exceptions.saldos.NoSeVisualizaElPro
 import co.com.bancolombia.certificacion.svp.exceptions.saldos.SeVisualizaUnaCategoriaSinProductosException;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.targets.Target;
 
 import static co.com.bancolombia.certificacion.svp.userinterface.inicio.InicioPage.LBL_PRODUCTOS;
-import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.COMA;
-import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.EMPTY;
+import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.*;
 
 public class ProductoVisible {
 
     private static Actor actor;
-    private static String producto;
+    private static Target producto;
     private static String numerosProductos;
-    private static boolean resultado =true;
-    private static final String CUENTAS = "Cuentas";
+    private static boolean resultado = true;
 
     public ProductoVisible(Actor actor) {
         this.actor = actor;
     }
 
 
+    public static ProductoVisible el(Actor actor) {
+        return new ProductoVisible (actor);
+    }
 
-    public static ProductoVisible el(Actor actor){return new ProductoVisible(actor);}
-
-    public  ProductoVisible visualizalProducto(String producto){
-        this.producto= producto;
+    public ProductoVisible visualizalProducto(Target producto) {
+        this.producto = producto;
         return this;
     }
 
-    public ProductoVisible conLosNumeros(String numeroProducto){
+    public ProductoVisible conLosNumeros(String numeroProducto) {
         this.numerosProductos = numeroProducto;
         return this;
     }
 
     public boolean eIdentificaQueSePresenta() {
-
-        if (numerosProductos != null && !numerosProductos.equals(EMPTY)) {
-            if (!CUENTAS.equals(producto)) {
-                actor.attemptsTo(Click.on(LBL_PRODUCTOS.of(producto)));
+        if (numerosProductos != null && !numerosProductos.equals (EMPTY)) {
+            if (!TXT_CUENTAS.equals (producto.resolveFor(actor).getText())) {
+                actor.attemptsTo (Click.on (producto));
             }
-            for (String numeroProducto : numerosProductos.split(COMA)) {
-                if (!LBL_PRODUCTOS.of(numeroProducto).resolveFor(actor).isVisible()) {
+            for (String numeroProducto : numerosProductos.split (COMA)) {
+                if (!LBL_PRODUCTOS.of (numeroProducto).resolveFor (actor).isVisible ()) {
                     resultado = false;
-                    throw new NoSeVisualizaElProductoException(numeroProducto);
+                    throw new NoSeVisualizaElProductoException (numeroProducto);
                 }
             }
-        }else {
-            if (LBL_PRODUCTOS.of(producto).resolveFor(actor).isVisible()) {
+        } else {
+            if (producto.resolveFor (actor).isVisible ()) {
                 resultado = false;
-                throw new SeVisualizaUnaCategoriaSinProductosException(producto);
+                throw new SeVisualizaUnaCategoriaSinProductosException ();
             }
         }
         return resultado;
