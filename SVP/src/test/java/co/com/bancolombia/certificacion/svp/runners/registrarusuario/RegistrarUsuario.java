@@ -17,6 +17,7 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
         glue = {"co.com.bancolombia.certificacion.svp.stepdefinitions.autenticacion",
                 "co.com.bancolombia.certificacion.svp.stepdefinitions.comunes",
                 "co.com.bancolombia.certificacion.svp.stepdefinitions.registrarusuario"},
+        tags = {"@hola"},
         snippets = SnippetType.CAMELCASE
 )
 @RunWith(RunnerPersonalizado.class)

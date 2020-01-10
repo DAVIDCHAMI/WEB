@@ -25,7 +25,7 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | cuentas                   | tarjetasCredito        | creditos        | inversiones   | crediagil         | mensaje | escenario |
        ##@externaldata@.\src\test\resources\datadriven\inicio\saldosporproducto\saldosporproducto.xlsx@Datos@2
-      |2|Acierto||||854124014|OSVPPRU10|1234|1234||||||||Posee depositos y créditos|
+      |2|Acierto||||1989647803|USUCAYC01|1234|1234||406-778030-20||Prestamo Personal Ta||||Posee depositos y créditos|
 
   Esquema del escenario: Consulta saldos por producto - posee créditos y fondos de inversión
     Dado que Juan carga los datos de la prueba

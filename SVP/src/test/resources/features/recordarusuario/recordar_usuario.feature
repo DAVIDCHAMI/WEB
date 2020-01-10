@@ -5,7 +5,6 @@ Característica: Recordar usuario
   Quiero recordar el usuario
   Para ingresar a la Sucursal Virtual Personas
 
-
   Esquema del escenario: Recordar usuario - clave invalida
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | mensajeRespuesta   |
@@ -17,7 +16,6 @@ Característica: Recordar usuario
        ##@externaldata@./src/test/resources/datadriven/recordarusuario/recordar_usuario.xlsx@Datos@1
       |1|Alterno||||25130112|USUCTDC3|4321|1234||Usuario o clave inválida. Inténtalo nuevamente|
 
-
   Esquema del escenario: Recordar usuario - usuario invalido
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | mensajeRespuesta   |
@@ -28,7 +26,6 @@ Característica: Recordar usuario
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario  | clave | segundaClave | tipoDocumento | mensajeRespuesta                               |
        ##@externaldata@./src/test/resources/datadriven/recordarusuario/recordar_usuario.xlsx@Datos@2
       |2|Alterno||||1152207037|USUCTDC3|1234|1234||Usuario o clave inválida. Inténtalo nuevamente|
-
 
   Esquema del escenario: Recordar usuario exitoso
     Dado que Juan carga los datos de la prueba

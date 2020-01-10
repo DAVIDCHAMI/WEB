@@ -11,7 +11,7 @@ public class InicioPage {
     public static final Target LBL_PRODUCTOS_OCULTOS = Target.the("Productos ocultos")
             .locatedBy("");
     public static final Target LBL_CUENTAS = Target.the ("Label Cuentas")
-            .locatedBy ("");
+            .located (By.id(""));
     public static final Target LBL_TARJETASDECREDITO = Target.the ("Label Tarjetas de credito")
             .locatedBy ("");
     public static final Target LBL_CREDITOS = Target.the ("Label Creditos")
