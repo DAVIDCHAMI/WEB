@@ -13,8 +13,8 @@ Característica: SVP autenticacion
     Entonces el deberia de ver un mensaje informativo
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | cuentas | tarjetasCredito | creditos | inversiones | crediagil | mensaje                                                                                                              |escenario   |
-       ##@externaldata@.\src\test\resources\datadriven\inicio\saldosporproducto\saldosporproducto.xlsx@Datos@9
-      |9|Acierto||||854124014|OSVPPRU10|1234|1234|||33333333333,4444444444|5555555,6666666|777777,888888|99999999,00000000|Los productos están ocultos, puedes habilitarlos nuevamente en la opción "Productos/ Administrar productos propios".|Tarjetas credito ocultas|
+       ##@externaldata@.\src\test\resources\datadriven\inicio\saldosporproducto\saldosporproducto.xlsx@TarjetasCredito@1
+      |1|Acierto||||854124014|OSVPPRU10|1234|1234|3|3|3|3|3|3|Los productos están ocultos, puedes habilitarlos nuevamente en la opción "Productos/ Administrar productos propios".|Tarjetas credito ocultas|
 
   Esquema del escenario: Consulta saldos por producto sin tarjetas de credito
     Dado que Juan carga los datos de la prueba
@@ -24,5 +24,5 @@ Característica: SVP autenticacion
     Entonces el deberia de ver un mensaje informativo
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | cuentas                   | tarjetasCredito | creditos        | inversiones   | crediagil         | mensaje |escenario   |
-       ##@externaldata@.\src\test\resources\datadriven\inicio\saldosporproducto\saldosporproducto.xlsx@Datos@16
-      |16|Acierto||||854124014|OSVPPRU10|1234|1234||||||||Sin tarjetas de credito|
+       ##@externaldata@.\src\test\resources\datadriven\inicio\saldosporproducto\saldosporproducto.xlsx@TarjetasCredito@2
+      |2|Acierto||||854124014|OSVPPRU10|1234|1234|3|3|3|3|3|3||Sin tarjetas de credito|
