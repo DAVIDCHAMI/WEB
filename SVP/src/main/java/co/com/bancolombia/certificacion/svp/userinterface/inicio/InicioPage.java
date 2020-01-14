@@ -7,7 +7,7 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
 
 public class InicioPage {
     public static final Target LBL_PRODUCTOS = Target.the("Productos")
-            .locatedBy("//*[text()='{0}}']");
+            .locatedBy("//*[text()='{0}']");
     public static final Target LBL_PRODUCTOS_OCULTOS = Target.the("Productos ocultos")
             .locatedBy("");
     public static final Target LBL_CUENTAS = Target.the ("Label Cuentas")
