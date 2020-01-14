@@ -16,7 +16,6 @@ Característica: SVP autenticacion
        ##@externaldata@.\src\test\resources\datadriven\inicio\saldosporproducto\saldosporproducto.xlsx@General@1
       |1|Acierto||||854124014|registro01|1234|1234||406-701110-29,406-701110-29||*4676||||Todos los productos|
 
-  @test1
   Esquema del escenario: Consulta saldos por producto - posee depositos y créditos
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | cuentas   | tarjetasCredito   | creditos   | inversiones   | crediagil   | mensaje   | escenario   |
