@@ -7,19 +7,19 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
 
 public class InicioPage {
     public static final Target LBL_PRODUCTOS = Target.the("Productos")
-            .locatedBy("//*[contains(text(), '{0}')]");
+            .locatedBy("//*[text()='{0}}']");
     public static final Target LBL_PRODUCTOS_OCULTOS = Target.the("Productos ocultos")
             .locatedBy("");
     public static final Target LBL_CUENTAS = Target.the ("Label Cuentas")
-            .located (By.id(""));
+            .located (By.id("b8-label"));
     public static final Target LBL_TARJETASDECREDITO = Target.the ("Label Tarjetas de credito")
-            .locatedBy ("");
+            .located (By.id("b15-label"));
     public static final Target LBL_CREDITOS = Target.the ("Label Creditos")
-            .located (By.id ("b18-label"));
+            .located (By.id ("CreditText"));
     public static final Target LBL_INVERSIONES = Target.the ("Label Inversiones")
-            .locatedBy ("");
+            .located (By.id("InvestmentText"));
     public static final Target LBL_CREDIAGIL = Target.the ("Label Crediagil")
-            .locatedBy ("");
+            .located (By.id(""));
 
     private InicioPage() {throw new IllegalStateException(UI_CLASS);}
 }

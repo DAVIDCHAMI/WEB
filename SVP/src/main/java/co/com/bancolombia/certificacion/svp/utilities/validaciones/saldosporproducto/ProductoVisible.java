@@ -38,7 +38,7 @@ public class ProductoVisible {
             if (!TXT_CUENTAS.equals (producto.resolveFor (actor).getText ())) {
                 actor.attemptsTo (Click.on (producto));
             }
-            for (String numeroProducto : numerosProductos.split (COMA)) {
+            for (String numeroProducto : numerosProductos.replace (" ","").split (COMA)) {
                 if (!LBL_PRODUCTOS.of (numeroProducto).resolveFor (actor).isVisible ()) {
                     resultado = false;
                     throw new NoSeVisualizaElProductoException (numeroProducto);
