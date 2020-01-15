@@ -13,7 +13,7 @@ import java.io.IOException;
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTypeClass.RUNNER_CLASS;
 
 @CucumberOptions(
-        features = "src/test/resources/features/inicio/saldosporproducto/saldosporproductogeneral.feature",
+        features = "src/test/resources/features/inicio/saldosporproducto/saldos_por_producto_general.feature",
         glue = {"co.com.bancolombia.certificacion.svp.stepdefinitions.autenticacion",
                 "co.com.bancolombia.certificacion.svp.stepdefinitions.comunes",
                 "co.com.bancolombia.certificacion.svp.stepdefinitions.inicio.saldosporproductos"},
@@ -26,6 +26,6 @@ public class SaldosPorProductoGeneral {
     }
     @BeforeSuite
     public static void test() throws InvalidFormatException, IOException {
-        DataToFeature.overrideFeatureFiles("./src/test/resources/features/inicio/saldosporproducto/saldosporproductogeneral.feature");
+        DataToFeature.overrideFeatureFiles("./src/test/resources/features/inicio/saldosporproducto/saldos_por_producto_general.feature");
     }
 }
