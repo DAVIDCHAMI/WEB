@@ -1,6 +1,6 @@
 #language: es
 
-Característica: SVP autenticacion
+Característica: SVP saldos por producto
   Yo como usuario de Bancolombia
   Quiero iniciar sesion en el SVP
   Para visualizar los productos en la SVP

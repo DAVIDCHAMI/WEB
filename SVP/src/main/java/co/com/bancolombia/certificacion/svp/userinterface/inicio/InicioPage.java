@@ -12,7 +12,7 @@ public class InicioPage {
             .locatedBy("");
     public static final Target LBL_CUENTAS = Target.the ("Label Cuentas")
             .located (By.id("b8-label"));
-    public static final Target LBL_TARJETASDECREDITO = Target.the ("Label Tarjetas de credito")
+    public static final Target LBL_TARJETAS_CREDITO = Target.the ("Label Tarjetas de credito")
             .located (By.id("b15-label"));
     public static final Target LBL_CREDITOS = Target.the ("Label Creditos")
             .located (By.id ("CreditText"));
