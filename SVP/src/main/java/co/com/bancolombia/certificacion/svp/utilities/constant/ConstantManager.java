@@ -8,6 +8,7 @@ public class ConstantManager {
     public static final String ALTERNO = "ALTERNO";
     public static final String FORMATO_HORA_HHMMSS = "HHmmss";
     public static final String FORMATO_FECHA_YYYYMMDD = "yyyyMMdd";
+    public static final String COMA = ",";
     public static final String EMPTY = "";
     public static final String REMOVE_MIDDLE_SCRIPT = "-";
     public static final String MM_DD_YYYY = "MM/dd/yyyy";
@@ -40,6 +41,13 @@ public class ConstantManager {
     public static final int INTENTOS_REGISTRAR_USUARIO = 3;
     public static final int INTENTOS_RECORDAR_USUARIO = 4;
     public static final int TIEMPO_ESPERA_LOGIN = 9000;
+
+    public static final String TXT_CUENTAS = "Cuentas";
+    public static final String CUENTAS = "cuentas";
+    public static final String TARJETASDECREDITO = "tarjetasCredito";
+    public static final String CREDITOS = "creditos";
+    public static final String INVERSIONES = "inversiones";
+    public static final String CREDIAGIL = "crediagil";
 
     private ConstantManager() {
         throw new IllegalStateException(CONSTANT_CLASS);
