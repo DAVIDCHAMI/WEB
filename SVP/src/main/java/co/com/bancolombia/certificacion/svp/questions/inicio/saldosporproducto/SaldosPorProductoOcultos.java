@@ -22,13 +22,6 @@ public class SaldosPorProductoOcultos implements Question<String> {
 
     @Override
     public String answeredBy(Actor actor) {
-
-//        if (!TXT_CUENTAS.equals (producto)) {
-//            actor.attemptsTo (Click.on (LBL_PRODUCTOS.of (producto)));
-//        }
-
-
-        System.out.println (producto);
         if (!TXT_CUENTAS.equals (producto)) {
             actor.attemptsTo (Click.on(ObjetoAInteractuar.interactuaConEl(producto)));
         }
