@@ -7,6 +7,8 @@ import static co.com.bancolombia.certificacion.svp.userinterface.inicio.InicioPa
 
 public class ObjetoAInteractuar {
 
+    private ObjetoAInteractuar() {    }
+
     public static Target interactuaConEl(String producto){
         Target target = null;
         switch(producto) {

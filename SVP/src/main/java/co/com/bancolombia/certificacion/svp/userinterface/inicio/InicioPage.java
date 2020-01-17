@@ -18,15 +18,15 @@ public class InicioPage {
             .located (By.id(""));
     public static final Target LBL_CREDIAGIL = Target.the ("Label Crediagil")
             .located (By.id("CreditAgilRow"));
-    public static final Target LBL_PRODUCTOS_OCULTOS_CUENTAS = Target.the("Productos ocultos")
+    public static final Target LBL_PRODUCTOS_OCULTOS_CUENTAS = Target.the("Productos ocultos cuentas")
             .locatedBy("//*[@id='AccountsRow']//div[@class='text-message no-responsive']");
-    public static final Target LBL_PRODUCTOS_OCULTOS_TARJETAS_CREDITO = Target.the("Productos ocultos")
+    public static final Target LBL_PRODUCTOS_OCULTOS_TARJETAS_CREDITO = Target.the("Productos ocultos tarjetas credito")
             .locatedBy("//*[@id='CreditCardContainer']//div[@class='text-message no-responsive']");
-    public static final Target LBL_PRODUCTOS_OCULTOS_CREDITOS = Target.the("Productos ocultos")
+    public static final Target LBL_PRODUCTOS_OCULTOS_CREDITOS = Target.the("Productos ocultos creditos")
             .locatedBy("//*[@id='CreditRow']//div[@class='text-message no-responsive']");
-    public static final Target LBL_PRODUCTOS_OCULTOS_INVERSIONES = Target.the("Productos ocultos")
+    public static final Target LBL_PRODUCTOS_OCULTOS_INVERSIONES = Target.the("Productos ocultos inversion")
             .locatedBy("");
-    public static final Target LBL_PRODUCTOS_OCULTOS_CREDIAGIL = Target.the("Productos ocultos")
+    public static final Target LBL_PRODUCTOS_OCULTOS_CREDIAGIL = Target.the("Productos ocultos crediagil")
             .locatedBy("//*[@id='CreditAgilRow']//div[@class='text-message no-responsive']");
 
     private InicioPage() {throw new IllegalStateException(UI_CLASS);}
