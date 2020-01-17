@@ -21,9 +21,9 @@ public class SaldosPorProductoVisibles implements Question<Boolean> {
     }
 
     public static boolean segundaRespuestaDel(Actor actor){
-        return el(actor).visualizalProducto(LBL_CREDITOS).conLosNumeros(DatosPrueba.getMap().get(CREDITOS).toString()).eIdentificaQueSePresenta()&&el(actor).visualizalProducto(LBL_INVERSIONES).conLosNumeros(DatosPrueba.getMap().get(INVERSIONES).toString()).eIdentificaQueSePresenta()
-                &&
-                el(actor).visualizalProducto(LBL_CREDIAGIL).conLosNumeros(DatosPrueba.getMap().get(CREDIAGIL).toString()).eIdentificaQueSePresenta();
+        return el(actor).visualizalProducto(LBL_CREDITOS).conLosNumeros(DatosPrueba.getMap().get(CREDITOS).toString()).eIdentificaQueSePresenta()
+                &&el(actor).visualizalProducto(LBL_INVERSIONES).conLosNumeros(DatosPrueba.getMap().get(INVERSIONES).toString()).eIdentificaQueSePresenta()
+                &&el(actor).visualizalProducto(LBL_CREDIAGIL).conLosNumeros(DatosPrueba.getMap().get(CREDIAGIL).toString()).eIdentificaQueSePresenta();
     }
 
     @Override
