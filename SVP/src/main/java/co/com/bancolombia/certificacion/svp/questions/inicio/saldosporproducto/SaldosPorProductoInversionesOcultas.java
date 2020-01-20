@@ -11,14 +11,15 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantMa
 import static co.com.bancolombia.certificacion.svp.utilities.validaciones.saldosporproducto.ProductoVisible.el;
 
 public class SaldosPorProductoInversionesOcultas implements Question<Boolean> {
-    boolean productoOculto;
+    boolean productoVisibles;
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        productoOculto = (DatosPrueba.getMap ().get (MENSAJE_RESPUESTA).toString ()).equals(LBL_PRODUCTOS_OCULTOS_INVERSIONES.resolveFor (actor).getText ());
+        productoVisibles = el(actor).visualizalProducto(LBL_INVERSIONES)
+                .conLosNumeros(DatosPrueba.getMap().get(INVERSIONES).toString())
+                .eIdentificaQueSePresenta();
 
-        return el(actor).visualizalProducto(LBL_INVERSIONES).conLosNumeros(DatosPrueba.getMap().get(INVERSIONES).toString()).eIdentificaQueSePresenta()
-        && productoOculto;
+        return productoVisibles && (DatosPrueba.getMap ().get (MENSAJE_RESPUESTA).toString ()).equals(LBL_PRODUCTOS_OCULTOS_INVERSIONES.resolveFor (actor).getText ());
     }
 
     public static SaldosPorProductoInversionesOcultas visualizaElProductoVisibleMasMensajeDeOculto(){
