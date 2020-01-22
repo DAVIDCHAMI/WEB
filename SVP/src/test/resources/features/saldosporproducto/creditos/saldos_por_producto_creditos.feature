@@ -13,7 +13,7 @@ Característica: SVP saldos por producto
     Entonces el deberia de ver el saldo de cada producto en la SVP
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | cuentas | tarjetasCredito | creditos | inversiones | crediagil | mensajeRespuesta | escenario           |
-       ##@externaldata@.\src\test\resources\datadriven\inicio\saldosporproducto\saldosporproducto.xlsx@Creditos@1
+       ##@externaldata@.\src\test\resources\datadriven\saldosporproducto\saldosporproducto.xlsx@Creditos@1
       |1|Acierto||||854124014|OSVPPRU10|1234|1234||||4||||Visualizar creditos|
 
   Esquema del escenario: Consulta saldos por producto - creditos ocultas
@@ -24,7 +24,7 @@ Característica: SVP saldos por producto
     Entonces el deberia de ver un mensaje informativo de Credito ocultas
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | cuentas                   | tarjetasCredito | creditos        | inversiones   | crediagil         | mensajeRespuesta                                                                                                              | escenario        |
-       ##@externaldata@.\src\test\resources\datadriven\inicio\saldosporproducto\saldosporproducto.xlsx@Creditos@2
+       ##@externaldata@.\src\test\resources\datadriven\saldosporproducto\saldosporproducto.xlsx@Creditos@2
       |2|Acierto||||854124014|OSVPPRU10|1234|1234||4|4|4|4|4|Los productos están ocultos, puedes habilitarlos nuevamente en la opción "Productos/ Administrar productos propios".|Creditos ocultas   |
 
   Esquema del escenario: Consulta saldos por producto sin creditos
@@ -35,5 +35,5 @@ Característica: SVP saldos por producto
     Entonces el deberia de ver el saldo de cada producto en la SVP
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | cuentas | tarjetasCredito | creditos | inversiones | crediagil | mensajeRespuesta | escenario    |
-       ##@externaldata@.\src\test\resources\datadriven\inicio\saldosporproducto\saldosporproducto.xlsx@Creditos@3
+       ##@externaldata@.\src\test\resources\datadriven\saldosporproducto\saldosporproducto.xlsx@Creditos@3
       |3|Alterno||||854124014|OSVPPRU10|1234|1234||4|4|4|4|4||Sin creditos|
