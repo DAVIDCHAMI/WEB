@@ -1,4 +1,4 @@
-package co.com.bancolombia.certificacion.svp.questions.inicio.saldosporproducto;
+package co.com.bancolombia.certificacion.svp.questions.saldosporproducto;
 
 import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
 import net.serenitybdd.screenplay.Actor;

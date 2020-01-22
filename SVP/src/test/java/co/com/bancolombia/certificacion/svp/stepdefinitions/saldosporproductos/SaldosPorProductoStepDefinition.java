@@ -3,8 +3,8 @@ package co.com.bancolombia.certificacion.svp.stepdefinitions.saldosporproductos;
 import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
 import cucumber.api.java.es.Entonces;
 
-import static co.com.bancolombia.certificacion.svp.questions.inicio.saldosporproducto.SaldosPorProductoInversionesOcultas.visualizaElProductoVisibleMasMensajeDeOculto;
-import static co.com.bancolombia.certificacion.svp.questions.inicio.saldosporproducto.SaldosPorProductoTodosOcultos.visualizaTodosLosProductosOcultos;
+import static co.com.bancolombia.certificacion.svp.questions.saldosporproducto.SaldosPorProductoInversionesOcultas.visualizaElProductoVisibleMasMensajeDeOculto;
+import static co.com.bancolombia.certificacion.svp.questions.saldosporproducto.SaldosPorProductoTodosOcultos.visualizaTodosLosProductosOcultos;
 import static co.com.bancolombia.certificacion.svp.questions.saldosporproducto.SaldosPorProductoOcultos.visualizaElMensajeDeProductosOcultos;
 import static co.com.bancolombia.certificacion.svp.questions.saldosporproducto.SaldosPorProductoVisibles.visualizaSusSaldos;
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.MENSAJE_RESPUESTA;
