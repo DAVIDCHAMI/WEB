@@ -6,6 +6,7 @@ import cucumber.api.java.es.Entonces;
 import static co.com.bancolombia.certificacion.svp.questions.inicio.saldosporproducto.SaldosPorProductoInversionesOcultas.visualizaElProductoVisibleMasMensajeDeOculto;
 import static co.com.bancolombia.certificacion.svp.questions.inicio.saldosporproducto.SaldosPorProductoOcultos.visualizaElMensajeDeProductosOcultos;
 import static co.com.bancolombia.certificacion.svp.questions.inicio.saldosporproducto.SaldosPorProductoVisibles.visualizaSusSaldos;
+import static co.com.bancolombia.certificacion.svp.questions.inicio.saldosporproducto.SaldosPorProductoTodosOcultos.visualizaTodosLosProductosOcultos;
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.MENSAJE_RESPUESTA;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
@@ -16,6 +17,11 @@ public class SaldosPorProductoStepDefinition {
     @Entonces("^el deberia de ver el saldo de cada producto en la SVP$")
     public void elDeberiaDeVerElSaldoDeCadaProductoEnLaSVP() {
         theActorInTheSpotlight ().should (seeThat (visualizaSusSaldos ()));
+    }
+
+    @Entonces("^el deberia de ver un mensaje informativo para todos los productos$")
+    public void elDeberiaDeVerUnMensajeInformativoParaTodosLosProductos() {
+        theActorInTheSpotlight ().should (seeThat (visualizaTodosLosProductosOcultos ()));
     }
 
     @Entonces("^el deberia de ver un mensaje informativo$")
