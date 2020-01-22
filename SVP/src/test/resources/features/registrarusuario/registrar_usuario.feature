@@ -9,12 +9,12 @@ Característica: Registro de usuarios
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | correoElectronico   | celular   | palabraClave   | mensajeRespuesta   |
       | <idCaso> | <orientacion> | <codigoTransaccion> | <codigoError> | <resultadoEsperado> | <numeroDocumento> | <usuario> | <clave> | <segundaClave> | <tipoDocumento> | <correoElectronico> | <celular> | <palabraClave> | <mensajeRespuesta> |
-    Cuando el realiza un registro con usuario y documento igual en SVP
+    Cuando el quiere registrarsse con usuario y documento igual en SVP
     Entonces el deberia de ver el mensaje de respuesta
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario    | clave | segundaClave | tipoDocumento | correoElectronico | celular    | palabraClave | mensajeRespuesta                                            |
        ##@externaldata@./src/test/resources/datadriven/registrarusuario/registrar_usuario.xlsx@Datos@1
-      |1|Alterno||||65698237|25130234|1234|1234||da@gmail.com|3182314777|hola|Para continuar debes registrarte de nuevo en la aplicación.|
+      |1|Alterno||||989636299|989636299|1234|1234||da@gmail.com|3182314777|hola|Para continuar debes registrarte de nuevo en la aplicación.|
 
   Esquema del escenario: Registro de usuario con usuario ya existente
     Dado que Juan carga los datos de la prueba
