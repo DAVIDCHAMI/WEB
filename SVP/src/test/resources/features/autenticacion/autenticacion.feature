@@ -49,6 +49,7 @@ Característica: SVP autenticacion
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@4
       |4|Alterno|||Usuario o clave inválida. Inténtalo nuevamente||OSVPPRU06|4567|||
 
+
   Esquema del escenario: Inicio de sesion con clave bloqueada
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
@@ -58,7 +59,8 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/autenticacion/autenticacion.xlsx@Datos@5
-      |5|Alterno|||La clave que usas en el cajero está bloqueada. Debes activarla en la Sucursal Física. Para mayor información comunícate con la Sucursal Telefónica.|1989636238||1234|||
+      |5|Alterno|||La clave que usas en el cajero está bloqueada. Debes activarla en la Sucursal Física. Para mayor información comunícate con la Sucursal Telefónica.|a|a|1234|||
+
 
   Esquema del escenario: Inicio de sesion con usuario inexistente
     Dado que Juan carga los datos de la prueba
