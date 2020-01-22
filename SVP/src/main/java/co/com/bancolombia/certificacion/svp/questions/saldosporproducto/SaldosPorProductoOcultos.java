@@ -1,5 +1,6 @@
 package co.com.bancolombia.certificacion.svp.questions.saldosporproducto;
 
+import co.com.bancolombia.certificacion.svp.interactions.comunes.Esperar;
 import co.com.bancolombia.certificacion.svp.utilities.validaciones.saldosporproducto.ObjetoAInteractuar;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
@@ -19,7 +20,7 @@ public class SaldosPorProductoOcultos implements Question<String> {
     @Override
     public String answeredBy(Actor actor) {
         if (!TXT_CUENTAS.equals (producto)) {
-            actor.attemptsTo (Click.on(ObjetoAInteractuar.interactuaConEl(producto)));
+            actor.attemptsTo (Click.on(ObjetoAInteractuar.interactuaConEl(producto)), Esperar.unTiempo ());
         }
         return Text.of (ObjetoAInteractuar.interactuaConElMensajeDeOcultoDel (producto)).viewedBy (actor).asString ();
     }

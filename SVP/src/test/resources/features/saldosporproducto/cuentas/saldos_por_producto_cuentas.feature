@@ -14,7 +14,7 @@ Característica: SVP saldos por producto
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | cuentas | tarjetasCredito | creditos | inversiones | crediagil | mensajeRespuesta | escenario           |
        ##@externaldata@.\src\test\resources\datadriven\saldosporproducto\saldosporproducto.xlsx@Cuentas@1
-      |1|Acierto||||854124014|OSVPPRU10|1234|1234||2||||||Visualizar cuentas|
+      |1|Acierto|||||PRUEBAENROL5 |1234|1234||406-762410-20||||||Visualizar cuentas|
 
   Esquema del escenario: Consulta saldos por producto - cuentas ocultas
     Dado que Juan carga los datos de la prueba
@@ -25,7 +25,7 @@ Característica: SVP saldos por producto
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | cuentas | tarjetasCredito | creditos | inversiones | crediagil | mensajeRespuesta                                                                                                              |escenario   |
        ##@externaldata@.\src\test\resources\datadriven\saldosporproducto\saldosporproducto.xlsx@Cuentas@2
-      |2|Acierto||||854124014|OSVPPRU10|1234|1234||2|2|2|2|2|Los productos están ocultos, puedes habilitarlos nuevamente en la opción "Productos/ Administrar productos propios".|Cuentas ocultas|
+      |2|Acierto|||||USUCTDC2 |1234|1234|||||||Los productos están ocultos, puedes habilitarlos nuevamente en la opción "Productos/ Administrar productos propios".|Cuentas ocultas|
 
   Esquema del escenario: Consulta saldos por producto sin cuentas
     Dado que Juan carga los datos de la prueba
@@ -36,4 +36,4 @@ Característica: SVP saldos por producto
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | cuentas | tarjetasCredito        | creditos        | inversiones   | crediagil         | mensajeRespuesta |escenario   |
        ##@externaldata@.\src\test\resources\datadriven\saldosporproducto\saldosporproducto.xlsx@Cuentas@3
-      |3|Acierto||||854124014|OSVPPRU10|1234|1234||2|2|2|2|2||Sin cuentas|
+      |3|Acierto|||||USUCTDC11|1234|1234|||****4632, ****6885, ****9658|||||Sin cuentas|
