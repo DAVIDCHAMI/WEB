@@ -2,8 +2,8 @@ package co.com.bancolombia.certificacion.svp.stepdefinitions.inicio.saldosporpro
 
 import cucumber.api.java.es.Entonces;
 
-import static co.com.bancolombia.certificacion.svp.questions.inicio.saldosporproducto.SaldosPorProductoOcultos.visualizaElMensajeDeProductosOcultos;
-import static co.com.bancolombia.certificacion.svp.questions.inicio.saldosporproducto.SaldosPorProductoVisibles.visualizaSusSaldos;
+import static co.com.bancolombia.certificacion.svp.questions.saldosporproducto.SaldosPorProductoOcultos.visualizaElMensajeDeProductosOcultos;
+import static co.com.bancolombia.certificacion.svp.questions.saldosporproducto.SaldosPorProductoVisibles.visualizaSusSaldos;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
