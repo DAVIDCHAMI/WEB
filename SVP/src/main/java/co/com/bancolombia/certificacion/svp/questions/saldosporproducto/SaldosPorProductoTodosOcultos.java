@@ -1,4 +1,4 @@
-package co.com.bancolombia.certificacion.svp.questions.inicio.saldosporproducto;
+package co.com.bancolombia.certificacion.svp.questions.saldosporproducto;
 
 import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
 import net.serenitybdd.screenplay.Actor;
@@ -16,8 +16,7 @@ public class SaldosPorProductoTodosOcultos implements Question<Boolean> {
     }
 
     public static boolean respuestaDosDel(Actor actor){
-        return (DatosPrueba.getMap ().get (MENSAJE_RESPUESTA).toString ()).equals (LBL_PRODUCTOS_OCULTOS_CREDITOS.resolveFor (actor).getText ())
-                && (DatosPrueba.getMap ().get (MENSAJE_RESPUESTA).toString ()).equals (LBL_PRODUCTOS_OCULTOS_CREDIAGIL.resolveFor (actor).getText ());
+        return (DatosPrueba.getMap ().get (MENSAJE_RESPUESTA).toString ()).equals (LBL_PRODUCTOS_OCULTOS_CREDITOS.resolveFor (actor).getText ());
     }
 
     @Override
