@@ -48,7 +48,7 @@ Característica: SVP saldos por producto
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | cuentas                   | tarjetasCredito        | creditos        | inversiones   | crediagil | mensajeRespuesta                                                                                                              | escenario                                             |
        ##@externaldata@.\src\test\resources\datadriven\saldosporproducto\saldosporproducto.xlsx@Inversion@4
       |4|Alterno||||||1234|1234|||||||Los productos están ocultos, puedes habilitarlos nuevamente en la opción "Productos/ Administrar productos propios".|Inversión virtual visible y fondo de invercion oculto|
-
+    
   Esquema del escenario: Consulta saldos por producto - Sin inversion virtual y con fondos de inversion
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | cuentas   | tarjetasCredito   | creditos   | inversiones   | crediagil   | mensajeRespuesta   | escenario   |

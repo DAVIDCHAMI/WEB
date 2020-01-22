@@ -17,7 +17,7 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
         glue = {"co.com.bancolombia.certificacion.svp.stepdefinitions.autenticacion",
                 "co.com.bancolombia.certificacion.svp.stepdefinitions.comunes",
                 "co.com.bancolombia.certificacion.svp.stepdefinitions.saldosporproductos"},
-       snippets = SnippetType.CAMELCASE
+        snippets = SnippetType.CAMELCASE
 )
 @RunWith(RunnerPersonalizado.class)
 public class SaldosPorProductoInversion {
