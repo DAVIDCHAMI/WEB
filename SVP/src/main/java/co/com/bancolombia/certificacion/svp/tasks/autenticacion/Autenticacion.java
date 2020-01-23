@@ -1,4 +1,6 @@
 package co.com.bancolombia.certificacion.svp.tasks.autenticacion;
+
+import co.com.bancolombia.certificacion.svp.interactions.comunes.Esperar;
 import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -23,8 +25,10 @@ public class Autenticacion implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
+                Esperar.unTiempo(),
                 Enter.theValue(DatosPrueba.getMap().get(USUARIO).toString()).into(TXT_NOMBRE_USUARIO),
                 Click.on(BTN_CONTINUAR),WaitUntil.the(TXT_CLAVE, isVisible()),
+                Esperar.unTiempo(),
                 Ensure.that(IMG_USUARIO).isDisplayed(),Ensure.that(LBL_FRASE_SEGURIDAD).isDisplayed(),
                 Enter.theValue(DatosPrueba.getMap().get(CLAVE).toString()).into(TXT_CLAVE),
                 Click.on(BTN_CONTINUAR), unTiempo()
