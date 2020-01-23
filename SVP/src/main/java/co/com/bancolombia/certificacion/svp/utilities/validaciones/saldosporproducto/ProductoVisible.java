@@ -2,6 +2,7 @@ package co.com.bancolombia.certificacion.svp.utilities.validaciones.saldosporpro
 
 import co.com.bancolombia.certificacion.svp.exceptions.saldos.NoSeVisualizaElProductoException;
 import co.com.bancolombia.certificacion.svp.exceptions.saldos.SeVisualizaUnaCategoriaSinProductosException;
+import co.com.bancolombia.certificacion.svp.interactions.comunes.Esperar;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.targets.Target;
@@ -36,8 +37,9 @@ public class ProductoVisible {
     public boolean eIdentificaQueSePresenta() {
         if (numerosProductos != null && !numerosProductos.equals (EMPTY)) {
             if (!TXT_CUENTAS.equals (producto.resolveFor (actor).getText ())) {
-                actor.attemptsTo (Click.on (producto));
+                actor.attemptsTo (Click.on (producto), Esperar.unTiempo ());
             }
+
             for (String numeroProducto : numerosProductos.replace (" ","").split (COMA)) {
                 if (!LBL_PRODUCTOS.of (numeroProducto).resolveFor (actor).isVisible ()) {
                     resultado = false;

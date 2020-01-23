@@ -14,7 +14,7 @@ Característica: SVP saldos por producto
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | cuentas | tarjetasCredito | creditos | inversiones | crediagil | mensajeRespuesta | escenario                   |
        ##@externaldata@.\src\test\resources\datadriven\saldosporproducto\saldosporproducto.xlsx@TarjetasCredito@1
-      | 1      | Acierto     |                   |             |                   | 854124014       | OSVPPRU10 | 1234  | 1234         |               |         | 3               |          |             |           |                  | Visualizar tarjetas credito |
+      |1|Acierto|||||USUCTDC11|1234|1234|||****4632, ****6885, ****9658|||||Visualizar tarjetas credito|
 
   Esquema del escenario: Consulta saldos por producto - tarjetas credito ocultas
     Dado que Juan carga los datos de la prueba
@@ -25,7 +25,7 @@ Característica: SVP saldos por producto
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | cuentas | tarjetasCredito | creditos | inversiones | crediagil | mensajeRespuesta                                                                                                     | escenario                |
        ##@externaldata@.\src\test\resources\datadriven\saldosporproducto\saldosporproducto.xlsx@TarjetasCredito@2
-      | 2      | Acierto     |                   |             |                   | 854124014       | OSVPPRU10 | 1234  | 1234         |               | 3       | 3               | 3        | 3           | 3         | Los productos están ocultos, puedes habilitarlos nuevamente en la opción "Productos/ Administrar productos propios". | Tarjetas credito ocultas |
+      |2|Acierto|||||USUCTDC2 |1234|1234|||||||Los productos están ocultos, puedes habilitarlos nuevamente en la opción "Productos/ Administrar productos propios".|Tarjetas credito ocultas|
 
   Esquema del escenario: Consulta saldos por producto sin tarjetas de credito
     Dado que Juan carga los datos de la prueba
@@ -36,4 +36,4 @@ Característica: SVP saldos por producto
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | cuentas | tarjetasCredito | creditos | inversiones | crediagil | mensajeRespuesta | escenario               |
        ##@externaldata@.\src\test\resources\datadriven\saldosporproducto\saldosporproducto.xlsx@TarjetasCredito@3
-      | 3      | Acierto     |                   |             |                   | 854124014       | OSVPPRU10 | 1234  | 1234         |               | 3       | 3               | 3        | 3           | 3         |                  | Sin tarjetas de credito |
+      |3|Acierto|||||PRUEBAENROL5 |1234|1234||406-762410-20||||||Sin tarjetas de credito|
