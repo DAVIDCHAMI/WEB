@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTypeClass.UI_CLASS;
 
-public class RegistrarUsuarioPage {
+public class RegistrarUsuario {
     public static final Target TXT_CREAR_USUARIO = Target.the("Campo crear usuario").located(By.id("InputUserName"));
     public static final Target TXT_CORREO_ELECTRONICO = Target.the("Campo Correo electronico").located(By.id("InputEmail"));
     public static final Target TXT_CELULAR = Target.the("Campo Numero celular").located(By.id("InputMobilePhone"));
@@ -21,7 +21,7 @@ public class RegistrarUsuarioPage {
     public static final Target LBL_COMPROBANTE_REGISTRO_USUARIO = Target.the("Label comprobante registro exitoso").locatedBy("");
     public static final Target LBL_FECHA_HORA_REGISTRO_USUARIO = Target.the("Label fecha y hora registro exitoso").locatedBy("");
 
-    private RegistrarUsuarioPage() {
+    private RegistrarUsuario() {
         throw new IllegalStateException(UI_CLASS);
     }
 }

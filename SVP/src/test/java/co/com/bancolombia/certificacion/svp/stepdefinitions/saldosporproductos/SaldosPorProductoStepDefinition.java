@@ -4,10 +4,10 @@ import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
 import cucumber.api.java.es.Entonces;
 
 import static co.com.bancolombia.certificacion.svp.questions.saldosporproducto.SaldosPorProductoInversionesOcultas.visualizaElProductoVisibleMasMensajeDeOculto;
-import static co.com.bancolombia.certificacion.svp.questions.saldosporproducto.SaldosPorProductoTodosOcultos.visualizaTodosLosProductosOcultos;
 import static co.com.bancolombia.certificacion.svp.questions.saldosporproducto.SaldosPorProductoOcultos.visualizaElMensajeDeProductosOcultos;
+import static co.com.bancolombia.certificacion.svp.questions.saldosporproducto.SaldosPorProductoTodosOcultos.visualizaTodosLosProductosOcultos;
 import static co.com.bancolombia.certificacion.svp.questions.saldosporproducto.SaldosPorProductoVisibles.visualizaSusSaldos;
-import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.MENSAJE_RESPUESTA;
+import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantExcelData.MENSAJE_RESPUESTA;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.Matchers.equalTo;
@@ -34,5 +34,4 @@ public class SaldosPorProductoStepDefinition {
         theActorInTheSpotlight ().should (seeThat (visualizaElMensajeDeProductosOcultos (producto),
                 equalTo (DatosPrueba.getMap ().get (MENSAJE_RESPUESTA).toString ())));
     }
-
 }

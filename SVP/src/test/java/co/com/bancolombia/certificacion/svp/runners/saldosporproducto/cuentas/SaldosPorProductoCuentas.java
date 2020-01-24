@@ -21,9 +21,11 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
 )
 @RunWith(RunnerPersonalizado.class)
 public class SaldosPorProductoCuentas {
+
     private SaldosPorProductoCuentas() {
         throw new IllegalStateException(RUNNER_CLASS);
     }
+
     @BeforeSuite
     public static void test() throws InvalidFormatException, IOException {
         DataToFeature.overrideFeatureFiles("./src/test/resources/features/saldosporproducto/cuentas/saldos_por_producto_cuentas.feature");

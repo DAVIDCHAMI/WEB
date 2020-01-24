@@ -4,7 +4,7 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
-public class AutenticacionPage extends PageObject {
+public class Autenticacion extends PageObject {
     public static final Target TXT_NOMBRE_USUARIO = Target.the("Campo Nombre de usuario").located(By.id("UsernameInput"));
     public static final Target LNK_OLVIDASTE_CONTRASENA = Target.the("Link olvido contraseña").locatedBy("//span[@class='padding-base']");
     public static final Target LNK_PROBLEMAS_CONEXION = Target.the("Link problemas conexion").located(By.id("b3-Input_Input1"));

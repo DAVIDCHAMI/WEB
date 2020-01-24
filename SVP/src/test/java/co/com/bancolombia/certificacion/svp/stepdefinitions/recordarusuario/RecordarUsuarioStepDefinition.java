@@ -29,5 +29,4 @@ public class RecordarUsuarioStepDefinition {
     public void elDeberiaDeVerElMensajeDeClaveBloqueada() {
         theActorInTheSpotlight().should(seeThat(visualizaElMensajeDeClaveBloqueada()));
     }
-
 }

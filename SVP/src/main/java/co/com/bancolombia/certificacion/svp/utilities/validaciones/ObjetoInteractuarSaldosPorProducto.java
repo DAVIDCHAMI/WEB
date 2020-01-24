@@ -1,16 +1,16 @@
-package co.com.bancolombia.certificacion.svp.utilities.validaciones.saldosporproducto;
+package co.com.bancolombia.certificacion.svp.utilities.validaciones;
 
 import co.com.bancolombia.certificacion.svp.exceptions.comunes.ProductoNoManejadoPorElBancoException;
 import net.serenitybdd.screenplay.targets.Target;
 
-import static co.com.bancolombia.certificacion.svp.userinterface.inicio.InicioPage.*;
+import static co.com.bancolombia.certificacion.svp.userinterface.inicio.Inicio.*;
 
-public class ObjetoAInteractuar {
+public class ObjetoInteractuarSaldosPorProducto {
 
-    private ObjetoAInteractuar() {    }
+    private ObjetoInteractuarSaldosPorProducto() {    }
 
     public static Target interactuaConEl(String producto){
-        Target target = null;
+        Target target;
         switch(producto) {
             case "Cuentas":
                 target = LBL_CUENTAS;
@@ -34,7 +34,7 @@ public class ObjetoAInteractuar {
     }
 
     public static Target interactuaConElMensajeDeOcultoDel(String producto){
-        Target target = null;
+        Target target;
         switch(producto) {
             case "Cuentas":
                 target = LBL_PRODUCTOS_OCULTOS_CUENTAS;
