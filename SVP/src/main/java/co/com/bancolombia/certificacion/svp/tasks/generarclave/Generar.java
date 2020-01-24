@@ -1,7 +1,6 @@
 package co.com.bancolombia.certificacion.svp.tasks.generarclave;
 
 import co.com.bancolombia.certificacion.svp.interactions.comunes.Cargar;
-import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
@@ -10,11 +9,12 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.conditions.Check;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
-import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.AutenticacionPage.LNK_GENERAR_CLAVE;
-import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.AutenticacionPage.TXT_NOMBRE_USUARIO;
-import static co.com.bancolombia.certificacion.svp.userinterface.comunes.ElementosComunesPage.BTN_CONTINUAR;
-import static co.com.bancolombia.certificacion.svp.userinterface.generarclave.GenerarClavePage.*;
-import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.*;
+import static co.com.bancolombia.certificacion.svp.models.DatosPrueba.obtener;
+import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.Autenticacion.LNK_GENERAR_CLAVE;
+import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.Autenticacion.TXT_NOMBRE_USUARIO;
+import static co.com.bancolombia.certificacion.svp.userinterface.comunes.ElementosComunes.BTN_CONTINUAR;
+import static co.com.bancolombia.certificacion.svp.userinterface.generarclave.GenerarClave.*;
+import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantExcelData.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isClickable;
 
@@ -27,7 +27,7 @@ public class Generar implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Enter.theValue(DatosPrueba.getMap().get(USUARIO).toString()).into(TXT_NOMBRE_USUARIO),
+                Enter.theValue(obtener(USUARIO)).into(TXT_NOMBRE_USUARIO),
                 Click.on(BTN_CONTINUAR),
                 Cargar.transaccion(),
                 WaitUntil.the(LNK_GENERAR_CLAVE, isClickable())
@@ -40,10 +40,10 @@ public class Generar implements Task {
                         Click.on(BTN_ENTIENDO_MODAL)
                 ),
                 Click.on(LST_TIPO_DOCUMENTO),
-                Click.on(OPT_TIPO_DOCUMENTO.of(DatosPrueba.getMap().get(TIPO_DOCUMENTO).toString())),
-                Enter.theValue(DatosPrueba.getMap().get(NUMERO_DOCUMENTO).toString()).into(TXT_NUMERO_DOCUMENTO),
-                Enter.theValue(DatosPrueba.getMap().get(CLAVE).toString()).into(TXT_CLAVE_USUARIO),
-                Enter.theValue(DatosPrueba.getMap().get(CLAVE).toString()).into(TXT_CONFIRMAR_CLAVE_USUARIO),
+                Click.on(OPT_TIPO_DOCUMENTO.of(obtener(TIPO_DOCUMENTO))),
+                Enter.theValue(obtener(NUMERO_DOCUMENTO)).into(TXT_NUMERO_DOCUMENTO),
+                Enter.theValue(obtener(CLAVE)).into(TXT_CLAVE_USUARIO),
+                Enter.theValue(obtener(CLAVE)).into(TXT_CONFIRMAR_CLAVE_USUARIO),
                 Click.on(BTN_GENERAR_CLAVE),
                 Cargar.transaccion()
         );

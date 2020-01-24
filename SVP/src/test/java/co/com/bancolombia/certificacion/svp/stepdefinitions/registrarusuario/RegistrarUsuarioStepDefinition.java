@@ -47,5 +47,4 @@ public class RegistrarUsuarioStepDefinition {
         theActorInTheSpotlight().should(seeThat(MensajeRealizarRegistro.deNuevo())
         );
     }
-
 }

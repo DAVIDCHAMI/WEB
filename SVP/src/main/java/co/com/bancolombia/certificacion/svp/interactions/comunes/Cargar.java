@@ -4,7 +4,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Performable;
 
-import static co.com.bancolombia.certificacion.svp.userinterface.comunes.ElementosComunesPage.LBL_CARGANDO;
+import static co.com.bancolombia.certificacion.svp.userinterface.comunes.ElementosComunes.LBL_CARGANDO;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class Cargar implements Interaction {

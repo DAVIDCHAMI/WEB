@@ -15,4 +15,8 @@ public class DatosPrueba {
     public static void setMap(Map<String, Object> datosPrueba) {
         map = datosPrueba;
     }
+
+    public static String obtener(String datoObtener){
+        return (String) getMap().get(datoObtener);
+    }
 }

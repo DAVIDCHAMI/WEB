@@ -1,4 +1,4 @@
-package co.com.bancolombia.certificacion.svp.utilities.validaciones.saldosporproducto;
+package co.com.bancolombia.certificacion.svp.utilities.validaciones;
 
 import co.com.bancolombia.certificacion.svp.exceptions.saldos.NoSeVisualizaElProductoException;
 import co.com.bancolombia.certificacion.svp.exceptions.saldos.SeVisualizaUnaCategoriaSinProductosException;
@@ -7,29 +7,29 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.targets.Target;
 
-import static co.com.bancolombia.certificacion.svp.userinterface.inicio.InicioPage.LBL_PRODUCTOS;
+import static co.com.bancolombia.certificacion.svp.userinterface.inicio.Inicio.LBL_PRODUCTOS;
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.*;
 
-public class ProductoVisible {
+public class ProductoVisibleSaldosPorProducto {
     private static Actor actor;
     private static Target producto;
     private static String numerosProductos;
     private static boolean resultado = true;
 
-    public ProductoVisible(Actor actor) {
+    public ProductoVisibleSaldosPorProducto(Actor actor) {
         this.actor = actor;
     }
 
-    public static ProductoVisible el(Actor actor) {
-        return new ProductoVisible (actor);
+    public static ProductoVisibleSaldosPorProducto el(Actor actor) {
+        return new ProductoVisibleSaldosPorProducto(actor);
     }
 
-    public ProductoVisible visualizalProducto(Target producto) {
+    public ProductoVisibleSaldosPorProducto visualizalProducto(Target producto) {
         this.producto = producto;
         return this;
     }
 
-    public ProductoVisible conLosNumeros(String numeroProducto) {
+    public ProductoVisibleSaldosPorProducto conLosNumeros(String numeroProducto) {
         this.numerosProductos = numeroProducto;
         return this;
     }

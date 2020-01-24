@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTypeClass.UI_CLASS;
 
-public class InicioPage {
+public class Inicio {
     public static final Target LBL_PRODUCTOS = Target.the("Productos")
             .locatedBy("//*[text()='{0}']");
     public static final Target LBL_CUENTAS = Target.the ("Label Cuentas")
@@ -29,5 +29,5 @@ public class InicioPage {
     public static final Target LBL_PRODUCTOS_OCULTOS_CREDIAGIL = Target.the("Productos ocultos crediagil")
             .locatedBy("//*[@id='CreditAgilRow']//div[@class='text-message no-responsive']");
 
-    private InicioPage() {throw new IllegalStateException(UI_CLASS);}
+    private Inicio() {throw new IllegalStateException(UI_CLASS);}
 }

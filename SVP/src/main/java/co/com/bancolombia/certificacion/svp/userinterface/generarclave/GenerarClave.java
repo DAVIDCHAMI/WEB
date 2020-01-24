@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTypeClass.UI_CLASS;
 
-public class GenerarClavePage {
+public class GenerarClave {
     public static final Target BTN_ENTIENDO_MODAL = Target.the("Boton modal Entiendo").located(By.xpath("//button[contains(.,'CERRAR')]"));
     public static final Target LST_TIPO_DOCUMENTO = Target.the("Select tipo de documento").located(By.xpath("//div[@id='DropdownDocumentType']/div/div"));
     public static final Target OPT_TIPO_DOCUMENTO = Target.the("Opciones tipo de documento").locatedBy("//div[@id='DropdownDocumentType']/div/div/div[contains(.,'{0}')]");
@@ -17,7 +17,7 @@ public class GenerarClavePage {
     public static final Target LBL_MENSAJE_GENERAR = Target.the("Label Mensaje confirmar clave").located(By.id("b3-SuccessIcon"));
     public static final Target LBL_FECHA_HORA_GENERAR = Target.the("Label fecha generar clave").located(By.xpath("//div[@id='b5-Value']//span"));
 
-    private GenerarClavePage() {
+    private GenerarClave() {
         throw new IllegalStateException(UI_CLASS);
     }
 }
