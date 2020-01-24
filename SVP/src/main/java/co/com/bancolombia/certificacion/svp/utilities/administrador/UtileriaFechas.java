@@ -8,7 +8,7 @@ public class UtileriaFechas {
     private static String mes = Integer.toString(Calendar.getInstance().get(Calendar.MONTH) + 1);
     private static String anio = Integer.toString(Calendar.getInstance().get(Calendar.YEAR));
     private static String mesLetra;
-    private static String mesLetras[] = {"Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"};
+    private static String[] mesLetras = {"Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"};
 
     private UtileriaFechas() {
         throw new IllegalStateException("Utileria Fechas");
