@@ -27,6 +27,10 @@ public class ObjetoInteractuarSaldosPorProducto {
             case "Inversiones":
                 target =LBL_INVERSIONES;
                 break;
+            case "Credito":
+                target = LBL_CREDITOS_PAGOS;
+            case "Tarjeta de creditos":
+                target = LBL_TARJETAS_CREDITO_PAGOS;
             default:
                 throw new ProductoNoManejadoPorElBancoException (producto);
         }
@@ -51,8 +55,45 @@ public class ObjetoInteractuarSaldosPorProducto {
             case "Inversiones":
                 target = LBL_PRODUCTOS_OCULTOS_INVERSIONES;
                 break;
+            case "Tarjetas de credito ocultos":
+                target = LBL_PRODUCTOS_OCULTOS_TARJETAS_CREDITO_PAGOS;
+                break;
+            case "Credito oculto":
+                target = LBL_PRODUCTOS_OCULTOS_CREDITOS_PAGOS;
+                break;
             default:
                 throw new ProductoNoManejadoPorElBancoException (producto);
+        }
+        return target;
+    }
+
+    public static Target interactuaConElMnesajeDeNoTieneElProducto(String producto){
+        Target target;
+        switch (producto){
+            case "Tarjetas de credito":
+                target = LBL_NO_PRODUCTO_CREDITO_TARJETA;
+                break;
+
+            case "Credito":
+                target = LBL_NO_PRODUCTO_CREDITO;
+                break;
+            default:
+                throw new ProductoNoManejadoPorElBancoException (producto);
+        }
+        return target;
+    }
+
+    public static Target interactuaConElProductoOcultoPagos(String producto) {
+        Target target;
+             switch(producto) {
+                case "Credito oculto":
+                    target = LBL_CREDITOS_PAGOS;
+                    break;
+                case "Tarjetas de credito ocultos":
+                   target = LBL_TARJETAS_CREDITO_PAGOS;
+                   break;
+            default:
+                     throw new ProductoNoManejadoPorElBancoException (producto);
         }
         return target;
     }

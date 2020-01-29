@@ -36,6 +36,27 @@ public class ProductoVisibleSaldosPorProducto {
 
     public boolean eIdentificaQueSePresenta() {
         if (numerosProductos != null && !numerosProductos.equals (EMPTY)) {
+                if (!TXT_CUENTAS.equals (producto.resolveFor (actor).getText ())) {
+                    actor.attemptsTo (Click.on (producto), Esperar.unTiempo ());
+                }
+
+                for (String numeroProducto : numerosProductos.replace (" ","").split (COMA)) {
+                    if (!LBL_PRODUCTOS.of (numeroProducto).resolveFor (actor).isVisible ()) {
+                        resultado = false;
+                        throw new NoSeVisualizaElProductoException (numeroProducto);
+                    }
+                }
+        } else {
+            if (producto.resolveFor (actor).isVisible ()) {
+                resultado = false;
+                throw new SeVisualizaUnaCategoriaSinProductosException ();
+            }
+        }
+        return resultado;
+    }
+
+    public boolean eIdentificaQueSePresentaPagos() {
+        if (numerosProductos != null && !numerosProductos.equals (EMPTY)) {
             if (!TXT_CUENTAS.equals (producto.resolveFor (actor).getText ())) {
                 actor.attemptsTo (Click.on (producto), Esperar.unTiempo ());
             }
@@ -45,11 +66,6 @@ public class ProductoVisibleSaldosPorProducto {
                     resultado = false;
                     throw new NoSeVisualizaElProductoException (numeroProducto);
                 }
-            }
-        } else {
-            if (producto.resolveFor (actor).isVisible ()) {
-                resultado = false;
-                throw new SeVisualizaUnaCategoriaSinProductosException ();
             }
         }
         return resultado;
