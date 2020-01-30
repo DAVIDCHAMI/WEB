@@ -26,7 +26,7 @@ public class MensajeNoTieneCreditosYTarjetas implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-     actor.attemptsTo(Click.on(LBL_TARJETAS_CREDITO), Esperar.unTiempo());
+     actor.attemptsTo(Click.on(LBL_TARJETAS_CREDITO_PAGOS), Esperar.unTiempo());
      actor.attemptsTo(Click.on(LBL_CREDITOS_PAGOS), Esperar.unTiempo());
    return respuestaUno(actor) && respuestaDos(actor);
     }

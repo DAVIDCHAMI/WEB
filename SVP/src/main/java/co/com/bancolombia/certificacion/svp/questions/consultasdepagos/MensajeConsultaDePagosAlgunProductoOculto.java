@@ -7,17 +7,15 @@ import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.questions.Text;
 
-import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.TXT_CUENTAS;
-
-public class MensajeTarjetasDeCreditoOcultas implements Question<String> {
+public class MensajeConsultaDePagosAlgunProductoOculto implements Question<String> {
     String producto;
 
-    public MensajeTarjetasDeCreditoOcultas(String producto) {
+    public MensajeConsultaDePagosAlgunProductoOculto(String producto) {
         this.producto = producto;
     }
 
-    public static MensajeTarjetasDeCreditoOcultas mensajeTarjetaCreditoOculto(String producto) {
-        return new MensajeTarjetasDeCreditoOcultas(producto);
+    public static MensajeConsultaDePagosAlgunProductoOculto mensajeTarjetaCreditoOculto(String producto) {
+        return new MensajeConsultaDePagosAlgunProductoOculto(producto);
     }
 
     @Override
@@ -25,5 +23,4 @@ public class MensajeTarjetasDeCreditoOcultas implements Question<String> {
             actor.attemptsTo (Click.on(ObjetoInteractuarSaldosPorProducto.interactuaConElProductoOcultoPagos(producto)), Esperar.unTiempo ());
         return Text.of (ObjetoInteractuarSaldosPorProducto.interactuaConElMensajeDeOcultoDel (producto)).viewedBy (actor).asString ();
     }
-
 }

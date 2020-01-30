@@ -22,7 +22,5 @@ public class MensajeConsultaDePagosNoTieneElProducto implements Question<String>
     public String answeredBy(Actor actor) {
         actor.attemptsTo (Click.on(ObjetoInteractuarSaldosPorProducto.interactuaConEl(producto)), Esperar.unTiempo ());
         return Text.of (ObjetoInteractuarSaldosPorProducto.interactuaConElMnesajeDeNoTieneElProducto(producto)).viewedBy (actor).asString ();
-
-
     }
 }

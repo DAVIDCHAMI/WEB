@@ -22,7 +22,6 @@ public static  boolean primeraRespuesta(Actor actor){
 public  static  boolean segundaRespuesta(Actor actor){
         return (obtener(MENSAJE_RESPUESTA).equals(LBL_PRODUCTOS_OCULTOS_CREDITOS_PAGOS.resolveFor(actor).getText()));
 }
-
     @Override
     public Boolean answeredBy(Actor actor) {
       actor.attemptsTo(Click.on(LBL_TARJETAS_CREDITO_PAGOS), Esperar.unTiempo());

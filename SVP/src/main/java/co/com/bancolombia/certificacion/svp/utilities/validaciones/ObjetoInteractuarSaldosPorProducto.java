@@ -29,8 +29,10 @@ public class ObjetoInteractuarSaldosPorProducto {
                 break;
             case "Credito":
                 target = LBL_CREDITOS_PAGOS;
+                break;
             case "Tarjeta de creditos":
                 target = LBL_TARJETAS_CREDITO_PAGOS;
+                break;
             default:
                 throw new ProductoNoManejadoPorElBancoException (producto);
         }
