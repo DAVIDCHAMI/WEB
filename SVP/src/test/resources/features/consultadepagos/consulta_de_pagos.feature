@@ -1,9 +1,9 @@
 #language: es
 
-Característica: SVP autenticacion
+Característica: SVP consulta de pagos
   Yo como usuario de Bancolombia
   Quiero iniciar sesion en el SVP
-  Pra realizar transacciones en la SVP
+  Pra consultar los proximos en la SVP
 
 
   Esquema del escenario: Consulta de pagos de tarjetas de credito exitoso

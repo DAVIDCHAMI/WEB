@@ -42,7 +42,15 @@ public class Inicio {
             .locatedBy("//div[@id='InlineCreditOfferContainer']//span/../../../div[2]/div/button[contains(.,'LO QUIERO')]");
     public static final Target LBL_NO_PRODUCTO_CREDITO_TARJETA= Target.the("Tarjetas de credito Mensaje de no cuenta con el producto en Consultas de Pagos")
             .locatedBy("");
-    public static final Target BTN_MENSAJE_LO_QUIERO_PAGOS= Target.the("Mensaje en modulo de pagos LO QUIERO ").locatedBy("//button[@class='btn btn-primary padding-x-xl']");
+    public static final Target BTN_SI_CERRAR_SESION= Target.the("Boton si de cerrar sesion ")
+            .locatedBy("//button[@class='btn btn-primary margin-base']");
+    public  static  final Target BTN_CERRAR_SESISO= Target.the("opción cerrar sesion")
+            .locatedBy("//div[@class='action-with-icon display-flex center']");
+    public  static  final Target LBL_MENSAJE_VALIDACION_CIERRE_SESION= Target.the("Mensaje para validar sesion")
+            .locatedBy("//div[@id='ContainerText']//span");
+
+    public  static  final Target BTN_MENU_INICIO= Target.the("Boton menu incio")
+            .locatedBy("//div[@class='menu-icon center']");
 
     private Inicio() {throw new IllegalStateException(UI_CLASS);}
 }
