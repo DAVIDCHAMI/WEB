@@ -8,16 +8,18 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
 public class Inicio {
     public static final Target LBL_PRODUCTOS = Target.the("Productos")
             .locatedBy("//*[text()='{0}']");
+    public static final Target LBL_PRODUCTOS_CONSULTA_PAGOS = Target.the("Productos con pagos pendientes")
+            .locatedBy("//*[text()='{0}']/../../../following-sibling::div[2]/div/div[text()= 'Pagar']");
     public static final Target LBL_CUENTAS = Target.the ("Label Cuentas")
             .locatedBy ("//*[@id='AccountsRow']//span[text()='Cuentas']");
     public static final Target LBL_TARJETAS_CREDITO = Target.the ("Label Tarjetas de credito")
             .located (By.id("CreditCardRow"));
     public static final Target LBL_TARJETAS_CREDITO_PAGOS = Target.the ("Label Tarjetas de credito de Consultas de Pagos")
-            .located (By.id(""));
+            .locatedBy ("//div[@id='CreditCardPaymentTitle']//span[@id='CreditCardPaymentTitleLabel']");
     public static final Target LBL_CREDITOS = Target.the ("Label Creditos")
             .located (By.id ("CreditRow"));
     public static final Target LBL_CREDITOS_PAGOS = Target.the ("Label Creditos de Consultas de Pagos")
-            .located (By.id (""));
+            .locatedBy ("//div[@id='CreditPaymentTitle']//span[@id='CreditPaymentTitleLabel']");
     public static final Target LBL_INVERSIONES = Target.the ("Label Inversiones")
             .located (By.id("InvestmentsRow"));
     public static final Target LBL_CREDIAGIL = Target.the ("Label Crediagil")
@@ -37,9 +39,10 @@ public class Inicio {
     public static final Target LBL_PRODUCTOS_OCULTOS_CREDITOS_PAGOS = Target.the("Productos ocultos creditos de Consultas de Pagos")
             .locatedBy("");
     public static final Target LBL_NO_PRODUCTO_CREDITO = Target.the("Credito Mensaje de no cuenta con el producto en Consultas de Pagos")
-            .locatedBy("");
+            .locatedBy("//div[@id='InlineCreditOfferContainer']//span/../../../div[2]/div/button[contains(.,'LO QUIERO')]");
     public static final Target LBL_NO_PRODUCTO_CREDITO_TARJETA= Target.the("Tarjetas de credito Mensaje de no cuenta con el producto en Consultas de Pagos")
             .locatedBy("");
+    public static final Target BTN_MENSAJE_LO_QUIERO_PAGOS= Target.the("Mensaje en modulo de pagos LO QUIERO ").locatedBy("//button[@class='btn btn-primary padding-x-xl']");
 
     private Inicio() {throw new IllegalStateException(UI_CLASS);}
 }
