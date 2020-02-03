@@ -1,8 +1,11 @@
 package co.com.bancolombia.certificacion.svp.stepdefinitions.consultapagos;
 
 import static co.com.bancolombia.certificacion.svp.models.DatosPrueba.obtener;
+
+import co.com.bancolombia.certificacion.svp.questions.consultasdepagos.ConsultaPagosTarjetasCreditoSinFecha;
 import cucumber.api.java.es.Entonces;
 
+import static co.com.bancolombia.certificacion.svp.questions.consultasdepagos.ConsultaPagosTarjetasCreditoSinFecha.pagosDisponiblesSinFecha;
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantExcelData.MENSAJE_RESPUESTA;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -51,5 +54,10 @@ public class ConsultaPagosStepDefinition {
     @Entonces("^el deberia de ver mensajes no tiene los productos$")
     public void elDeberiaDeVerMensajesNoTieneLosProductos() {
       theActorInTheSpotlight().should(seeThat(mensajeNoTieneTarjetasYCreditos()));
+    }
+
+    @Entonces("^el deberia de ver los productos que tienen pagos disponibles sin fecha$")
+    public void elDeberiaDeVerLosProductosQueTienenPagosDisponiblesSinFecha() {
+        theActorInTheSpotlight().should(seeThat(pagosDisponiblesSinFecha()));
     }
 }

@@ -35,14 +35,15 @@ public class Inicio {
     public static final Target LBL_PRODUCTOS_OCULTOS_CREDIAGIL = Target.the("Productos ocultos crediagil")
             .locatedBy("//*[@id='CreditAgilRow']//div[@class='text-message no-responsive']");
     public static final Target LBL_PRODUCTOS_OCULTOS_TARJETAS_CREDITO_PAGOS = Target.the("Productos ocultos tarjetas credito de Consultas de Pagos")
-            .locatedBy("");
+            .locatedBy("//div[@id='FeedbackCreditCardPayment']//div[@class='text-message no-responsive']");
     public static final Target LBL_PRODUCTOS_OCULTOS_CREDITOS_PAGOS = Target.the("Productos ocultos creditos de Consultas de Pagos")
-            .locatedBy("");
+            .locatedBy("//div[@id='FeedbackCreditPayment']//div[@class='text-message no-responsive']");
     public static final Target LBL_NO_PRODUCTO_CREDITO = Target.the("Credito Mensaje de no cuenta con el producto en Consultas de Pagos")
             .locatedBy("//div[@id='InlineCreditOfferContainer']//span/../../../div[2]/div/button[contains(.,'LO QUIERO')]");
     public static final Target LBL_NO_PRODUCTO_CREDITO_TARJETA= Target.the("Tarjetas de credito Mensaje de no cuenta con el producto en Consultas de Pagos")
             .locatedBy("");
-    public static final Target BTN_MENSAJE_LO_QUIERO_PAGOS= Target.the("Mensaje en modulo de pagos LO QUIERO ").locatedBy("//button[@class='btn btn-primary padding-x-xl']");
+    public static final Target LBL_PRODUCTOS_CONSULTA_PAGOS_SIN_FECHA = Target.the("Productos con pagos pendientes")
+            .locatedBy("//*[text()='{0}']/../../../following-sibling::div/div/div/div[@class='product-row-three-column-center-content']");
 
     private Inicio() {throw new IllegalStateException(UI_CLASS);}
 }

@@ -7,8 +7,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.targets.Target;
 
-import static co.com.bancolombia.certificacion.svp.userinterface.inicio.Inicio.LBL_PRODUCTOS;
-import static co.com.bancolombia.certificacion.svp.userinterface.inicio.Inicio.LBL_PRODUCTOS_CONSULTA_PAGOS;
+import static co.com.bancolombia.certificacion.svp.userinterface.inicio.Inicio.*;
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.*;
 
 public class ProductoVisibleSaldosPorProducto {
@@ -71,4 +70,22 @@ public class ProductoVisibleSaldosPorProducto {
         }
         return resultado;
     }
+
+    public boolean eIdentificaQueSePresentaPagosSinFecha() {
+        if (numerosProductos != null && !numerosProductos.equals (EMPTY)) {
+            if (!TXT_CUENTAS.equals (producto.resolveFor (actor).getText ())) {
+                actor.attemptsTo (Click.on (producto), Esperar.unTiempo ());
+            }
+
+            for (String numeroProducto : numerosProductos.replace (" ","").split (COMA)) {
+                if (!LBL_PRODUCTOS_CONSULTA_PAGOS_SIN_FECHA.of (numeroProducto).resolveFor (actor).isVisible ()) {
+                    resultado = false;
+                    throw new NoSeVisualizaElProductoException (numeroProducto);
+                }
+            }
+        }
+        return resultado;
+    }
+
+
 }
