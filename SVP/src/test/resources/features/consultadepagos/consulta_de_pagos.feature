@@ -5,7 +5,6 @@ Característica: SVP consulta de pagos
   Quiero iniciar sesion en el SVP
   Pra consultar los proximos en la SVP
 
-
   Esquema del escenario: Consulta de pagos de tarjetas de credito exitoso
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | tarjetasCredito | creditos | mensajeRespuesta | mensajeRespuesta_2 | escenario |
@@ -28,7 +27,6 @@ Característica: SVP consulta de pagos
       ##@externaldata@./src/test/resources/datadriven/consultadepagos/consultadepagos.xlsx@Datos@2
       |2|Acierto|||Hola||chipote25|1234||||||||
 
-  @test1
   Esquema del escenario: Consulta de pagos de creditos (usuario sin credito)
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | tarjetasCredito | creditos | mensajeRespuesta | mensajeRespuesta_2 | escenario |

@@ -32,5 +32,4 @@ public class CerrarSesion {
     public static void test() throws InvalidFormatException, IOException {
         DataToFeature.overrideFeatureFiles("./src/test/resources/features/cerrarsesion/");
     }
-
 }

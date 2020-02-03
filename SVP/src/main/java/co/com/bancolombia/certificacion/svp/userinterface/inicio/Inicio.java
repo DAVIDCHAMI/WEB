@@ -48,9 +48,7 @@ public class Inicio {
             .locatedBy("//div[@class='action-with-icon display-flex center']");
     public  static  final Target LBL_MENSAJE_VALIDACION_CIERRE_SESION= Target.the("Mensaje para validar sesion")
             .locatedBy("//div[@id='ContainerText']//span");
-
     public  static  final Target BTN_MENU_INICIO= Target.the("Boton menu incio")
             .locatedBy("//div[@class='menu-icon center']");
-
     private Inicio() {throw new IllegalStateException(UI_CLASS);}
 }

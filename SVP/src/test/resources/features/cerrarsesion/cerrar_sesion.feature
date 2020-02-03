@@ -5,7 +5,6 @@ Característica: SVP cerrar sesion
   Quiero iniciar sesion en el SVP
   Para realizar cierre de sesion en la SVP
 
-
   Esquema del escenario: Inicio de sesion exitoso
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | mensajeRespuesta   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
@@ -16,4 +15,3 @@ Característica: SVP cerrar sesion
       | idCaso | orientacion | codigoTransaccion | codigoError | mensajeRespuesta | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento |
        ##@externaldata@./src/test/resources/datadriven/cerrarsesion/cerrarsesion.xlsx@Datos@1
       |1|Acierto|||Si aún no has creado el usuario, ingresa el número del documento de identidad.||pruebaavance01|1234|||
-
