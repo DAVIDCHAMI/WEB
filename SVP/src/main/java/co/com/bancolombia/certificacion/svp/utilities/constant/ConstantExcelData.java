@@ -16,6 +16,7 @@ public class ConstantExcelData {
     public static final String CELULAR = "celular";
     public static final String PALABRA_CLAVE = "palabraClave";
     public static final String MENSAJE_RESPUESTA = "mensajeRespuesta";
+    public static final String MENSAJE_RESPUESTA_2 = "mensajeRespuesta_2";
     public static final String MENSAJE_ESPERADO= "mensajeEsperado";
     public static final String CUENTAS = "cuentas";
     public static final String TARJETASDECREDITO = "tarjetasCredito";

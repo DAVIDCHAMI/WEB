@@ -16,7 +16,6 @@ Característica: SVP saldos por producto
        ##@externaldata@.\src\test\resources\datadriven\saldosporproducto\saldos_por_producto.xlsx@Inversion@6
       | 6      | Alterno     |                   |             |                   | 36123456        | USUCFEI01 | 5555  | 1234         |               | 001-003143-98, 001-003145-41, 001-003150-41, 406-714130-04, 406-734560-33, 406-734560-34, 406-734560-35, 406-734560-48, 406-734560-49, 406-734560-50, 406-734560-51, 406-734560-53, 406-734560-54, 406-734560-55, 406-734560-58, 406-134560-04, 406-181110-00 | ****1127, ****7618 |          | 12700025033 | Posee mas no se sabe el codigo |                  | Con inversion virtual y sin fondos de inversion |
 
-
   Esquema del escenario: Consulta saldos por producto visualizar inversion virtual y fondo de inversion
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | cuentas   | tarjetasCredito   | creditos   | inversiones   | crediagil   | mensajeRespuesta   | escenario   |

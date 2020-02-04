@@ -5,7 +5,6 @@ Característica: Recordar usuario
   Quiero recordar el usuario
   Para ingresar a la Sucursal Virtual Personas
 
-
   Esquema del escenario: Recordar usuario - clave invalida
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | mensajeRespuesta   |
@@ -27,7 +26,6 @@ Característica: Recordar usuario
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | mensajeRespuesta                               |
        ##@externaldata@./src/test/resources/datadriven/recordarusuario/recordar_usuario.xlsx@Datos@5
       |5|Alterno||||102030401|a|4321|1234||La clave que usas en el cajero está bloqueada.|
-
 
   Esquema del escenario: Recordar usuario - usuario invalido
     Dado que Juan carga los datos de la prueba
