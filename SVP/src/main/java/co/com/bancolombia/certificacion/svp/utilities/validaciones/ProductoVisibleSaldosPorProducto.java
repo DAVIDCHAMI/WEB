@@ -63,15 +63,10 @@ public class ProductoVisibleSaldosPorProducto {
 
             for (String numeroProducto : numerosProductos.replace(" ", "").split(COMA)) {
                 if (producto.equals(LBL_TARJETAS_CREDITO_PAGOS)) {
-                    if (!LBL_PRODUCTOS_CONSULTA_PAGOS.of(numeroProducto).resolveFor(actor).isVisible()) {
-                        resultado = false;
-                        throw new NoSeVisualizaElProductoException(numeroProducto);
-                    }
-                } else if(producto.equals(LBL_CREDITOS_PAGOS)) {
-                    if (!LBL_PRODUCTOS_CONSULTA_PAGOS_CREDITOS.of(numeroProducto).resolveFor(actor).isVisible()) {
-                        resultado = false;
-                        throw new NoSeVisualizaElProductoException(numeroProducto);
-                    }
+                   tarjetas(numeroProducto);
+                }
+                if (producto.equals(LBL_CREDITOS_PAGOS)) {
+                   credito(numeroProducto);
                 }
             }
         }
@@ -94,5 +89,17 @@ public class ProductoVisibleSaldosPorProducto {
         return resultado;
     }
 
+    public void tarjetas(String numeroProducto){
+        if (!LBL_PRODUCTOS_CONSULTA_PAGOS.of(numeroProducto).resolveFor(actor).isVisible()) {
+            resultado = false;
+            throw new NoSeVisualizaElProductoException(numeroProducto);
+        }
+    }
 
+    public void credito(String numeroProducto){
+        if (!LBL_PRODUCTOS_CONSULTA_PAGOS_CREDITOS.of(numeroProducto).resolveFor(actor).isVisible()) {
+            resultado = false;
+            throw new NoSeVisualizaElProductoException(numeroProducto);
+        }
+    }
 }

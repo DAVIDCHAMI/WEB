@@ -46,6 +46,13 @@ public class Inicio {
             .locatedBy("");
     public static final Target LBL_PRODUCTOS_CONSULTA_PAGOS_SIN_FECHA = Target.the("Productos con pagos pendientes")
             .locatedBy("//*[text()='{0}']/../../../following-sibling::div/div/div/div[@class='product-row-three-column-center-content']");
-
+    public static final Target BTN_SI_CERRAR_SESION= Target.the("Boton si de cerrar sesion ")
+            .locatedBy("//button[@class='btn btn-primary margin-base']");
+    public  static  final Target BTN_CERRAR_SESISO= Target.the("opción cerrar sesion")
+            .locatedBy("//div[@class='action-with-icon display-flex center']");
+    public  static  final Target LBL_MENSAJE_VALIDACION_CIERRE_SESION= Target.the("Mensaje para validar sesion")
+            .locatedBy("//div[@id='ContainerText']//span");
+    public  static  final Target BTN_MENU_INICIO= Target.the("Boton menu incio")
+            .locatedBy("//div[@class='menu-icon center']");
     private Inicio() {throw new IllegalStateException(UI_CLASS);}
 }
