@@ -9,6 +9,8 @@ public class Inicio {
     public static final Target LBL_PRODUCTOS = Target.the("Productos")
             .locatedBy("//*[text()='{0}']");
     public static final Target LBL_PRODUCTOS_CONSULTA_PAGOS = Target.the("Productos con pagos pendientes")
+            .locatedBy("//*[text()='{0}']/../../../../div[3]/div/span/div[text()= 'Pagar']");
+    public static final Target LBL_PRODUCTOS_CONSULTA_PAGOS_CREDITOS = Target.the("Productos con pagos pendientes")
             .locatedBy("//*[text()='{0}']/../../../following-sibling::div[2]/div/div[text()= 'Pagar']");
     public static final Target LBL_CUENTAS = Target.the ("Label Cuentas")
             .locatedBy ("//*[@id='AccountsRow']//span[text()='Cuentas']");

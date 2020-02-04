@@ -5,7 +5,7 @@ Característica: SVP autenticacion
   Quiero iniciar sesion en el SVP
   Pra realizar transacciones en la SVP
 
-
+@test1
   Esquema del escenario: Consulta de pagos de tarjetas de credito exitoso
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | tarjetasCredito | creditos | mensajeRespuesta | mensajeRespuesta_2 | escenario |
@@ -15,8 +15,8 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario | clave | segundaClave | tipoDocumento | tarjetasCredito | creditos | mensajeRespuesta | mensajeRespuesta_2 | escenario |
      ##@externaldata@./src/test/resources/datadriven/consultadepagos/consultadepagos.xlsx@Datos@1
-      |1|Acierto|||||USUCFEI01|1234|||****7618||||Validar pagos  de una tarjeta de crédito|
-
+      |1|Acierto|||||OSVPPRU15|1234|||****5949,****1123,****2495||||Validar pagos  de una tarjeta de crédito|
+  @test1
   Esquema del escenario: Consulta de pagos de credito exitoso
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | tarjetasCredito | creditos | mensajeRespuesta | mensajeRespuesta_2 | escenario |
@@ -27,7 +27,7 @@ Característica: SVP autenticacion
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario | clave | segundaClave | tipoDocumento | tarjetasCredito | creditos | mensajeRespuesta | mensajeRespuesta_2 | escenario |
       ##@externaldata@./src/test/resources/datadriven/consultadepagos/consultadepagos.xlsx@Datos@2
       |2|Acierto|||||OSVPPRU15|1234||||29281025315|||Validar pagos de créditos.|
-
+  @test1
   Esquema del escenario: Consulta de pagos de creditos (usuario sin credito)
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | tarjetasCredito | creditos | mensajeRespuesta | mensajeRespuesta_2 | escenario |
@@ -37,7 +37,7 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario | clave | segundaClave | tipoDocumento | tarjetasCredito | creditos | mensajeRespuesta | mensajeRespuesta_2 | escenario |
    ##@externaldata@./src/test/resources/datadriven/consultadepagos/consultadepagos.xlsx@Datos@3
-      |3|Acierto|||||OSVPPRU02|1234||||||¡LO QUIERO!|Validar usuario sin crédito|
+      |3|Acierto|||||OSVPPRU02|1234||||||LO QUIERO|Validar usuario sin crédito|
 @falta
   Esquema del escenario: Consulta de pagos de tarjetas de credito (usuario sin tarjetas de credito)
     Dado que Juan carga los datos de la prueba
@@ -49,7 +49,7 @@ Característica: SVP autenticacion
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario | clave | segundaClave | tipoDocumento | tarjetasCredito | creditos | mensajeRespuesta | mensajeRespuesta_2 | escenario |
        ##@externaldata@./src/test/resources/datadriven/consultadepagos/consultadepagos.xlsx@Datos@4
       |4|Alterno||||||||||||||
-
+  @test1
   Esquema del escenario: Consulta de pagos de tarjetas de credito (usuario con tarjetas de creditos ocultas)
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | tarjetasCredito | creditos | mensajeRespuesta | mensajeRespuesta_2 | escenario |
@@ -59,9 +59,9 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario | clave | segundaClave | tipoDocumento | tarjetasCredito | creditos | mensajeRespuesta | mensajeRespuesta_2 | escenario |
        ##@externaldata@./src/test/resources/datadriven/consultadepagos/consultadepagos.xlsx@Datos@5
-      |5|Alterno|||||pruebaavance01|1234|||||Los productos están ocultos, puedes habilitarlos nuevamente en la opción "Productos/ Administrar productos propios".|||
+      |5|Alterno|||||pruebaavance01|1234|||||Los productos están ocultos, puedes habilitarlos nuevamente en la opción "Productos/ Administrar productos propios".||Consulta de pagos de tarjetas de credito (usuario con tarjetas de creditos ocultas)|
 
-
+  @test1
   Esquema del escenario: Consulta de pagos de credito (usuario con creditos ocultos)
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | tarjetasCredito | creditos | mensajeRespuesta | mensajeRespuesta_2 | escenario |
@@ -71,9 +71,9 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario | clave | segundaClave | tipoDocumento | tarjetasCredito | creditos | mensajeRespuesta | mensajeRespuesta_2 | escenario |
        ##@externaldata@./src/test/resources/datadriven/consultadepagos/consultadepagos.xlsx@Datos@6
-      |6|Alterno|||||PRUEBAICDSC1|1234|||||Los productos están ocultos, puedes habilitarlos nuevamente en la opción "Productos/ Administrar productos propios".|||
+      |6|Alterno|||||PRUEBAICDSC1|1234|||||Los productos están ocultos, puedes habilitarlos nuevamente en la opción "Productos/ Administrar productos propios".||Consulta de pagos de credito (usuario con creditos ocultos)|
 
-
+  @test1
   Esquema del escenario: Consulta de pagos de credito y tarjetas creditos (creditos y tarjetas creditos ocultos)
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | tarjetasCredito | creditos | mensajeRespuesta | mensajeRespuesta_2 | escenario |
@@ -83,7 +83,7 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario | clave | segundaClave | tipoDocumento | tarjetasCredito | creditos | mensajeRespuesta | mensajeRespuesta_2 | escenario |
        ##@externaldata@./src/test/resources/datadriven/consultadepagos/consultadepagos.xlsx@Datos@7
-      |7|Alterno||||854124014|PRUEBAICDSC1|1234|||||Los productos están ocultos, puedes habilitarlos nuevamente en la opción "Productos/ Administrar productos propios".|||
+      |7|Alterno||||854124014|PRUEBAICDSC1|1234|||||Los productos están ocultos, puedes habilitarlos nuevamente en la opción "Productos/ Administrar productos propios".||Consulta de pagos de credito y tarjetas creditos (creditos y tarjetas creditos ocultos)|
 
 @falta
   Esquema del escenario: Consulta de pagos de credito y tarjetas creditos (usuario sin tarjetas de credito y sin creditos)
@@ -97,7 +97,7 @@ Característica: SVP autenticacion
        ##@externaldata@./src/test/resources/datadriven/consultadepagos/consultadepagos.xlsx@Datos@8
       |8|Alterno||||854124014||1234||||||||
 
-@falta
+@test1
   Esquema del escenario: Consulta de pagos de credito y tarjetas creditos (usuario con tarjetas de credito y  creditos)
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | tarjetasCredito | creditos | mensajeRespuesta | mensajeRespuesta_2 | escenario |
@@ -107,9 +107,9 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario | clave | segundaClave | tipoDocumento | tarjetasCredito | creditos | mensajeRespuesta | mensajeRespuesta_2 | escenario |
        ##@externaldata@./src/test/resources/datadriven/consultadepagos/consultadepagos.xlsx@Datos@9
-      |9|Alterno||||854124014||1234||||||||
+      |9|Alterno||||854124014|OSVPPRU15|1234|||****5949,****1123,****2495|29281025315|||Validar usuario con tarjetas y créditos|
 
-
+  @test1
   Esquema del escenario: Consulta de pagos de tarjetas de credito exitoso
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | tarjetasCredito | creditos | mensajeRespuesta | mensajeRespuesta_2 | escenario |
@@ -119,4 +119,4 @@ Característica: SVP autenticacion
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario | clave | segundaClave | tipoDocumento | tarjetasCredito | creditos | mensajeRespuesta | mensajeRespuesta_2 | escenario |
      ##@externaldata@./src/test/resources/datadriven/consultadepagos/consultadepagos.xlsx@Datos@10
-      |10||||||USUARIOTODO1|1234|||****0175,****0556,****9636|||||
+      |10||||||USUCFEI01|1234|||****7618||||Consulta de pagos de tarjetas de credito exitoso sin fecha|
