@@ -16,7 +16,7 @@ public class MensajeTodosLosProductosOcultos implements Question<Boolean> {
 
 public static  boolean respuesta(Actor actor){
         return (obtener(MENSAJE_RESPUESTA).equals(LBL_PRODUCTOS_OCULTOS_TARJETAS_CREDITO_PAGOS.resolveFor(actor).getText()))
-                & (obtener(MENSAJE_RESPUESTA).equals(LBL_PRODUCTOS_OCULTOS_CREDITOS_PAGOS.resolveFor(actor).getText()));
+                && (obtener(MENSAJE_RESPUESTA).equals(LBL_PRODUCTOS_OCULTOS_CREDITOS_PAGOS.resolveFor(actor).getText()));
 }
 
     @Override

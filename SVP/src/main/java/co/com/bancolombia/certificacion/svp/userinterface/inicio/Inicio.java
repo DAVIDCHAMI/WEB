@@ -43,7 +43,7 @@ public class Inicio {
     public static final Target LBL_NO_PRODUCTO_CREDITO = Target.the("Credito Mensaje de no cuenta con el producto en Consultas de Pagos")
             .locatedBy("//div[@id='InlineCreditOfferContainer']//span/../../../div[2]/div/button[contains(.,'LO QUIERO')]");
     public static final Target LBL_NO_PRODUCTO_CREDITO_TARJETA= Target.the("Tarjetas de credito Mensaje de no cuenta con el producto en Consultas de Pagos")
-            .locatedBy("");
+            .locatedBy("//div[@id='InlineCreditCardOffer']//span/../../../div[2]/div/button[text()='LA QUIERO']");
     public static final Target LBL_PRODUCTOS_CONSULTA_PAGOS_SIN_FECHA = Target.the("Productos con pagos pendientes")
             .locatedBy("//*[text()='{0}']/../../../following-sibling::div/div/div/div[@class='product-row-three-column-center-content']");
     public static final Target BTN_SI_CERRAR_SESION= Target.the("Boton si de cerrar sesion ")

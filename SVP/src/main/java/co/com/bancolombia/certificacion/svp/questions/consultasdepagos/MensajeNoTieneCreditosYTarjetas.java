@@ -15,14 +15,15 @@ public class MensajeNoTieneCreditosYTarjetas implements Question<Boolean> {
         return new MensajeNoTieneCreditosYTarjetas();
     }
 
-    public static boolean  respuestaUno(Actor actor){
+    public static boolean  respuesta(Actor actor){
         return (obtener(MENSAJE_RESPUESTA).equals(LBL_NO_PRODUCTO_CREDITO_TARJETA.resolveFor(actor).getText()))
-                & (obtener(MENSAJE_RESPUESTA_DOS).equals(LBL_NO_PRODUCTO_CREDITO.resolveFor(actor).getText()));
+                && (obtener(MENSAJE_RESPUESTA_DOS).equals(LBL_NO_PRODUCTO_CREDITO.resolveFor(actor).getText()));
     }
+
     @Override
     public Boolean answeredBy(Actor actor) {
      actor.attemptsTo(Click.on(LBL_TARJETAS_CREDITO_PAGOS), Esperar.unTiempo());
      actor.attemptsTo(Click.on(LBL_CREDITOS_PAGOS), Esperar.unTiempo());
-   return respuestaUno(actor);
+   return respuesta(actor);
     }
 }

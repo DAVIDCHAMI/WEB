@@ -13,16 +13,13 @@ public class ConsultaDePagos implements Question<Boolean> {
         return new ConsultaDePagos();
     }
 
-    public static boolean primeraRespuestaDel(Actor actor) {
-        return el(actor).visualizalProducto(LBL_TARJETAS_CREDITO_PAGOS).conLosNumeros(obtener(TARJETASDECREDITO)).eIdentificaQueSePresentaPagos();
-    }
-
-    public static boolean segundaRespuestaDel(Actor actor){
-        return el(actor).visualizalProducto(LBL_CREDITOS_PAGOS).conLosNumeros(obtener(CREDITOS)).eIdentificaQueSePresentaPagos();
+    public static boolean respuestaDel(Actor actor) {
+        return el(actor).visualizalProducto(LBL_TARJETAS_CREDITO_PAGOS).conLosNumeros(obtener(TARJETASDECREDITO)).eIdentificaQueSePresentaPagos()
+                && el(actor).visualizalProducto(LBL_CREDITOS_PAGOS).conLosNumeros(obtener(CREDITOS)).eIdentificaQueSePresentaPagos();
     }
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        return primeraRespuestaDel(actor) && segundaRespuestaDel(actor);
+        return respuestaDel(actor);
     }
 }

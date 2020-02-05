@@ -30,7 +30,7 @@ public class ObjetoInteractuarSaldosPorProducto {
             case "Credito":
                 target = LBL_CREDITOS_PAGOS;
                 break;
-            case "Tarjeta de creditos":
+            case "Tarjetas de creditos":
                 target = LBL_TARJETAS_CREDITO_PAGOS;
                 break;
             default:
@@ -72,7 +72,7 @@ public class ObjetoInteractuarSaldosPorProducto {
     public static Target interactuaConElMnesajeDeNoTieneElProducto(String producto){
         Target target;
         switch (producto){
-            case "Tarjetas de credito":
+            case "Tarjetas de creditos":
                 target = LBL_NO_PRODUCTO_CREDITO_TARJETA;
                 break;
 
