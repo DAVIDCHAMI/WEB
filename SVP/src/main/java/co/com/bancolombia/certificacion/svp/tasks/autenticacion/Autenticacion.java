@@ -30,7 +30,6 @@ public class Autenticacion implements Task {
                 Enter.theValue(obtener(USUARIO)).into(TXT_NOMBRE_USUARIO),
                 Click.on(BTN_CONTINUAR),WaitUntil.the(TXT_CLAVE, isVisible()),
                 Esperar.unTiempo(),
-                //Ensure.that(IMG_USUARIO).isDisplayed(),Ensure.that(LBL_FRASE_SEGURIDAD).isDisplayed(),
                 Enter.theValue(obtener(CLAVE)).into(TXT_CLAVE),
                 Click.on(BTN_CONTINUAR), unTiempo()
         );

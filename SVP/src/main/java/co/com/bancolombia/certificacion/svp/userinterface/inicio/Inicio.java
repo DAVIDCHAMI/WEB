@@ -9,6 +9,8 @@ public class Inicio {
     public static final Target LBL_PRODUCTOS = Target.the("Productos")
             .locatedBy("//*[text()='{0}']");
     public static final Target LBL_PRODUCTOS_CONSULTA_PAGOS = Target.the("Productos con pagos pendientes")
+            .locatedBy("//*[text()='{0}']/../../../../div[3]/div/span/div[text()= 'Pagar']");
+    public static final Target LBL_PRODUCTOS_CONSULTA_PAGOS_CREDITOS = Target.the("Productos con pagos pendientes")
             .locatedBy("//*[text()='{0}']/../../../following-sibling::div[2]/div/div[text()= 'Pagar']");
     public static final Target LBL_CUENTAS = Target.the ("Label Cuentas")
             .locatedBy ("//*[@id='AccountsRow']//span[text()='Cuentas']");
@@ -35,13 +37,15 @@ public class Inicio {
     public static final Target LBL_PRODUCTOS_OCULTOS_CREDIAGIL = Target.the("Productos ocultos crediagil")
             .locatedBy("//*[@id='CreditAgilRow']//div[@class='text-message no-responsive']");
     public static final Target LBL_PRODUCTOS_OCULTOS_TARJETAS_CREDITO_PAGOS = Target.the("Productos ocultos tarjetas credito de Consultas de Pagos")
-            .locatedBy("");
+            .locatedBy("//div[@id='FeedbackCreditCardPayment']//div[@class='text-message no-responsive']");
     public static final Target LBL_PRODUCTOS_OCULTOS_CREDITOS_PAGOS = Target.the("Productos ocultos creditos de Consultas de Pagos")
-            .locatedBy("");
+            .locatedBy("//div[@id='FeedbackCreditPayment']//div[@class='text-message no-responsive']");
     public static final Target LBL_NO_PRODUCTO_CREDITO = Target.the("Credito Mensaje de no cuenta con el producto en Consultas de Pagos")
             .locatedBy("//div[@id='InlineCreditOfferContainer']//span/../../../div[2]/div/button[contains(.,'LO QUIERO')]");
     public static final Target LBL_NO_PRODUCTO_CREDITO_TARJETA= Target.the("Tarjetas de credito Mensaje de no cuenta con el producto en Consultas de Pagos")
-            .locatedBy("");
+            .locatedBy("//div[@id='InlineCreditCardOffer']//span/../../../div[2]/div/button[text()='LA QUIERO']");
+    public static final Target LBL_PRODUCTOS_CONSULTA_PAGOS_SIN_FECHA = Target.the("Productos con pagos pendientes")
+            .locatedBy("//*[text()='{0}']/../../../following-sibling::div/div/div/div[@class='product-row-three-column-center-content']");
     public static final Target BTN_SI_CERRAR_SESION= Target.the("Boton si de cerrar sesion ")
             .locatedBy("//button[@class='btn btn-primary margin-base']");
     public  static  final Target BTN_CERRAR_SESISO= Target.the("opción cerrar sesion")
