@@ -18,6 +18,7 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
                 "co.com.bancolombia.certificacion.svp.stepdefinitions.comunes",
                 "co.com.bancolombia.certificacion.svp.stepdefinitions.autenticacion"
         },
+        tags = {"@ECARD"},
         snippets = SnippetType.CAMELCASE
 )
 @RunWith(RunnerPersonalizado.class)
@@ -28,6 +29,6 @@ public class ConsultarDetalleTarjetaCredito {
 
     @BeforeSuite
     public static void test() throws InvalidFormatException, IOException {
-        DataToFeature.overrideFeatureFiles("./src/test/resources/features/consultasdedetalle/");
+        DataToFeature.overrideFeatureFiles("./src/test/resources/features/consultasdedetalle/consulta_de_detalle_tarjeta_credito.feature");
     }
 }

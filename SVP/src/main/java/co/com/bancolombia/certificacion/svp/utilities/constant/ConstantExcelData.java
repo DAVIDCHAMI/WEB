@@ -23,6 +23,9 @@ public class ConstantExcelData {
     public static final String CREDITOS = "creditos";
     public static final String INVERSIONES = "inversiones";
     public static final String CREDIAGIL = "crediagil";
+    public static final String PRODUCTO = "producto";
+    public static final String NUMERO_PRODUCTO = "numeroProducto";
+    public static final String CAMPOS_DETALLE = "camposDetalle";
 
     private ConstantExcelData() {
         throw new IllegalStateException(CONSTANT_CLASS);
