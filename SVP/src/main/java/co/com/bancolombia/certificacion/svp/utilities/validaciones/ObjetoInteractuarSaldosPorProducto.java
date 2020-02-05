@@ -69,7 +69,7 @@ public class ObjetoInteractuarSaldosPorProducto {
         return target;
     }
 
-    public static Target interactuaConElMnesajeDeNoTieneElProducto(String producto){
+    public static Target interactuaConElMensajeDeNoTieneElProducto(String producto){
         Target target;
         switch (producto){
             case "Tarjetas de creditos":
