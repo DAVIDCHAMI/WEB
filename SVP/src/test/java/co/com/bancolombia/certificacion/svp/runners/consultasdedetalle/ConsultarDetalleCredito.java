@@ -13,7 +13,7 @@ import java.io.IOException;
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTypeClass.RUNNER_CLASS;
 
 @CucumberOptions(
-        features = "src/test/resources/features/consultasdedetalle/consulta_de_detalle_credito_de_consumo.feature",
+        features = "src/test/resources/features/consultasdedetalle/consulta_de_detalle_tarjeta_credito.feature",
         glue = {"co.com.bancolombia.certificacion.svp.stepdefinitions.consultasdedetalle",
                 "co.com.bancolombia.certificacion.svp.stepdefinitions.comunes",
                 "co.com.bancolombia.certificacion.svp.stepdefinitions.autenticacion"

@@ -4,19 +4,19 @@ import co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasFond
 import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Entonces;
 
-import static co.com.bancolombia.certificacion.svp.questions.consultasdetallecuentas.CaracteristicasDeCrediagil.lasCaracteristicasDeCrediagil;
-import static co.com.bancolombia.certificacion.svp.questions.consultasdetallecuentas.CaracteristicasDeCuentasAhorro.lasCaracteristicasDeLasCuentasAhorro;
-import static co.com.bancolombia.certificacion.svp.questions.consultasdetallecuentas.CaracteristicasDeCuentasCorriente.lasCaracteristicasDeLasCuentasCorriente;
-import static co.com.bancolombia.certificacion.svp.questions.consultasdetallecuentas.CaracteristicasDeCuentasCreditos.lasCaracteristicasDeLosCreditos;
-import static co.com.bancolombia.certificacion.svp.questions.consultasdetallecuentas.CaracteristicasDeFondosInversion.lasCaracteristicasDeFondosInversion;
-import static co.com.bancolombia.certificacion.svp.questions.consultasdetallecuentas.CaracteristicasDeInversione.lasCaracteristicaDeInversiones;
-import static co.com.bancolombia.certificacion.svp.questions.consultasdetallecuentas.CaracteristicasDeTarjetasCredito.lasCaracteristicasDeLasTarjetasDeCredito;
-import static co.com.bancolombia.certificacion.svp.questions.consultasdetallecuentas.CaracteristicasDeTarjetasCreditosEcard.lasCaracteristicasDeTarjetasCreditosECard;
-import static co.com.bancolombia.certificacion.svp.questions.consultasdetallecuentas.ConsultarCreditoOpcionPagarDisponible.laOpcionDePagarDisponible;
+import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.CaracteristicasDeCrediagil.lasCaracteristicasDeCrediagil;
+import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.CaracteristicasDeCuentasAhorro.visualizaLosDetallesDeCuentasAhorro;
+import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.CaracteristicasDeCuentasCorriente.lasCaracteristicasDeLasCuentasCorriente;
+import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.CaracteristicasDeCuentasCreditos.lasCaracteristicasDeLosCreditos;
+import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.CaracteristicasDeFondosInversion.lasCaracteristicasDeFondosInversion;
+import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.CaracteristicasDeInversione.lasCaracteristicaDeInversiones;
+import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.CaracteristicasDeTarjetasCredito.lasCaracteristicasDeLasTarjetasDeCredito;
+import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.CaracteristicasDeTarjetasCreditosEcard.lasCaracteristicasDeTarjetasCreditosECard;
+import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.ConsultarCreditoOpcionPagarDisponible.laOpcionDePagarDisponible;
 import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasCrediagil.consultarDetalleCrediagil;
 import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasCredito.consultaDetalleCredito;
-import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasCuentaAhorro.consultaDetalleCuentas;
-import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasCuentasCorriente.consultaDeDetalleCorriente;
+import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasCuentaAhorro.consultaDetalleCuentasDeAhorro;
+import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasCuentasCorriente.consultaDeDetalleCuentasCorriente;
 import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasInversiones.consultarDetalleInversiones;
 import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasTarjetasCredito.consultarDetalleTarjetaCredito;
 import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasTarjetasCreditoECard.consultarDetalleTarjetaCreditoECard;
@@ -27,7 +27,7 @@ public class ConsultarDetalleStepDefinition {
 
     @Entonces("^el deberia de ver el detalle de la cuenta de ahorro$")
     public void elDeberiaDeVerElDetalleDeLaCuentaDeAhorro() {
-        theActorInTheSpotlight().should(seeThat(lasCaracteristicasDeLasCuentasAhorro()));
+        theActorInTheSpotlight().should(seeThat(visualizaLosDetallesDeCuentasAhorro()));
     }
 
     @Entonces("^el deberia de ver el detalle de la cuenta corriente$")
@@ -50,8 +50,8 @@ public class ConsultarDetalleStepDefinition {
         theActorInTheSpotlight().should(seeThat(lasCaracteristicasDeFondosInversion()));
     }
 
-    @Entonces("^el deberia de ver el detalle  de inversiones$")
-    public void elDeberiaDeVerElDetalleDeInversiones() {
+    @Entonces("^el deberia de ver el detalle  de inversiones virtuales$")
+    public void elDeberiaDeVerElDetalleDeInversionesVirtuales() {
         theActorInTheSpotlight().should(seeThat(lasCaracteristicaDeInversiones()));
     }
 
@@ -67,12 +67,12 @@ public class ConsultarDetalleStepDefinition {
 
     @Cuando("^consulta el detalle de la cuenta de ahorro$")
     public void consultaElDetalleDeLaCuentaDeAhorro() {
-        theActorInTheSpotlight().attemptsTo(consultaDetalleCuentas());
+        theActorInTheSpotlight().attemptsTo(consultaDetalleCuentasDeAhorro());
     }
 
     @Cuando("^consulta el detalle de la cuenta corriente$")
     public void consultaElDetalleDeLaCuentaCorriente() {
-        theActorInTheSpotlight().attemptsTo(consultaDeDetalleCorriente());
+        theActorInTheSpotlight().attemptsTo(consultaDeDetalleCuentasCorriente());
     }
 
     @Cuando("^consulta el detalle del credito de consumo$")
@@ -90,8 +90,8 @@ public class ConsultarDetalleStepDefinition {
         theActorInTheSpotlight().attemptsTo(ConsultasFondosInversion.consultarDetalleFondosInversion());
     }
 
-    @Cuando("^consulta el detalle inversiones$")
-    public void consultaElDetalleInversiones() {
+    @Cuando("^consulta el detalle inversiones virtuales$")
+    public void consultaElDetalleInversionesVirtuales() {
         theActorInTheSpotlight().attemptsTo(consultarDetalleInversiones());
     }
 

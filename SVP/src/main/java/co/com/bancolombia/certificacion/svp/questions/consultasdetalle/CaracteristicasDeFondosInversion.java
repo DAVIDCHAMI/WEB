@@ -1,4 +1,4 @@
-package co.com.bancolombia.certificacion.svp.questions.consultasdetallecuentas;
+package co.com.bancolombia.certificacion.svp.questions.consultasdetalle;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
