@@ -13,11 +13,10 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class RegistrarUsuarioStepDefinition {
 
-    @Cuando("^el realiza un registro con usuario y documento igual en SVP$")
+    @Cuando("^el quiere registrarsse con usuario y documento igual en SVP$")
     public void elRealizaUnRegistroConUsuarioYDocumentoIgualEnSVP() {
         theActorInTheSpotlight().attemptsTo(
-                autenticarseConDocumentoEnLaSVP(),
-                llenaElPrimerFormularioDeRegistro()
+                autenticarseConDocumentoEnLaSVP()
         );
     }
 
@@ -48,5 +47,4 @@ public class RegistrarUsuarioStepDefinition {
         theActorInTheSpotlight().should(seeThat(MensajeRealizarRegistro.deNuevo())
         );
     }
-
 }

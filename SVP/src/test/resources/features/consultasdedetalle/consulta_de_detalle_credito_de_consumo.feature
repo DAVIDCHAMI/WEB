@@ -1,12 +1,12 @@
 #language: es
 
-Característica: SVP autenticacion
+Característica: SVP consulta de detalles
   Yo como usuario de Bancolombia
-  Quiero iniciar sesion en el SVP
-  Para realizar transacciones en la SVP
+  Quiero iniciar sesion en la SVP
+  Para consultar el detalle de un credito de consumo
 
   Esquema del escenario: Consulta detalle credito de comsumo
-    Dado que Juan carga los datos de la prueba
+    Dado que Andres carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
       | <idCaso> | <orientacion> | <codigoTransaccion> | <codigoError> | <resultadoEsperado> | <numeroDocumento> | <usuario> | <clave> | <segundaClave> | <tipoDocumento> |
     Cuando el realiza la autenticacion en la SVP
@@ -18,7 +18,7 @@ Característica: SVP autenticacion
       |1|Acierto|||||OSVPPRU04|1234|||
 
   Esquema del escenario: Consultar detalle de creditos (cuando el pago mínimo y total sea mayor a cero)
-    Dado que Juan carga los datos de la prueba
+    Dado que Andres carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   |
       | <idCaso> | <orientacion> | <codigoTransaccion> | <codigoError> | <resultadoEsperado> | <numeroDocumento> | <usuario> | <clave> | <segundaClave> | <tipoDocumento> |
     Cuando el realiza la autenticacion en la SVP

@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 
 import static co.com.bancolombia.certificacion.svp.tasks.recordarusuario.LlenarFormularioRecordarUsuario.llenaElFormularioDelRecordarUsuario;
-import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.AutenticacionPage.BTN_OLVIDASTE_TU_USUARIO;
+import static co.com.bancolombia.certificacion.svp.userinterface.autenticacion.Autenticacion.BTN_OLVIDASTE_TU_USUARIO;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class Recordar implements Task {

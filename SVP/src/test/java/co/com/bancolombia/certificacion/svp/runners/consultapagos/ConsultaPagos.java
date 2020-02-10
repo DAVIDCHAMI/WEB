@@ -14,9 +14,10 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
 
 @CucumberOptions(
         features = "src/test/resources/features/consultadepagos/consulta_de_pagos.feature",
-        glue = {"co.com.bancolombia.certificacion.svp.stepdefinitions.consultapagos",
-                "co.com.bancolombia.certificacion.svp.stepdefinitions.autenticacion",
-                "co.com.bancolombia.certificacion.svp.stepdefinitions.comunes"
+        glue = {
+               "co.com.bancolombia.certificacion.svp.stepdefinitions.consultapagos",
+               "co.com.bancolombia.certificacion.svp.stepdefinitions.autenticacion",
+               "co.com.bancolombia.certificacion.svp.stepdefinitions.comunes"
         },
         snippets = SnippetType.CAMELCASE
 )

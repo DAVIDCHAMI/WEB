@@ -2,7 +2,6 @@ package co.com.bancolombia.certificacion.svp.stepdefinitions.generarclave;
 
 import co.com.bancolombia.certificacion.svp.exceptions.generarclave.FechaComprobanteDiferenteDelSistemaException;
 import co.com.bancolombia.certificacion.svp.exceptions.generarclave.NoSeVisualizaMensajeGeneracionClaveException;
-import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
 import co.com.bancolombia.certificacion.svp.questions.generarclave.ClaveUsuario;
 import co.com.bancolombia.certificacion.svp.questions.generarclave.FechaComprobante;
 import co.com.bancolombia.certificacion.svp.questions.generarclave.Mensaje;
@@ -13,9 +12,9 @@ import cucumber.api.java.es.Y;
 
 import static co.com.bancolombia.certificacion.svp.exceptions.generarclave.FechaComprobanteDiferenteDelSistemaException.MENSAJE_FECHA_COMPROBANTE;
 import static co.com.bancolombia.certificacion.svp.exceptions.generarclave.NoSeVisualizaMensajeGeneracionClaveException.MENSAJE_ERROR_GENERAR_CLAVE;
+import static co.com.bancolombia.certificacion.svp.models.DatosPrueba.obtener;
 import static co.com.bancolombia.certificacion.svp.questions.autenticacion.Clave.mensajeClaveBloqueada;
-import static co.com.bancolombia.certificacion.svp.questions.autenticacion.UsuarioRegistrado.mensajeUsuarioRegistrado;
-import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.RESULTADO_ESPERADO;
+import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantExcelData.RESULTADO_ESPERADO;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 import static org.hamcrest.Matchers.equalTo;
@@ -68,7 +67,7 @@ public class GenerarClaveStepDefinition {
     @Entonces("^el deberia de ver mensaje de su clave esta bloqueada$")
     public void elDeberiaDeVerMensajeDeClaveBloqueada() {
         theActorInTheSpotlight().should(seeThat(
-                mensajeClaveBloqueada(), equalTo(DatosPrueba.getMap().get(RESULTADO_ESPERADO).toString()))
+                mensajeClaveBloqueada(), equalTo(obtener(RESULTADO_ESPERADO)))
         );
     }
 

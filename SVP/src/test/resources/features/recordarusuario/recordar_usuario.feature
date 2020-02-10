@@ -14,7 +14,18 @@ Característica: Recordar usuario
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario  | clave | segundaClave | tipoDocumento | mensajeRespuesta                               |
        ##@externaldata@./src/test/resources/datadriven/recordarusuario/recordar_usuario.xlsx@Datos@1
-      |1|Alterno||||25130112|USUCTDC3|4321|1234||Usuario o clave inválida. Inténtalo nuevamente|
+      |1|Alterno||||25130237|USUCTDC2|4321|1234||Usuario o clave inválida. Inténtalo nuevamente|
+
+  Esquema del escenario: Recordar usuario - clave bloqueada
+    Dado que Juan carga los datos de la prueba
+      | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | mensajeRespuesta   |
+      | <idCaso> | <orientacion> | <codigoTransaccion> | <codigoError> | <resultadoEsperado> | <numeroDocumento> | <usuario> | <clave> | <segundaClave> | <tipoDocumento> | <mensajeRespuesta> |
+    Cuando el recuerda su usuario en la SVP
+    Entonces el deberia de ver el mensaje de clave bloqueada
+    Ejemplos:
+      | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | mensajeRespuesta                               |
+       ##@externaldata@./src/test/resources/datadriven/recordarusuario/recordar_usuario.xlsx@Datos@5
+      |5|Alterno||||102030401|a|4321|1234||La clave que usas en el cajero está bloqueada.|
 
   Esquema del escenario: Recordar usuario - usuario invalido
     Dado que Juan carga los datos de la prueba
@@ -36,8 +47,9 @@ Característica: Recordar usuario
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario  | clave | segundaClave | tipoDocumento | mensajeRespuesta                                  |
        ##@externaldata@./src/test/resources/datadriven/recordarusuario/recordar_usuario.xlsx@Datos@3
-      |3|Acierto||||25130111|USUCTDC1|1234|1234||El usuario ha sido enviado al correo electrónico.|
+      |3|Acierto||||25130233|USUCTDC3|1234|1234||El usuario ha sido enviado al correo electrónico.|
 
+    @Manual:Passed
   Esquema del escenario: Bloqueo por intentos fallidos al recordar usuario
     Dado que Juan carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | mensajeRespuesta   |
@@ -47,15 +59,4 @@ Característica: Recordar usuario
     Ejemplos:
       | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario    | clave | segundaClave | tipoDocumento | mensajeRespuesta |
        ##@externaldata@./src/test/resources/datadriven/recordarusuario/recordar_usuario.xlsx@Datos@4
-      |4|Alterno||||1245123884|USUCTDC3|4321|1234||¡Lo sentimos!|
-
-  Esquema del escenario: Recordar usuario - clave bloqueada
-    Dado que Juan carga los datos de la prueba
-      | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | mensajeRespuesta   |
-      | <idCaso> | <orientacion> | <codigoTransaccion> | <codigoError> | <resultadoEsperado> | <numeroDocumento> | <usuario> | <clave> | <segundaClave> | <tipoDocumento> | <mensajeRespuesta> |
-    Cuando el recuerda su usuario en la SVP
-    Entonces el deberia de ver el mensaje de clave bloqueada
-    Ejemplos:
-      | idCaso | orientacion | codigoTransaccion | codigoError | resultadoEsperado | numeroDocumento | usuario   | clave | segundaClave | tipoDocumento | mensajeRespuesta                               |
-       ##@externaldata@./src/test/resources/datadriven/recordarusuario/recordar_usuario.xlsx@Datos@5
-      |5|Alterno||||1989636240|OSVPPRU16|1234|1234||La clave que usas en el cajero está bloqueada.|
+      |4|Alterno||||51854814|userejec21|4321|1234||¡Lo sentimos!|
