@@ -11,7 +11,6 @@ import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.Ca
 import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.CaracteristicasDeFondosInversion.lasCaracteristicasDeFondosInversion;
 import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.CaracteristicasDeInversione.lasCaracteristicaDeInversiones;
 import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.CaracteristicasDeTarjetasCredito.lasCaracteristicasDeLasTarjetasDeCredito;
-import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.CaracteristicasDeTarjetasCreditosEcard.lasCaracteristicasDeTarjetasCreditosECard;
 import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.ConsultarCreditoOpcionPagarDisponible.laOpcionDePagarDisponible;
 import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasCrediagil.consultarDetalleCrediagil;
 import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasCredito.consultaDetalleCredito;
@@ -58,11 +57,6 @@ public class ConsultarDetalleStepDefinition {
     @Entonces("^el deberia de ver el detalle de la tarjeta de credito$")
     public void elDeberiaDeVerElDetalleDeLaTarjetaDeCredito() {
         theActorInTheSpotlight().should(seeThat(lasCaracteristicasDeLasTarjetasDeCredito()));
-    }
-
-    @Entonces("^el deberia de ver el detalle de la tarjeta de credito E-card$")
-    public void elDeberiaDeVerElDetalleDeLaTarjetaDeCreditoECard() {
-        theActorInTheSpotlight().should(seeThat(lasCaracteristicasDeTarjetasCreditosECard()));
     }
 
     @Cuando("^consulta el detalle de la cuenta de ahorro$")

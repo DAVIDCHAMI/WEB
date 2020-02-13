@@ -17,11 +17,15 @@ public class SaldosPorProductoVisibles implements Question<Boolean> {
 
     public static boolean segundaRespuestaDel(Actor actor){
         return el(actor).visualizalProducto(LBL_CREDITOS).conLosNumeros(obtener(CREDITOS)).eIdentificaQueSePresenta()
-                &&el(actor).visualizalProducto(LBL_INVERSIONES).conLosNumeros(obtener(INVERSIONES)).eIdentificaQueSePresenta();
+                && el(actor).visualizalProducto(LBL_INVERSIONES).conLosNumeros(obtener(INVERSIONES)).eIdentificaQueSePresenta()
+                && el(actor).visualizalProducto(LBL_CREDIAGIL).conLosNumeros(obtener(CREDIAGIL)).eIdentificaQueSePresenta();
     }
 
     @Override
-    public Boolean answeredBy(Actor actor) {return primeraRespuestaDel (actor) && segundaRespuestaDel (actor);}
+    public Boolean answeredBy(Actor actor) {
+           return primeraRespuestaDel (actor) && segundaRespuestaDel (actor);
+       }
 
-    public static SaldosPorProductoVisibles visualizaSusSaldos(){return new SaldosPorProductoVisibles();}
+    public static SaldosPorProductoVisibles visualizaSusSaldos(){return new SaldosPorProductoVisibles();
+       }
 }
