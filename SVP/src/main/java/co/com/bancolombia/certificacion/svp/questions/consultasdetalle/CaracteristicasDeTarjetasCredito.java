@@ -8,12 +8,10 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantEx
 import static co.com.bancolombia.certificacion.svp.utilities.validaciones.DetallesCampos.camposDetallesTarjetasCredito;
 
 public class CaracteristicasDeTarjetasCredito implements Question<Boolean> {
-
     private boolean resultado = true;
 
     @Override
     public Boolean answeredBy(Actor actor) {
-
         for (String campo : obtener(CAMPOS_DETALLE).split(",")){
             resultado = resultado && camposDetallesTarjetasCredito(campo).resolveFor(actor).isVisible();
         }

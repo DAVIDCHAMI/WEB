@@ -9,6 +9,7 @@ import static co.com.bancolombia.certificacion.svp.utilities.validaciones.Detall
 
 public class CaracteristicasDeCuentasAhorro implements Question<Boolean> {
     private boolean resultado = true;
+
     @Override
     public Boolean answeredBy(Actor actor) {
         for (String campo : obtener(CAMPOS_DETALLE).split(",")){
