@@ -17,14 +17,9 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisi
 
 public class ConsultasTarjetasCredito implements Task {
 
-    public static ConsultasTarjetasCredito consultarDetalleTarjetaCredito() {
-        return instrumented(ConsultasTarjetasCredito.class);
-    }
-
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(Esperar.unTiempo());
-
         if ("Tarjetas de credito".equals(obtener(PRODUCTO))) {
             actor.attemptsTo(Click.on(ObjetoInteractuarSaldosPorProducto.interactuaConEl(obtener(PRODUCTO))));
         }
@@ -32,5 +27,9 @@ public class ConsultasTarjetasCredito implements Task {
                 WaitUntil.the(LBL_DETALLE_TARJETA, isVisible()),
                 Esperar.unTiempo()
         );
+    }
+
+    public static ConsultasTarjetasCredito consultarDetalleTarjetaCredito() {
+        return instrumented(ConsultasTarjetasCredito.class);
     }
 }

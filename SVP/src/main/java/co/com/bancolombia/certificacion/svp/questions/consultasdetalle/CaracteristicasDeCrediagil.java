@@ -3,14 +3,22 @@ package co.com.bancolombia.certificacion.svp.questions.consultasdetalle;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-public class CaracteristicasDeCrediagil implements Question<Boolean> {
+import static co.com.bancolombia.certificacion.svp.models.DatosPrueba.obtener;
+import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantExcelData.CAMPOS_DETALLE;
+import static co.com.bancolombia.certificacion.svp.utilities.validaciones.DetallesCampos.camposDetallesCrediAgil;
 
-    public static CaracteristicasDeCrediagil lasCaracteristicasDeCrediagil() {
-        return new CaracteristicasDeCrediagil();
-    }
+public class CaracteristicasDeCrediagil implements Question<Boolean> {
+    private boolean resultado = true;
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        return null;
+        for (String campo : obtener(CAMPOS_DETALLE).split(",")){
+            resultado = resultado && camposDetallesCrediAgil(campo).resolveFor(actor).isVisible();
+        }
+        return resultado;
+    }
+
+    public static CaracteristicasDeCrediagil lasCaracteristicasDeCrediagil() {
+        return new CaracteristicasDeCrediagil();
     }
 }

@@ -11,15 +11,12 @@ import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.Ca
 import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.CaracteristicasDeFondosInversion.lasCaracteristicasDeFondosInversion;
 import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.CaracteristicasDeInversione.lasCaracteristicaDeInversiones;
 import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.CaracteristicasDeTarjetasCredito.lasCaracteristicasDeLasTarjetasDeCredito;
-import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.CaracteristicasDeTarjetasCreditosEcard.lasCaracteristicasDeTarjetasCreditosECard;
-import static co.com.bancolombia.certificacion.svp.questions.consultasdetalle.ConsultarCreditoOpcionPagarDisponible.laOpcionDePagarDisponible;
 import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasCrediagil.consultarDetalleCrediagil;
 import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasCredito.consultaDetalleCredito;
 import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasCuentaAhorro.consultaDetalleCuentasDeAhorro;
 import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasCuentasCorriente.consultaDeDetalleCuentasCorriente;
 import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasInversiones.consultarDetalleInversiones;
 import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasTarjetasCredito.consultarDetalleTarjetaCredito;
-import static co.com.bancolombia.certificacion.svp.tasks.consultardetalle.ConsultasTarjetasCreditoECard.consultarDetalleTarjetaCreditoECard;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
@@ -40,8 +37,8 @@ public class ConsultarDetalleStepDefinition {
         theActorInTheSpotlight().should(seeThat(lasCaracteristicasDeCrediagil()));
     }
 
-    @Entonces("^el deberia de ver el detalle del credito de consumo$")
-    public void elDeberiaDeVerElDetalleDelCreditoDeConsumo() {
+    @Entonces("^el deberia de ver el detalle del credito$")
+    public void elDeberiaDeVerElDetalleDelCredito() {
         theActorInTheSpotlight().should(seeThat(lasCaracteristicasDeLosCreditos()));
     }
 
@@ -60,11 +57,6 @@ public class ConsultarDetalleStepDefinition {
         theActorInTheSpotlight().should(seeThat(lasCaracteristicasDeLasTarjetasDeCredito()));
     }
 
-    @Entonces("^el deberia de ver el detalle de la tarjeta de credito E-card$")
-    public void elDeberiaDeVerElDetalleDeLaTarjetaDeCreditoECard() {
-        theActorInTheSpotlight().should(seeThat(lasCaracteristicasDeTarjetasCreditosECard()));
-    }
-
     @Cuando("^consulta el detalle de la cuenta de ahorro$")
     public void consultaElDetalleDeLaCuentaDeAhorro() {
         theActorInTheSpotlight().attemptsTo(consultaDetalleCuentasDeAhorro());
@@ -75,8 +67,8 @@ public class ConsultarDetalleStepDefinition {
         theActorInTheSpotlight().attemptsTo(consultaDeDetalleCuentasCorriente());
     }
 
-    @Cuando("^consulta el detalle del credito de consumo$")
-    public void consultaElDetalleDelCreditoDeConsumo() {
+    @Cuando("^consulta el detalle del credito$")
+    public void consultaElDetalleDelCredito() {
         theActorInTheSpotlight().attemptsTo(consultaDetalleCredito());
     }
 
@@ -98,15 +90,5 @@ public class ConsultarDetalleStepDefinition {
     @Cuando("^consulta el detalle de crediagil$")
     public void consultaElDetalleDeCrediagil() {
         theActorInTheSpotlight().attemptsTo(consultarDetalleCrediagil());
-    }
-
-    @Cuando("^consulta el detalle de la tarjeta de credito E-card$")
-    public void consultaElDetalleDeLaTarjetaDeCreditoECard() {
-        theActorInTheSpotlight().attemptsTo(consultarDetalleTarjetaCreditoECard());
-    }
-
-    @Entonces("^el deberia de ver la opcion de pagar disponible$")
-    public void elDeberiaDeVerLaOpcionDePagarDisponible() {
-        theActorInTheSpotlight().should(seeThat(laOpcionDePagarDisponible()));
     }
 }

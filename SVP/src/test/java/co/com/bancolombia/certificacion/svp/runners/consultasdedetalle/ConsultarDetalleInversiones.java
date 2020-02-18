@@ -28,6 +28,6 @@ public class ConsultarDetalleInversiones {
 
     @BeforeSuite
     public static void test() throws InvalidFormatException, IOException {
-        DataToFeature.overrideFeatureFiles("./src/test/resources/features/consultasdedetalle/");
+        DataToFeature.overrideFeatureFiles("./src/test/resources/features/consultasdedetalle/consulta_de_detalle_de_inversion.feature");
     }
 }

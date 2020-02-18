@@ -16,6 +16,6 @@ public class UtileriaFechas {
 
     public static String obtenerFechaComprobantes() {
         mesLetra = mesLetras[Integer.parseInt(mes) -1];
-        return dia + " " + mesLetra + " " + anio;
+        return dia +"  "+ mesLetra + "  " + anio;
     }
 }
