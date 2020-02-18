@@ -49,7 +49,7 @@ public class ProductoVisibleSaldosPorProducto {
         } else {
             if (producto.resolveFor(actor).isVisible()) {
                 resultado = false;
-                throw new SeVisualizaUnaCategoriaSinProductosException();
+                throw new SeVisualizaUnaCategoriaSinProductosException(numerosProductos);
             }
         }
         return resultado;
