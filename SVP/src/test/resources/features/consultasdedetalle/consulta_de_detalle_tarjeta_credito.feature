@@ -41,8 +41,6 @@ Característica: SVP consulta detalles
        ##@externaldata@.\src\test\resources\datadriven\consultasdedetalle\consulta_de_detalles.xlsx@DetalleTarjetasCredito@3
       |3|Acierto|||||USUCTDC3|1234|1234||Tarjetas de credito|****0374|Tipo de tarjeta,Disponible para avances en pesos,Cupo disponible en pesos,Deuda a la fecha en pesos,TRM|Visualizar campos Visa|
 
-  @manual
-    @manual-result:passed
   Esquema del escenario: Consulta detalle tarjetas de credito E-card
     Dado que Andres carga los datos de la prueba
       | idCaso   | orientacion   | codigoTransaccion   | codigoError   | resultadoEsperado   | numeroDocumento   | usuario   | clave   | segundaClave   | tipoDocumento   | producto   | numeroProducto   | camposDetalle   | escenario   |
