@@ -180,15 +180,6 @@ public class DetallesCampos {
             case "Cupo disponible":
                 target = LBL_CUPO_DISPONIBLE_CREDIAGIL;
                 break;
-            case "Disponible con sobrecupo":
-                target = LBL_DISPONIBLE_SOBRECUPO_CREDIAGIL;
-                break;
-            case "Valor minimo a desembolsar":
-                target = LBL_VALOR_MINIMO_DESEMBOLSO_CREDIAGIL;
-                break;
-            case "Valor maximo a desembolsar":
-                target = LBL_VALOR_MAXIMO_DESEMBOLSO_CREDIAGIL;
-                break;
             case "Cupo de canje":
                 target = LBL_CUPO_CANJE_CREDIAGIL;
                 break;

@@ -15,7 +15,7 @@ Característica: SVP consulta de detalles
     Ejemplos:
       | idCaso    | orientacion   | codigoTransaccion  | codigoError  | resultadoEsperado     | numeroDocumento   | usuario      | clave   | segundaClave  | tipoDocumento   | producto   | numeroProducto    | camposDetalle                                                     |   escenario       |
        ##@externaldata@.\src\test\resources\datadriven\consultasdedetalle\consulta_de_detalles.xlsx@DetalleFondosInversion@1
-      |1|Acierto|||||FIDUQA04|1234|4321||Inversiones|0461000001260|Tipo de fondo,Saldo disponible,Saldo total,Fecha de vencimiento|Con fecha de vencimiento|
+      |1|Acierto|||||FIDURENTA2|1234|4321||Inversiones|7001000083018|Tipo de fondo,Saldo disponible,Saldo total,Fecha de vencimiento|Con fecha de vencimiento|
 
   Esquema del escenario: Consulta detalle de fondos de inversion sin fecha de vencimiento
     Dado que Andres carga los datos de la prueba
@@ -27,4 +27,4 @@ Característica: SVP consulta de detalles
     Ejemplos:
       | idCaso    | orientacion   | codigoTransaccion  | codigoError  | resultadoEsperado     | numeroDocumento   | usuario      | clave   | segundaClave  | tipoDocumento   | producto   | numeroProducto    | camposDetalle                                                     |   escenario       |
        ##@externaldata@.\src\test\resources\datadriven\consultasdedetalle\consulta_de_detalles.xlsx@DetalleFondosInversion@2
-      |1|Acierto|||||FIDUQA04|1234|4321||Inversiones|0461000001260|Tipo de fondo,Saldo disponible,Saldo total,Fecha de vencimiento|Con fecha de vencimiento|
+      |2|Acierto|||||FIDUQA04|1234|4321||Inversiones|0461000001260|Tipo de fondo,Saldo disponible,Saldo total|Sin fecha de vencimiento|

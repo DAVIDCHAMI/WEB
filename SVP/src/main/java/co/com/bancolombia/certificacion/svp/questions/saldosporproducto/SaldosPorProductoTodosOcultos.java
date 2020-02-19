@@ -26,7 +26,6 @@ public class SaldosPorProductoTodosOcultos implements Question<Boolean> {
         actor.attemptsTo (Click.on (LBL_TARJETAS_CREDITO), Esperar.unTiempo ());
         actor.attemptsTo (Click.on (LBL_CREDITOS), Esperar.unTiempo ());
         actor.attemptsTo (Click.on (LBL_INVERSIONES), Esperar.unTiempo ());
-        actor.attemptsTo (Click.on (LBL_CREDIAGIL), Esperar.unTiempo ());
         return respuestaUnoDel (actor) && respuestaDosDel (actor);
     }
 
