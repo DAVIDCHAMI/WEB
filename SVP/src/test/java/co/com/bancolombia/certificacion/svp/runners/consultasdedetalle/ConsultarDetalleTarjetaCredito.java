@@ -18,7 +18,6 @@ import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantTy
                 "co.com.bancolombia.certificacion.svp.stepdefinitions.comunes",
                 "co.com.bancolombia.certificacion.svp.stepdefinitions.autenticacion"
         },
-        tags = {"@ECARD"},
         snippets = SnippetType.CAMELCASE
 )
 @RunWith(RunnerPersonalizado.class)
