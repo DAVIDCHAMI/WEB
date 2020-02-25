@@ -26,7 +26,7 @@ public class ConstantExcelData {
     public static final String PRODUCTO = "producto";
     public static final String NUMERO_PRODUCTO = "numeroProducto";
     public static final String CAMPOS_DETALLE = "camposDetalle";
-
+    public static final String PRODUCTOS= "productos";
     private ConstantExcelData() {
         throw new IllegalStateException(CONSTANT_CLASS);
     }

@@ -54,5 +54,32 @@ public class Inicio {
             .locatedBy("//div[@id='ContainerText']//span");
     public  static  final Target BTN_MENU_INICIO= Target.the("Boton menu incio")
             .locatedBy("//div[@class='menu-icon center']");
+
+    public static final Target LBL_LISTA_CUENTAS_DE_USUARIOS= Target.the("contiene la lista de las cuentas que tiene un susario")
+            .locatedBy("(//div[@id='AccountsRow']//div[@role='tabpanel']/div[@id='SavingAccountsListGroup']/div)[1]");
+    public static final Target LBL_LISTA_SALDOS_CUENTAS_DE_USUARIOS= Target.the("contiene la lista de saldos de las cuentas que tiene un susario")
+            .locatedBy("(//div[@id='AccountsRow']//div[@role='tabpanel']/div[@id='SavingAccountsListGroup']//following::span[@class='heading6 text-nunito'])[1]");
+    public static final Target LBL_LISTA_NUMERO_CUENTAS_DE_USUARIOS= Target.the("contiene la lista de los numeros de cuentas que tiene un susario")
+            .locatedBy("(//div[contains(@id, 'Content')]/div/div/following::div[contains(@id, 'ColumnLeftPlaceholder')]/div/span[contains(text(),'-')])[1]");
+
+    public static final Target LBL_LISTA_CREDITOS_DE_USUARIOS= Target.the("contiene la lista de los creditos que tiene un usuario")
+            .locatedBy("(//div[@id='CreditRow']//div[@role='tabpanel']/div[@class='list list-group OSFillParent']/div)[1]");
+    public static final Target LBL_LISTA_SALDOS_CREDITOS_DE_USUARIOS= Target.the("contiene la lista de los saldos de creditos que tiene un usuario")
+            .locatedBy("(//div[@id='CreditRow']//div[contains(@id, 'ColumnRightPlaceholder')]/div[2]/span)[1]");
+    public static final Target LBL_LISTA_NUMEROS_CREDITOS_DE_USUARIOS= Target.the("contiene la lista de los numeros de creditos que tiene un usuario")
+            .locatedBy("(//div[@id='CreditRow']//div[contains(@id, 'ColumnLeftPlaceholder')]/div[2]/span)[1]");
+
+    public static final Target LBL_LISTA_SALDOS_DOLAR_TARJETAS_CREDITOS_DE_USUARIOS= Target.the("contiene la lista de los saldos en dolar creditos que tiene un usuario")
+            .locatedBy("(//div[@id='CreditCardRow']//div[contains(@id, 'ColumnRightPlaceholder')]/div[3]/span)[1]");
+    public static final Target LBL_LISTA_SALDOS_PESO_TARJETAS_CREDITOS_DE_USUARIOS= Target.the("contiene la lista de los saldos en peso creditos que tiene un usuario")
+            .locatedBy("//div[@id='CreditCardRow']//div[contains(@id, 'ColumnRightPlaceholder')]/div[2]/span");
+    public static final Target LBL_LISTA_NUMERO_TARJETAS_CREDITOS_DE_USUARIOS= Target.the("contiene la lista de los numeros en dolar creditos que tiene un usuario")
+            .locatedBy("(//div[@id='CreditCardRow']//div[contains(@id, 'ColumnLeftPlaceholder')]/div[2]/span)[1]");
+
+    public static final Target LBL_LISTA_SALDOS_INVERSIONES_DE_USUARIOS= Target.the("contiene la lista de los saldos en inversiones que tiene un usuario")
+            .locatedBy("(//div[@id='InvestmentsRow']//div[contains(@id, 'ColumnRightPlaceholder')]/span)[1]");
+    public static final Target LBL_LISTA_NUMERO_INVERSIONES_DE_USUARIOS= Target.the("contiene la lista de los numeros en inversiones que tiene un usuario")
+            .locatedBy("(//div[@id='InvestmentsRow']//div[contains(@id, 'ColumnLeftPlaceholder')]/div[2]/span)[1]");
+
     private Inicio() {throw new IllegalStateException(UI_CLASS);}
 }

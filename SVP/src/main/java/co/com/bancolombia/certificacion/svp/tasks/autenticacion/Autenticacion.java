@@ -31,7 +31,7 @@ public class Autenticacion implements Task {
                 Click.on(BTN_CONTINUAR),WaitUntil.the(TXT_CLAVE, isVisible()),
                 Esperar.unTiempo(),
                 Enter.theValue(obtener(CLAVE)).into(TXT_CLAVE),
-                Click.on(BTN_CONTINUAR), unTiempo()
+                Click.on(BTN_CONTINUAR),Esperar.unTiempo()
         );
     }
 }
