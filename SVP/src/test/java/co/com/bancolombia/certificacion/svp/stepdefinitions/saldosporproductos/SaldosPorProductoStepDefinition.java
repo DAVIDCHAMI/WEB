@@ -2,7 +2,6 @@ package co.com.bancolombia.certificacion.svp.stepdefinitions.saldosporproductos;
 
 import co.com.bancolombia.certificacion.svp.models.DatosPrueba;
 import cucumber.api.java.es.Entonces;
-
 import static co.com.bancolombia.certificacion.svp.models.DatosPrueba.obtener;
 import static co.com.bancolombia.certificacion.svp.questions.saldosporproducto.SaldosPorProductoInversionesOcultas.visualizaElProductoVisibleMasMensajeDeOculto;
 import static co.com.bancolombia.certificacion.svp.questions.saldosporproducto.SaldosPorProductoOcultos.visualizaElMensajeDeProductosOcultos;

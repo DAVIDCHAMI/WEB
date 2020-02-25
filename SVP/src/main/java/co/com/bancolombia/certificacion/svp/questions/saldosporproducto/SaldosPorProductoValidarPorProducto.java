@@ -3,6 +3,7 @@ package co.com.bancolombia.certificacion.svp.questions.saldosporproducto;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import static co.com.bancolombia.certificacion.svp.utilities.validaciones.ProductoVisibleSaldosPorProducto.respuesta;
+
 public class SaldosPorProductoValidarPorProducto implements Question <Boolean> {
     String producto;
 
