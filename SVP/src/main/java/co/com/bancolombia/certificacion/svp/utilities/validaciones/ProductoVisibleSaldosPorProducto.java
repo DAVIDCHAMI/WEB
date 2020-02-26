@@ -1,5 +1,6 @@
 package co.com.bancolombia.certificacion.svp.utilities.validaciones;
 
+import co.com.bancolombia.certificacion.svp.exceptions.comunes.ProductoNoManejadoPorElBancoException;
 import co.com.bancolombia.certificacion.svp.exceptions.saldos.NoSeVisualizaElProductoException;
 import co.com.bancolombia.certificacion.svp.exceptions.saldos.SeVisualizaUnaCategoriaSinProductosException;
 import co.com.bancolombia.certificacion.svp.interactions.comunes.Esperar;
@@ -7,7 +8,13 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.targets.Target;
 
+import static co.com.bancolombia.certificacion.svp.models.DatosPrueba.obtener;
 import static co.com.bancolombia.certificacion.svp.userinterface.inicio.Inicio.*;
+import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantExcelData.CREDIAGIL;
+import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantExcelData.CREDITOS;
+import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantExcelData.CUENTAS;
+import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantExcelData.INVERSIONES;
+import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantExcelData.TARJETASDECREDITO;
 import static co.com.bancolombia.certificacion.svp.utilities.constant.ConstantManager.*;
 
 public class ProductoVisibleSaldosPorProducto {
@@ -102,4 +109,22 @@ public class ProductoVisibleSaldosPorProducto {
             throw new NoSeVisualizaElProductoException(numeroProducto);
         }
     }
+
+    public static boolean respuesta(Actor actor, String producto) {
+        switch (producto){
+            case "CUENTAS":
+                return el(actor).visualizalProducto(LBL_CUENTAS).conLosNumeros(obtener(CUENTAS)).eIdentificaQueSePresenta();
+            case "TARJETAS":
+                return el(actor).visualizalProducto(LBL_TARJETAS_CREDITO).conLosNumeros(obtener(TARJETASDECREDITO)).eIdentificaQueSePresenta();
+            case "CREDITOS":
+                return el(actor).visualizalProducto(LBL_CREDITOS).conLosNumeros(obtener(CREDITOS)).eIdentificaQueSePresenta();
+            case "INVERSIONES":
+                return el(actor).visualizalProducto(LBL_INVERSIONES).conLosNumeros(obtener(INVERSIONES)).eIdentificaQueSePresenta();
+            case "CREDIAGIL":
+                return  el(actor).visualizalProducto(LBL_CREDIAGIL).conLosNumeros(obtener(CREDIAGIL)).eIdentificaQueSePresenta();
+            default:
+                throw new ProductoNoManejadoPorElBancoException(producto);
+        }
+    }
+
 }
